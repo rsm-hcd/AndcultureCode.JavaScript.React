@@ -1,0 +1,31 @@
+{
+    "name": "andculturecode.javascript.react",
+    "version": "0.0.0",
+    "description": "Common patterns, functions, etc... used when building react applications",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React.git"
+    },
+    "keywords": [
+        "React",
+        "JavaScript",
+        "Node"
+    ],
+    "author": "andculture",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React/issues"
+    },
+    "homepage": "https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React#readme",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "immutable": "^4.0.0-rc.12"
+    },
+    "devDependencies": {
+        "typescript": "^3.8.3"
+    }
+}
