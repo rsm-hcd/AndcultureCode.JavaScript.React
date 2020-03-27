@@ -23,9 +23,11 @@
     "homepage": "https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React#readme",
     "dependencies": {
         "axios": "^0.19.2",
-        "immutable": "^4.0.0-rc.12"
+        "immutable": "^4.0.0-rc.12",
+        "react": "^16.13.1"
     },
     "devDependencies": {
+        "@types/react": "^16.9.26",
         "typescript": "^3.8.3"
     }
 }
