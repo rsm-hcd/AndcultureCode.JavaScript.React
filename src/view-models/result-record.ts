@@ -9,8 +9,7 @@ const defaultValues: Result<any> = {
     resultObject: undefined,
 };
 
-export default class ResultRecord<T> extends Record(defaultValues)
-    implements Result<T> {
+class ResultRecord<T> extends Record(defaultValues) implements Result<T> {
     // Do NOT set properties on immutable records due to babel and typescript transpilation issue
     // See https://github.com/facebook/create-react-app/issues/6506
 
@@ -145,3 +144,5 @@ export default class ResultRecord<T> extends Record(defaultValues)
 
     // #endregion Private Methods
 }
+
+export default ResultRecord;

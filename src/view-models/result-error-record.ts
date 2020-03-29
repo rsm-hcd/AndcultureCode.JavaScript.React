@@ -8,8 +8,7 @@ const defaultValues: ResultError = {
     type: ErrorType.Error,
 };
 
-export default class ResultErrorRecord extends Record(defaultValues)
-    implements ResultError {
+class ResultErrorRecord extends Record(defaultValues) implements ResultError {
     // Do NOT set properties on immutable records due to babel and typescript transpilation issue
     // See https://github.com/facebook/create-react-app/issues/6506
 
@@ -48,3 +47,5 @@ export default class ResultErrorRecord extends Record(defaultValues)
 
     // #endregion Public Methods
 }
+
+export default ResultErrorRecord;
