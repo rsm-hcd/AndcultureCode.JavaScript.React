@@ -1,7 +1,11 @@
 import React from "react";
 import { RouteMap } from "../interfaces/route-map";
 
-export interface RouteDefinition {
+// -----------------------------------------------------------------------------------------
+// #region Interfaces
+// -----------------------------------------------------------------------------------------
+
+interface RouteDefinition {
     authRequired: boolean;
     component: React.ComponentType;
     exact?: boolean;
@@ -11,3 +15,13 @@ export interface RouteDefinition {
     // TODO: This may need to be decoupled from the package.
     sidebar?: React.ComponentType;
 }
+
+// #endregion Interfaces
+
+// -----------------------------------------------------------------------------------------
+// #region Export
+// -----------------------------------------------------------------------------------------
+
+export { RouteDefinition };
+
+// #endregion Export

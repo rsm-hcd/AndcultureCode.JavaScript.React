@@ -1,13 +1,21 @@
-import ResultErrorRecord from "../view-models/result-error-record";
+import { ResultErrorRecord } from "../view-models/result-error-record";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-export default interface PagedResult<T> {
+interface PagedResult<T> {
     errors?: ResultErrorRecord[];
     resultObject?: T[];
     rowCount: number;
 }
 
 // #endregion Interfaces
+
+// -----------------------------------------------------------------------------------------
+// #region Export
+// -----------------------------------------------------------------------------------------
+
+export { PagedResult };
+
+// #endregion Export

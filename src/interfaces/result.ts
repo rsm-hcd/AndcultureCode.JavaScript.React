@@ -1,12 +1,20 @@
-import ResultErrorRecord from "../view-models/result-error-record";
+import { ResultErrorRecord } from "../view-models/result-error-record";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-export default interface Result<T> {
+interface Result<T> {
     errors?: ResultErrorRecord[];
     resultObject?: T;
 }
 
 // #endregion Interfaces
+
+// -----------------------------------------------------------------------------------------
+// #region Export
+// -----------------------------------------------------------------------------------------
+
+export { Result };
+
+// #endregion Export

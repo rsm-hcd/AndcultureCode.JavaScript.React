@@ -3,4 +3,4 @@ enum ErrorType {
     ValidationError = 1,
 }
 
-export default ErrorType;
+export { ErrorType };
