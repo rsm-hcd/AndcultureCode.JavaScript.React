@@ -1,9 +1,9 @@
 import { RouteUtils } from "../utilities/route-utils";
-import ServiceResponse from "../interfaces/service-response";
+import { ServiceResponse } from "../interfaces/service-response";
 import axios, { AxiosResponse } from "axios";
-import Result from "../interfaces/result";
-import ResultRecord from "../view-models/result-record";
-import PagedResult from "../interfaces/paged-result";
+import { Result } from "../interfaces/result";
+import { ResultRecord } from "../view-models/result-record";
+import { PagedResult } from "../interfaces/paged-result";
 
 // -----------------------------------------------------------------------------------------
 // #region Public Functions
@@ -279,9 +279,9 @@ const _update = async function<TRecord extends any>(
 // #endregion Private Functions
 
 // -----------------------------------------------------------------------------------------
-// #region Exports
+// #region Export
 // -----------------------------------------------------------------------------------------
 
-export default ServiceFactory;
+export { ServiceFactory };
 
-// #endregion Exports
+// #endregion Export

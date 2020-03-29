@@ -1,10 +1,10 @@
-import ResultRecord from "../view-models/result-record";
+import { ResultRecord } from "../view-models/result-record";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-export default interface ServiceResponse<T> {
+interface ServiceResponse<T> {
     /**
      * Result object containing detailed response information,
      * such as; errors, result data, etc...
@@ -41,3 +41,11 @@ export default interface ServiceResponse<T> {
 }
 
 // #endregion Interfaces
+
+// -----------------------------------------------------------------------------------------
+// #region Export
+// -----------------------------------------------------------------------------------------
+
+export { ServiceResponse };
+
+// #endregion Export

@@ -1,6 +1,6 @@
 import { Record } from "immutable";
-import ResultError from "../interfaces/result-error";
-import ErrorType from "../enumerations/error-type";
+import { ResultError } from "../interfaces/result-error";
+import { ErrorType } from "../enumerations/error-type";
 
 const defaultValues: ResultError = {
     key: undefined,
@@ -48,4 +48,10 @@ class ResultErrorRecord extends Record(defaultValues) implements ResultError {
     // #endregion Public Methods
 }
 
-export default ResultErrorRecord;
+// -----------------------------------------------------------------------------------------
+// #region Export
+// -----------------------------------------------------------------------------------------
+
+export { ResultErrorRecord };
+
+// #endregion Export
