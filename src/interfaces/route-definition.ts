@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteMap } from "interfaces/route-map";
+import { RouteMap } from "../interfaces/route-map";
 
 export interface RouteDefinition {
     authRequired: boolean;

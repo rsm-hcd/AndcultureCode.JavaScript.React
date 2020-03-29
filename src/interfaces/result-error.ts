@@ -1,8 +1,8 @@
-import ErrorType from "enumerations/error-type";
-
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
+
+import ErrorType from "../enumerations/error-type";
 
 export default interface ResultError {
     key?: string;

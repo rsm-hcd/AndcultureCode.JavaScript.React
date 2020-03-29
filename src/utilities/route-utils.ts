@@ -1,6 +1,6 @@
-import { CoreUtils } from "utilities/core-utils";
-import { RouteDefinition } from "interfaces/route-definition";
-import { RouteMap } from "interfaces/route-map";
+import { CoreUtils } from "../utilities/core-utils";
+import { RouteDefinition } from "../interfaces/route-definition";
+import { RouteMap } from "../interfaces/route-map";
 
 // -----------------------------------------------------------------------------------------
 // #region Constants
