@@ -1,6 +1,6 @@
 {
     "name": "andculturecode.javascript.react",
-    "version": "0.0.0",
+    "version": "0.0.1-0",
     "description": "Common patterns, functions, etc... used when building react applications",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
