@@ -16,6 +16,6 @@
         "target": "es5",
         "outDir": "dist"
     },
-    "include": ["src/**/*.tsx?"],
-    "exclude": ["node_modules", "dist"]
+    "include": ["src/**/*.ts*"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts*"]
 }

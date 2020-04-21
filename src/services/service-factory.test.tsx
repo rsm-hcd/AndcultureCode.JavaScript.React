@@ -105,7 +105,9 @@ describe("ServiceFactory", () => {
 
                 useEffect(() => {
                     async function createStubRecord() {
-                        const result = await create(new StubResourceRecord());
+                        const result = await create(Factory.build<StubResourceRecord>(
+                            FactoryType.StubResourceRecord
+                        ));
                         setStubRecord(result.resultObject!);
                     }
 
