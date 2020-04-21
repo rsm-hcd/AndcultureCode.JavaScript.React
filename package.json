@@ -33,8 +33,8 @@
         "react-dom": "^16.13.1"
     },
     "devDependencies": {
-        "@testing-library/react": "^10.0.2",
         "@testing-library/jest-dom": "5.5.0",
+        "@testing-library/react": "^10.0.2",
         "@types/jest": "^25.1.5",
         "@types/node": "^13.11.0",
         "@types/react": "^16.9.26",
@@ -43,6 +43,7 @@
         "jest": "^25.2.4",
         "jest-extended": "^0.11.5",
         "jest-fetch-mock": "^3.0.3",
+        "prettier": "^2.0.4",
         "rosie": "^2.0.1",
         "ts-jest": "^25.3.0",
         "typescript": "^3.8.3"
