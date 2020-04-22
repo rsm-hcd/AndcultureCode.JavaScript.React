@@ -105,9 +105,11 @@ describe("ServiceFactory", () => {
 
                 useEffect(() => {
                     async function createStubRecord() {
-                        const result = await create(Factory.build<StubResourceRecord>(
-                            FactoryType.StubResourceRecord
-                        ));
+                        const result = await create(
+                            Factory.build<StubResourceRecord>(
+                                FactoryType.StubResourceRecord
+                            )
+                        );
                         setStubRecord(result.resultObject!);
                     }
 
@@ -133,114 +135,101 @@ describe("ServiceFactory", () => {
             expect(consoleErrorSpy).toHaveBeenCalled();
         });
 
-        //         it("when successful, returns response mapped to supplied TRecord", async () => {
-        //             // Arrange
-        //             const expected = Factory.build<UserRecord>(FactoryType.userRecord);
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expected = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord
+            );
 
-        //             const sut = ServiceFactory.create(UserRecord, baseEndpoint);
-        //             mockAxios.postSuccess(expected);
+            const sut = ServiceFactory.create(StubResourceRecord, baseEndpoint);
+            mockAxios.postSuccess(expected);
 
-        //             // Act
-        //             const response = await sut(expected);
+            // Act
+            const response = await sut(expected);
 
-        //             // Assert
-        //             expect(response.resultObject).not.toBeNull();
-        //             expect(response.resultObject).toBeInstanceOf(UserRecord);
-        //             expect(response.resultObject!.email).toEqual(expected.email);
-        //         });
+            // Assert
+            expect(response.resultObject).not.toBeNull();
+            expect(response.resultObject).toBeInstanceOf(StubResourceRecord);
+            expect(response.resultObject!.name).toEqual(expected.name);
+        });
     });
 
     // #endregion create
 
-    //     // -----------------------------------------------------------------------------------------
-    //     // #region delete
-    //     // --------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------
+    // #region delete
+    // --------------------------------------------------------------------------------------------
 
-    //     describe("delete", () => {
-    //         itReturnsFunction(ServiceFactory.delete, baseEndpoint);
+    describe("delete", () => {
+        itReturnsFunction(ServiceFactory.delete, baseEndpoint);
 
-    //         it("when successful, returns response mapped to supplied TRecord", async () => {
-    //             // Arrange
-    //             const expected = Factory.build<UserRecord>(FactoryType.userRecord, {
-    //                 id: 20,
-    //             });
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.delete(resourceEndpoint);
+            const record = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
 
-    //             const sut = ServiceFactory.delete(UserRecord, resourceEndpoint);
-    //             mockAxios.deleteSuccess(expected);
+            mockAxios.deleteSuccess(record, cancellationTestsApiDelay);
 
-    //             // Act
-    //             const response = await sut(expected.id!);
+            let isUnmounted = false;
 
-    //             // Assert
-    //             expect(response.resultObject).not.toBeNull();
-    //             expect(response.resultObject).toBeInstanceOf(UserRecord);
-    //             expect(response.resultObject!.email).toEqual(expected.email);
-    //         });
+            const DeleteStubComponent = () => {
+                const [deleted, setDeleted] = useState(false);
 
-    //         /**
-    //          * Test ensures service factory in fact causes a react console.error to throw
-    //          * when the react component unmounts before the promise resolves.
-    //          *
-    //          * See ServiceHookFactory.test.tsx for test that verifies cancellation works
-    //          */
-    //         it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
-    //             // Arrange
-    //             const consoleErrorSpy = jest.spyOn(console, "error");
-    //             const sut = ServiceFactory.delete(UserRecord, resourceEndpoint);
-    //             const record = Factory.build<UserRecord>(FactoryType.userRecord, {
-    //                 id: 20,
-    //             });
+                useEffect(() => {
+                    async function deleteUser() {
+                        const result = await sut(record.id!);
+                        setDeleted((result.resultObject || false) as boolean);
+                    }
 
-    //             mockAxios.deleteSuccess(record, cancellationTestsApiDelay);
+                    deleteUser();
 
-    //             let isUnmounted = false;
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
 
-    //             const DeleteStubComponent = () => {
-    //                 const [user, setUser] = useState<UserRecord>(null as any);
+                return <div>{deleted && "deleted"}</div>;
+            };
 
-    //                 useEffect(() => {
-    //                     async function deleteUser() {
-    //                         const result = await sut(record.id!);
-    //                         setUser(result.resultObject!);
-    //                     }
+            // Act
+            await act(async () => {
+                const { unmount } = render(<DeleteStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+            });
 
-    //                     deleteUser();
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
 
-    //                     return () => {
-    //                         isUnmounted = true;
-    //                     };
-    //                 }, []);
+        it("when successful, given empty result, returns response without resultObject", async () => {
+            // Arrange
+            const sut = ServiceFactory.delete(resourceEndpoint);
 
-    //                 return <div>{user != null && user!.email}</div>;
-    //             };
+            mockAxios.deleteSuccess(undefined);
 
-    //             // Act
-    //             await act(async () => {
-    //                 const { unmount } = render(<DeleteStubComponent />);
-    //                 unmount();
-    //                 await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
-    //             });
+            // Act
+            const response = await sut(10);
 
-    //             // Assert
-    //             expect(isUnmounted).toBeTrue();
-    //             expect(consoleErrorSpy).toHaveBeenCalled();
-    //         });
+            // Assert
+            expect(response.resultObject).toBeUndefined();
+        });
+    });
 
-    //         it("when successful, given empty result, returns response without resultObject", async () => {
-    //             // Arrange
-    //             const sut = ServiceFactory.delete(UserRecord, resourceEndpoint);
-
-    //             mockAxios.deleteSuccess(undefined);
-
-    //             // Act
-    //             const response = await sut(10);
-
-    //             // Assert
-    //             expect(response.resultObject).toBeUndefined();
-    //         });
-    //     });
-
-    //     // #endregion delete
+    // #endregion delete
 
     //     // -----------------------------------------------------------------------------------------
     //     // #region get
