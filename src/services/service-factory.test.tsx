@@ -323,370 +323,396 @@ describe("ServiceFactory", () => {
 
     // #endregion get
 
-    //     // -----------------------------------------------------------------------------------------
-    //     // #region list
-    //     // -----------------------------------------------------------------------------------------
-
-    //     describe("list", () => {
-    //         interface StubListParams {}
-
-    //         itReturnsFunction(ServiceFactory.list, baseEndpoint);
-
-    //         /**
-    //          * Test ensures service factory in fact causes a react console.error to throw
-    //          * when the react component unmounts before the promise resolves.
-    //          *
-    //          * See ServiceHookFactory.test.tsx for test that verifies cancellation works
-    //          */
-    //         it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
-    //             // Arrange
-    //             const consoleErrorSpy = jest.spyOn(console, "error");
-    //             const sut = ServiceFactory.list<StubResourceRecord, StubResourceParams>(
-    //                 StubResourceRecord,
-    //                 baseEndpoint
-    //             );
-    //             const expectedResults = Factory.buildList(
-    //                 FactoryType.StubResourceRecord,
-    //                 2
-    //             ) as StubResourceRecord[];
-
-    //             mockAxios.listSuccess(expectedResults, cancellationTestsApiDelay);
-
-    //             let isUnmounted = false;
-
-    //             const ListStubComponent = () => {
-    //                 const [records, setRecords] = useState<StubResourceRecord[]>([]);
-
-    //                 useEffect(() => {
-    //                     async function listUsers() {
-    //                         const result = await sut();
-    //                         setRecords(result.resultObjects!);
-    //                     }
-
-    //                     listUsers();
-
-    //                     return () => {
-    //                         isUnmounted = true;
-    //                     };
-    //                 }, []);
-
-    //                 return <div>{records != null && records.map((u) => u.name!)}</div>;
-    //             };
-
-    //             // Act
-    //             await act(async () => {
-    //                 const { unmount } = render(<ListStubComponent />);
-    //                 unmount();
-    //                 await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
-    //             });
-
-    //             // Assert
-    //             expect(isUnmounted).toBeTrue();
-    //             expect(consoleErrorSpy).toHaveBeenCalled();
-    //         });
-
-    //         it("when successful, returns response mapped to supplied TRecord", async () => {
-    //             // Arrange
-    //             const expectedResults = Factory.buildList(
-    //                 FactoryType.StubResourceRecord,
-    //                 2
-    //             ) as StubResourceRecord[];
-
-    //             const sut = ServiceFactory.list<StubResourceRecord, StubListParams>(
-    //                 StubResourceRecord,
-    //                 baseEndpoint
-    //             );
-    //             mockAxios.listSuccess(expectedResults);
-
-    //             // Act
-    //             const response = await sut();
-
-    //             // Assert
-    //             const resultObjects = response.resultObjects;
-    //             expect(resultObjects).not.toBeNull();
-    //             expect(response.rowCount).toEqual(expectedResults.length);
-
-    //             for (let i = 0; i < resultObjects!.length; i++) {
-    //                 const expected = expectedResults[i];
-    //                 const resultObject = resultObjects![i];
-    //                 expect(resultObject).toBeInstanceOf(StubResourceRecord);
-    //                 expect(resultObject.name).toEqual(expected.name);
-    //             }
-    //         });
-    //     });
-
-    //     // #endregion list
-
-    //     // -----------------------------------------------------------------------------------------
-    //     // #region nestedCreate
-    //     // -----------------------------------------------------------------------------------------
-
-    //     describe("nestedCreate", () => {
-    //         itReturnsFunction(ServiceFactory.nestedCreate, nestedBaseEndpoint);
-
-    //         it("given null, throws error", async () => {
-    //             expect.assertions(1);
-    //             try {
-    //                 const sut = ServiceFactory.nestedCreate(
-    //                     StubResourceRecord,
-    //                     baseEndpoint
-    //                 );
-
-    //                 await sut(null as any, {}); // <----- passing null
-    //             } catch (e) {
-    //                 expect(e).toBeInstanceOf(TypeError);
-    //             }
-    //         });
-
-    //         /**
-    //          * Test ensures service factory in fact causes a react console.error to throw
-    //          * when the react component unmounts before the promise resolves.
-    //          *
-    //          * See ServiceHookFactory.test.tsx for test that verifies cancellation works
-    //          */
-    //         it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
-    //             // Arrange
-    //             const consoleErrorSpy = jest.spyOn(console, "error");
-    //             const sut = ServiceFactory.nestedCreate<
-    //                 StubResourceRecord,
-    //                 StubNestedParams
-    //             >(StubResourceRecord, nestedBaseEndpoint);
-    //             const record = Factory.build<StubResourceRecord>(FactoryType.StubResourceRecord, {
-    //                 id: 20,
-    //             });
-
-    //             mockAxios.postSuccess(record, cancellationTestsApiDelay);
-
-    //             let isUnmounted = false;
-
-    //             const NestedCreateStubComponent = () => {
-    //                 const [stubRecord, setStubRecord] = useState<StubResourceRecord>(null as any);
-
-    //                 useEffect(() => {
-    //                     async function createUser() {
-    //                         const result = await sut(record, { nestedId: 10 });
-    //                         setStubRecord(result.resultObject!);
-    //                     }
-
-    //                     createUser();
-
-    //                     return () => {
-    //                         isUnmounted = true;
-    //                     };
-    //                 }, []);
-
-    //                 return <div>{user != null && user!.name}</div>;
-    //             };
-
-    //             // Act
-    //             await act(async () => {
-    //                 const { unmount } = render(<NestedCreateStubComponent />);
-    //                 unmount();
-    //                 await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
-    //             });
-
-    //             // Assert
-    //             expect(isUnmounted).toBeTrue();
-    //             expect(consoleErrorSpy).toHaveBeenCalled();
-    //         });
-
-    //         it("when successful, returns response mapped to supplied TRecord", async () => {
-    //             // Arrange
-    //             const expected = Factory.build<StubResourceRecord>(FactoryType.StubResourceRecord);
-
-    //             const sut = ServiceFactory.nestedCreate<
-    //                 StubResourceRecord,
-    //                 StubNestedParams
-    //             >(StubResourceRecord, nestedBaseEndpoint);
-
-    //             mockAxios.postSuccess(expected);
-
-    //             // Act
-    //             const response = await sut(expected, { nestedId: 40 });
-
-    //             // Assert
-    //             expect(response.resultObject).not.toBeNull();
-    //             expect(response.resultObject).toBeInstanceOf(StubResourceRecord);
-    //             expect(response.resultObject!.name).toEqual(expected.name);
-    //         });
-    //     });
-
-    //     // #endregion nestedCreate
-
-    //     // -----------------------------------------------------------------------------------------
-    //     // #region nestedList
-    //     // -----------------------------------------------------------------------------------------
-
-    //     describe("nestedList", () => {
-    //         interface StubListQueryParams {}
-
-    //         itReturnsFunction(ServiceFactory.nestedList, nestedBaseEndpoint);
-
-    //         /**
-    //          * Test ensures service factory in fact causes a react console.error to throw
-    //          * when the react component unmounts before the promise resolves.
-    //          *
-    //          * See ServiceHookFactory.test.tsx for test that verifies cancellation works
-    //          */
-    //         it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
-    //             // Arrange
-    //             const consoleErrorSpy = jest.spyOn(console, "error");
-    //             const sut = ServiceFactory.nestedList<
-    //                 StubResourceRecord,
-    //                 StubNestedParams,
-    //                 StubListQueryParams
-    //             >(StubResourceRecord, nestedBaseEndpoint);
-    //             const expectedResults = Factory.buildList(
-    //                 FactoryType.StubResourceRecord,
-    //                 2
-    //             ) as StubResourceRecord[];
-
-    //             mockAxios.listSuccess(expectedResults, cancellationTestsApiDelay);
-
-    //             let isUnmounted = false;
-
-    //             const NestedListStubComponent = () => {
-    //                 const [records, setRecords] = useState<StubResourceRecord[]>([]);
-
-    //                 useEffect(() => {
-    //                     async function listUsers() {
-    //                         const result = await sut({ nestedId: 20 });
-    //                         setRecords(result.resultObjects!);
-    //                     }
-
-    //                     listUsers();
-
-    //                     return () => {
-    //                         isUnmounted = true;
-    //                     };
-    //                 }, []);
-
-    //                 return <div>{records != null && records.map((u) => u.name!)}</div>;
-    //             };
-
-    //             // Act
-    //             await act(async () => {
-    //                 const { unmount } = render(<NestedListStubComponent />);
-    //                 unmount();
-    //                 await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
-    //             });
-
-    //             // Assert
-    //             expect(isUnmounted).toBeTrue();
-    //             expect(consoleErrorSpy).toHaveBeenCalled();
-    //         });
-
-    //         it("when successful, returns response mapped to supplied TRecord", async () => {
-    //             // Arrange
-    //             const expectedResults = Factory.buildList(
-    //                 FactoryType.StubResourceRecord,
-    //                 2
-    //             ) as StubResourceRecord[];
-
-    //             const sut = ServiceFactory.nestedList<
-    //                 StubResourceRecord,
-    //                 StubNestedParams,
-    //                 StubListQueryParams
-    //             >(StubResourceRecord, nestedBaseEndpoint);
-
-    //             mockAxios.listSuccess(expectedResults);
-
-    //             // Act
-    //             const response = await sut({ nestedId: 40 });
-
-    //             // Assert
-    //             const resultObjects = response.resultObjects;
-    //             expect(resultObjects).not.toBeNull();
-    //             expect(response.rowCount).toEqual(expectedResults.length);
-
-    //             for (let i = 0; i < resultObjects!.length; i++) {
-    //                 const expected = expectedResults[i];
-    //                 const resultObject = resultObjects![i];
-    //                 expect(resultObject).toBeInstanceOf(StubResourceRecord);
-    //                 expect(resultObject.name).toEqual(expected.name);
-    //             }
-    //         });
-    //     });
-
-    //     // #endregion nestedList
-
-    //     // -----------------------------------------------------------------------------------------
-    //     // #region update
-    //     // -----------------------------------------------------------------------------------------
-
-    //     describe("update", () => {
-    //         itReturnsFunction(ServiceFactory.update, baseEndpoint);
-
-    //         /**
-    //          * Test ensures service factory in fact causes a react console.error to throw
-    //          * when the react component unmounts before the promise resolves.
-    //          *
-    //          * See ServiceHookFactory.test.tsx for test that verifies cancellation works
-    //          */
-
-    //         it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
-    //             // Arrange
-    //             const consoleErrorSpy = jest.spyOn(console, "error");
-    //             const sut = ServiceFactory.update(StubResourceRecord, resourceEndpoint);
-    //             const record = Factory.build<StubResourceRecord>(FactoryType.StubResourceRecord, {
-    //                 id: 20,
-    //             });
-
-    //             mockAxios.putSuccess(record, cancellationTestsApiDelay);
-
-    //             let isUnmounted = false;
-
-    //             const UpdateStubComponent = () => {
-    //                 const [stubRecord, setStubRecord] = useState<StubResourceRecord>(null as any);
-
-    //                 useEffect(() => {
-    //                     async function updateUser() {
-    //                         const result = await sut(record);
-    //                         setStubRecord(result.resultObject!);
-    //                     }
-
-    //                     updateUser();
-
-    //                     return () => {
-    //                         isUnmounted = true;
-    //                     };
-    //                 }, []);
-
-    //                 return <div>{user != null && user!.name}</div>;
-    //             };
-
-    //             // Act
-    //             await act(async () => {
-    //                 const { unmount } = render(<UpdateStubComponent />);
-    //                 unmount();
-    //                 await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
-    //             });
-
-    //             // Assert
-    //             expect(isUnmounted).toBeTrue();
-    //             expect(consoleErrorSpy).toHaveBeenCalled();
-    //         });
-
-    //         it("when successful, returns response mapped to supplied TRecord", async () => {
-    //             // Arrange
-    //             const expected = Factory.build<StubResourceRecord>(FactoryType.StubResourceRecord, {
-    //                 id: 20,
-    //             });
-
-    //             const sut = ServiceFactory.update(StubResourceRecord, baseEndpoint);
-    //             mockAxios.putSuccess(expected);
-
-    //             // Act
-    //             const response = await sut(expected);
-
-    //             // Assert
-    //             expect(response.resultObject).not.toBeNull();
-    //             expect(response.resultObject).toBeInstanceOf(StubResourceRecord);
-    //             expect(response.resultObject!.name).toEqual(expected.name);
-    //         });
-    //     });
-
-    //     // #endregion update
+    // -----------------------------------------------------------------------------------------
+    // #region list
+    // -----------------------------------------------------------------------------------------
+
+    describe("list", () => {
+        interface StubListParams {}
+
+        itReturnsFunction(ServiceFactory.list, baseEndpoint);
+
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.list<
+                StubResourceRecord,
+                StubResourceParams
+            >(StubResourceRecord, baseEndpoint);
+            const expectedResults = Factory.buildList(
+                FactoryType.StubResourceRecord,
+                2
+            ) as StubResourceRecord[];
+
+            mockAxios.listSuccess(expectedResults, cancellationTestsApiDelay);
+
+            let isUnmounted = false;
+
+            const ListStubComponent = () => {
+                const [records, setRecords] = useState<StubResourceRecord[]>(
+                    []
+                );
+
+                useEffect(() => {
+                    async function listUsers() {
+                        const result = await sut();
+                        setRecords(result.resultObjects!);
+                    }
+
+                    listUsers();
+
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
+
+                return (
+                    <div>{records != null && records.map((u) => u.name!)}</div>
+                );
+            };
+
+            // Act
+            await act(async () => {
+                const { unmount } = render(<ListStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+            });
+
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expectedResults: StubResourceRecord[] = Factory.buildList(
+                FactoryType.StubResourceRecord,
+                2
+            );
+
+            const sut = ServiceFactory.list<StubResourceRecord, StubListParams>(
+                StubResourceRecord,
+                baseEndpoint
+            );
+            mockAxios.listSuccess(expectedResults);
+
+            // Act
+            const response = await sut();
+
+            // Assert
+            const resultObjects = response.resultObjects;
+            expect(resultObjects).not.toBeNull();
+            expect(response.rowCount).toEqual(expectedResults.length);
+
+            for (let i = 0; i < resultObjects!.length; i++) {
+                const expected = expectedResults[i];
+                const resultObject = resultObjects![i];
+                expect(resultObject).toBeInstanceOf(StubResourceRecord);
+                expect(resultObject.name).toEqual(expected.name);
+            }
+        });
+    });
+
+    // #endregion list
+
+    // -----------------------------------------------------------------------------------------
+    // #region nestedCreate
+    // -----------------------------------------------------------------------------------------
+
+    describe("nestedCreate", () => {
+        itReturnsFunction(ServiceFactory.nestedCreate, nestedBaseEndpoint);
+
+        it("given null, throws error", async () => {
+            expect.assertions(1);
+            try {
+                const sut = ServiceFactory.nestedCreate(
+                    StubResourceRecord,
+                    baseEndpoint
+                );
+
+                await sut(null as any, {}); // <----- passing null
+            } catch (e) {
+                expect(e).toBeInstanceOf(TypeError);
+            }
+        });
+
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.nestedCreate<
+                StubResourceRecord,
+                StubNestedParams
+            >(StubResourceRecord, nestedBaseEndpoint);
+            const record = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
+
+            mockAxios.postSuccess(record, cancellationTestsApiDelay);
+
+            let isUnmounted = false;
+
+            const NestedCreateStubComponent = () => {
+                const [stubRecord, setStubRecord] = useState<
+                    StubResourceRecord
+                >(null as any);
+
+                useEffect(() => {
+                    async function createUser() {
+                        const result = await sut(record, { nestedId: 10 });
+                        setStubRecord(result.resultObject!);
+                    }
+
+                    createUser();
+
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
+
+                return <div>{stubRecord != null && stubRecord!.name}</div>;
+            };
+
+            // Act
+            await act(async () => {
+                const { unmount } = render(<NestedCreateStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+            });
+
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expected = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord
+            );
+
+            const sut = ServiceFactory.nestedCreate<
+                StubResourceRecord,
+                StubNestedParams
+            >(StubResourceRecord, nestedBaseEndpoint);
+
+            mockAxios.postSuccess(expected);
+
+            // Act
+            const response = await sut(expected, { nestedId: 40 });
+
+            // Assert
+            expect(response.resultObject).not.toBeNull();
+            expect(response.resultObject).toBeInstanceOf(StubResourceRecord);
+            expect(response.resultObject!.name).toEqual(expected.name);
+        });
+    });
+
+    // #endregion nestedCreate
+
+    // -----------------------------------------------------------------------------------------
+    // #region nestedList
+    // -----------------------------------------------------------------------------------------
+
+    describe("nestedList", () => {
+        interface StubListQueryParams {}
+
+        itReturnsFunction(ServiceFactory.nestedList, nestedBaseEndpoint);
+
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.nestedList<
+                StubResourceRecord,
+                StubNestedParams,
+                StubListQueryParams
+            >(StubResourceRecord, nestedBaseEndpoint);
+            const expectedResults: StubResourceRecord[] = Factory.buildList(
+                FactoryType.StubResourceRecord,
+                2
+            );
+
+            mockAxios.listSuccess(expectedResults, cancellationTestsApiDelay);
+
+            let isUnmounted = false;
+
+            const NestedListStubComponent = () => {
+                const [records, setRecords] = useState<StubResourceRecord[]>(
+                    []
+                );
+
+                useEffect(() => {
+                    async function listUsers() {
+                        const result = await sut({ nestedId: 20 });
+                        setRecords(result.resultObjects!);
+                    }
+
+                    listUsers();
+
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
+
+                return (
+                    <div>{records != null && records.map((u) => u.name!)}</div>
+                );
+            };
+
+            // Act
+            await act(async () => {
+                const { unmount } = render(<NestedListStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+            });
+
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expectedResults: StubResourceRecord[] = Factory.buildList(
+                FactoryType.StubResourceRecord,
+                2
+            );
+
+            const sut = ServiceFactory.nestedList<
+                StubResourceRecord,
+                StubNestedParams,
+                StubListQueryParams
+            >(StubResourceRecord, nestedBaseEndpoint);
+
+            mockAxios.listSuccess(expectedResults);
+
+            // Act
+            const response = await sut({ nestedId: 40 });
+
+            // Assert
+            const resultObjects = response.resultObjects;
+            expect(resultObjects).not.toBeNull();
+            expect(response.rowCount).toEqual(expectedResults.length);
+
+            for (let i = 0; i < resultObjects!.length; i++) {
+                const expected = expectedResults[i];
+                const resultObject = resultObjects![i];
+                expect(resultObject).toBeInstanceOf(StubResourceRecord);
+                expect(resultObject.name).toEqual(expected.name);
+            }
+        });
+    });
+
+    // #endregion nestedList
+
+    // -----------------------------------------------------------------------------------------
+    // #region update
+    // -----------------------------------------------------------------------------------------
+
+    describe("update", () => {
+        itReturnsFunction(ServiceFactory.update, baseEndpoint);
+
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.update(
+                StubResourceRecord,
+                resourceEndpoint
+            );
+            const record = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
+
+            mockAxios.putSuccess(record, cancellationTestsApiDelay);
+
+            let isUnmounted = false;
+
+            const UpdateStubComponent = () => {
+                const [stubRecord, setStubRecord] = useState<
+                    StubResourceRecord
+                >(null as any);
+
+                useEffect(() => {
+                    async function updateUser() {
+                        const result = await sut(record);
+                        setStubRecord(result.resultObject!);
+                    }
+
+                    updateUser();
+
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
+
+                return <div>{stubRecord != null && stubRecord!.name}</div>;
+            };
+
+            // Act
+            await act(async () => {
+                const { unmount } = render(<UpdateStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+            });
+
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expected = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
+
+            const sut = ServiceFactory.update(StubResourceRecord, baseEndpoint);
+            mockAxios.putSuccess(expected);
+
+            // Act
+            const response = await sut(expected);
+
+            // Assert
+            expect(response.resultObject).not.toBeNull();
+            expect(response.resultObject).toBeInstanceOf(StubResourceRecord);
+            expect(response.resultObject!.name).toEqual(expected.name);
+        });
+    });
+
+    // #endregion update
 });
 
 // #endregion Tests
