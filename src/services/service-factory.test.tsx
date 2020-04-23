@@ -57,6 +57,105 @@ const itReturnsFunction = (func: Function, endpoint: string) => {
 // -----------------------------------------------------------------------------------------
 
 describe("ServiceFactory", () => {
+    // -------------------------------------------------------------------------------------------------
+    // #region bulkUpdate
+    // -------------------------------------------------------------------------------------------------
+
+    describe("bulkUpdate", () => {
+        itReturnsFunction(ServiceFactory.bulkUpdate, baseEndpoint);
+
+        /**
+         * Test ensures service factory in fact causes a react console.error to throw
+         * when the react component unmounts before the promise resolves.
+         *
+         * See ServiceHookFactory.test.tsx for test that verifies cancellation works
+         */
+
+        it("when unmounted before resolution, promise isn't cancelled and error thrown", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
+            const sut = ServiceFactory.bulkUpdate(
+                StubResourceRecord,
+                resourceEndpoint
+            );
+            const record = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
+
+            mockAxios.putSuccess([record], cancellationTestsApiDelay);
+
+            let isUnmounted = false;
+
+            const BulkUpdateStubComponent = () => {
+                const [stubRecords, setStubRecords] = useState<
+                    Array<StubResourceRecord>
+                >([]);
+
+                useEffect(() => {
+                    async function updateStubRecords() {
+                        const result = await sut([record], { id: record.id! });
+                        setStubRecords(result.resultObjects || []);
+                    }
+
+                    updateStubRecords();
+
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
+
+                return (
+                    <div>
+                        {stubRecords != null &&
+                            stubRecords.length > 0 &&
+                            stubRecords[0].name}
+                    </div>
+                );
+            };
+
+            // Act
+            await act(async () => {
+                const { unmount } = render(<BulkUpdateStubComponent />);
+                unmount();
+                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API
+                // promise resolves
+            });
+
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        it("when successful, returns response mapped to supplied TRecord", async () => {
+            // Arrange
+            const expected = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 20,
+                }
+            );
+
+            const sut = ServiceFactory.bulkUpdate(
+                StubResourceRecord,
+                baseEndpoint
+            );
+            mockAxios.putSuccess([expected]);
+
+            // Act
+            const response = await sut([expected], { id: expected.id! });
+
+            // Assert
+            expect(response.resultObjects).not.toBeNull();
+            expect(response.resultObjects).toBeInstanceOf(Array);
+            expect(response.resultObjects![0].name).toEqual(expected.name);
+        });
+    });
+
+    // #endregion bulkUpdate
+
     // -----------------------------------------------------------------------------------------
     // #region create
     // -----------------------------------------------------------------------------------------
@@ -360,12 +459,12 @@ describe("ServiceFactory", () => {
                 );
 
                 useEffect(() => {
-                    async function listUsers() {
+                    async function listStubRecords() {
                         const result = await sut();
                         setRecords(result.resultObjects!);
                     }
 
-                    listUsers();
+                    listStubRecords();
 
                     return () => {
                         isUnmounted = true;
@@ -562,12 +661,12 @@ describe("ServiceFactory", () => {
                 );
 
                 useEffect(() => {
-                    async function listUsers() {
+                    async function listStubRecords() {
                         const result = await sut({ nestedId: 20 });
                         setRecords(result.resultObjects!);
                     }
 
-                    listUsers();
+                    listStubRecords();
 
                     return () => {
                         isUnmounted = true;
