@@ -10,10 +10,5 @@ customGlobal.fetchMock = customGlobal.fetch;
 
 // Run before each individual test across the entire test suite
 beforeEach(() => {
-    jest.resetAllMocks(
-
-
-
-        
-    );
+    jest.resetAllMocks();
 });
