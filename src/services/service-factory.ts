@@ -1,9 +1,7 @@
 import { RouteUtils } from "../utilities/route-utils";
 import { ServiceResponse } from "../interfaces/service-response";
-import axios, { AxiosResponse } from "axios";
-import { Result } from "../interfaces/result";
-import { ResultRecord } from "../view-models/result-record";
-import { PagedResult } from "../interfaces/paged-result";
+import axios from "axios";
+import { ServiceUtils } from "../utilities/service-utils";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -241,7 +239,7 @@ const _bulkUpdate = async function <
             url,
             records.map((r: TRecord) => r.toJS())
         )
-        .then((r) => _mapPagedAxiosResponse(recordType, r));
+        .then((r) => ServiceUtils.mapPagedAxiosResponse(recordType, r));
 };
 
 const _create = async function <TRecord extends any>(
@@ -253,7 +251,7 @@ const _create = async function <TRecord extends any>(
 
     return await axios
         .post(url, requestData)
-        .then((r) => _mapAxiosResponse(recordType, r));
+        .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
 };
 
 const _delete = async function (
@@ -262,7 +260,9 @@ const _delete = async function (
     pathParams?: any
 ) {
     const url = _buildUrl(id, resourceEndpoint, pathParams);
-    return await axios.delete(url).then((r) => _mapAxiosResponse(Boolean, r));
+    return await axios
+        .delete(url)
+        .then((r) => ServiceUtils.mapAxiosResponse(Boolean, r));
 };
 
 const _get = async function <TRecord, TPathParams>(
@@ -271,7 +271,9 @@ const _get = async function <TRecord, TPathParams>(
     pathParams: TPathParams
 ) {
     const url = RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
-    return await axios.get(url).then((r) => _mapAxiosResponse(recordType, r));
+    return await axios
+        .get(url)
+        .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
 };
 
 const _list = async function <TRecord extends any>(
@@ -287,7 +289,7 @@ const _list = async function <TRecord extends any>(
     );
     return await axios
         .get(url)
-        .then((r) => _mapPagedAxiosResponse(recordType, r));
+        .then((r) => ServiceUtils.mapPagedAxiosResponse(recordType, r));
 };
 
 const _update = async function <TRecord extends any, TPathParams extends any>(
@@ -299,69 +301,10 @@ const _update = async function <TRecord extends any, TPathParams extends any>(
     const url = _buildUrl(record.id, resourceEndpoint, pathParams);
     return await axios
         .put(url, record.toJS())
-        .then((r) => _mapAxiosResponse(recordType, r));
+        .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
 };
 
 // #endregion Private Functions
-
-/**
- * Translates axios specific data response to a more generic ServiceResponse
- * type for consumption throughout the system
- */
-const _mapAxiosResponse = function <TRecord>(
-    recordType: { new (props: Partial<TRecord>): TRecord },
-    axiosResponse: AxiosResponse<Result<TRecord>>
-): ServiceResponse<TRecord> {
-    if (axiosResponse == null) {
-        return axiosResponse;
-    }
-
-    // Ensure result data is wrapped within a record
-    let resultObject;
-    if (axiosResponse.data != null && axiosResponse.data.resultObject != null) {
-        resultObject = new recordType(axiosResponse.data.resultObject);
-        axiosResponse.data.resultObject = resultObject;
-    }
-
-    return {
-        result: new ResultRecord<TRecord>(axiosResponse.data),
-        resultObject: resultObject,
-        rowCount: 1,
-        status: axiosResponse.status,
-    };
-};
-
-/**
- * Translates axios specific data responses to a more generic ServiceResponse
- * type for consumption throughout the system
- */
-const _mapPagedAxiosResponse = function <TRecord>(
-    recordType: { new (props: Partial<TRecord>): TRecord },
-    axiosResponse: AxiosResponse<PagedResult<TRecord>>
-): ServiceResponse<TRecord> {
-    if (axiosResponse == null) {
-        return axiosResponse;
-    }
-    const data = axiosResponse.data;
-
-    // Ensure result data is wrapped within records
-    let resultObjects;
-    if (
-        data != null &&
-        data.resultObject != null &&
-        data.resultObject.length > 0
-    ) {
-        resultObjects = data.resultObject.map((r) => new recordType(r));
-        data.resultObject = resultObjects;
-    }
-
-    return {
-        results: new ResultRecord<TRecord[]>(data),
-        resultObjects: resultObjects,
-        rowCount: axiosResponse.data.rowCount,
-        status: axiosResponse.status,
-    };
-};
 
 // -----------------------------------------------------------------------------------------
 // #region Export

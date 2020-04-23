@@ -32,11 +32,6 @@ interface StubResourceParams {
     id: number;
 }
 
-interface StubResource {
-    id: number;
-    name?: string;
-}
-
 // #endregion Stubs
 
 // -----------------------------------------------------------------------------------------

@@ -1,3 +1,4 @@
 import StubResourceRecordFactory from "./stub-resource-record-factory";
+import AxiosResponseFactory from "./axios-response-factory";
 
-export { StubResourceRecordFactory };
+export { AxiosResponseFactory, StubResourceRecordFactory };

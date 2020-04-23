@@ -1,17 +1,16 @@
 import { Factory } from "rosie";
-import { StubResourceRecord } from "../stubs/stub-resource-record";
 import { FactoryType } from "./factory-type";
+import { AxiosResponse } from "axios";
 
 // -----------------------------------------------------------------------------------------
 // #region Factory
 // -----------------------------------------------------------------------------------------
 
-const StubResourceRecordFactory = Factory.define<StubResourceRecord>(
-    FactoryType.StubResourceRecord,
-    StubResourceRecord
+const AxiosResponseFactory = Factory.define<AxiosResponse>(
+    FactoryType.AxiosResponse
 )
-    .sequence("id", (i: number) => i)
-    .sequence("name", (i: number) => `Name ${i}`);
+    .sequence("status", () => 200)
+    .sequence("statusText", () => "OK");
 
 // #endregion Factory
 
@@ -19,6 +18,6 @@ const StubResourceRecordFactory = Factory.define<StubResourceRecord>(
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export default StubResourceRecordFactory;
+export default AxiosResponseFactory;
 
 // #endregion Export

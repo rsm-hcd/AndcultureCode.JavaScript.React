@@ -1,4 +1,5 @@
 enum FactoryType {
+    AxiosResponse = "AxiosResponse",
     StubResourceRecord = "StubResourceRecord",
 }
 
