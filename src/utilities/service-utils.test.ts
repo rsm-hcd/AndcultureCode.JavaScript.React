@@ -32,7 +32,7 @@ describe("ServiceUtils", () => {
             expect(result).toBeNull();
         });
 
-        test("when response.data is undefined, the mapped resultObject is undefined", () => {
+        test("when response.data is undefined, it returns the mapped resultObject as undefined", () => {
             // Arrange
             const axiosResponse = Factory.build<AxiosResponse>(
                 FactoryType.AxiosResponse,
@@ -49,7 +49,7 @@ describe("ServiceUtils", () => {
             expect(result.resultObject).toBeUndefined();
         });
 
-        test("when response.data is null, the mapped resultObject is undefined", () => {
+        test("when response.data is null, it returns the mapped resultObject as undefined", () => {
             // Arrange
             const axiosResponse = Factory.build<AxiosResponse>(
                 FactoryType.AxiosResponse,
@@ -64,6 +64,80 @@ describe("ServiceUtils", () => {
 
             // Assert
             expect(result.resultObject).toBeUndefined();
+        });
+
+        test("when response.data.resultObject is undefined, it returns the mapped resultObject as undefined", () => {
+            // Arrange
+            const axiosResponse = Factory.build<AxiosResponse>(
+                FactoryType.AxiosResponse,
+                {
+                    data: {
+                        resultObject: undefined,
+                    },
+                }
+            );
+
+            // Act
+            const result = ServiceUtils.mapAxiosResponse(
+                StubResourceRecord,
+                axiosResponse
+            );
+
+            // Assert
+            expect(result.resultObject).toBeUndefined();
+        });
+
+        test("when response.data.resultObject is null, it returns the mapped resultObject as undefined", () => {
+            // Arrange
+            const axiosResponse = Factory.build<AxiosResponse>(
+                FactoryType.AxiosResponse,
+                {
+                    data: {
+                        resultObject: null,
+                    },
+                }
+            );
+
+            // Act
+            const result = ServiceUtils.mapAxiosResponse(
+                StubResourceRecord,
+                axiosResponse
+            );
+
+            // Assert
+            expect(result.resultObject).toBeUndefined();
+        });
+
+        test("it returns rowCount as 1", () => {
+            // Arrange
+            const axiosResponse = Factory.build<AxiosResponse>(
+                FactoryType.AxiosResponse
+            );
+
+            // Act
+            const result = ServiceUtils.mapAxiosResponse(
+                StubResourceRecord,
+                axiosResponse
+            );
+
+            // Assert
+            expect(result.rowCount).toBe(1);
+        });
+
+        test("it returns the mapped status from the original response", () => {
+            // Arrange
+            const axiosResponse = Factory.build<AxiosResponse>(
+                FactoryType.AxiosResponse
+            );
+
+            // Act
+            const result = ServiceUtils.mapAxiosResponse(
+                StubResourceRecord,
+                axiosResponse
+            );
+
+            // Assert
+            expect(result.status).toBe(axiosResponse.status);
         });
     });
 
