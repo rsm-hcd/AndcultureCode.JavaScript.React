@@ -22,7 +22,7 @@ const _mapAxiosResponse = <TRecord>(
 
     // Ensure result data is wrapped within a record
     let resultObject;
-    if (axiosResponse.data != null && axiosResponse.data.resultObject != null) {
+    if (axiosResponse.data?.resultObject != null) {
         resultObject = new recordType(axiosResponse.data.resultObject);
         axiosResponse.data.resultObject = resultObject;
     }
@@ -50,11 +50,7 @@ const _mapPagedAxiosResponse = <TRecord>(
 
     // Ensure result data is wrapped within records
     let resultObjects;
-    if (
-        data != null &&
-        data.resultObject != null &&
-        data.resultObject.length > 0
-    ) {
+    if (data?.resultObject?.length != null && data.resultObject.length > 0) {
         resultObjects = data.resultObject.map((r) => new recordType(r));
         data.resultObject = resultObjects;
     }
@@ -62,7 +58,7 @@ const _mapPagedAxiosResponse = <TRecord>(
     return {
         results: new ResultRecord<TRecord[]>(data),
         resultObjects: resultObjects,
-        rowCount: axiosResponse.data.rowCount,
+        rowCount: data?.resultObject?.length ?? 0,
         status: axiosResponse.status,
     };
 };
