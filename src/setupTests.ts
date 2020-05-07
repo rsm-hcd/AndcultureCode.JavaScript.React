@@ -7,3 +7,8 @@ require("./tests/factories");
 const customGlobal: GlobalWithFetchMock = global as GlobalWithFetchMock;
 customGlobal.fetch = require("jest-fetch-mock");
 customGlobal.fetchMock = customGlobal.fetch;
+
+// Run before each individual test across the entire test suite
+beforeEach(() => {
+    jest.resetAllMocks();
+});
