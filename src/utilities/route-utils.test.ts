@@ -6,6 +6,8 @@ import { FactoryType } from "../tests/factories/factory-type";
 import { ResultRecord } from "../view-models/result-record";
 import "jest-extended";
 import { RouteUtils } from "./route-utils";
+import { RouteDefinition } from "../interfaces/route-definition";
+import { RouteUtils } from "../../dist/utilities/route-utils";
 
 describe("RouteUtils", () => {
     // -----------------------------------------------------------------------------------------
@@ -54,4 +56,50 @@ describe("RouteUtils", () => {
     });
 
     // #endregion appendQueryParams
+
+    // -----------------------------------------------------------------------------------------
+    // #region getFlattenedRoutes
+    // -----------------------------------------------------------------------------------------
+
+    describe("getFlattenedRoutes", () => {
+        test("when a route has nested routes, it returns a flattened list", () => {
+            // Arrange
+            const grandChildRoute = Factory.build<RouteDefinition>(
+                FactoryType.RouteDefinition
+            );
+            const childRoute = Factory.build<RouteDefinition>(
+                FactoryType.RouteDefinition,
+                {
+                    routes: { grandChildRoute },
+                }
+            );
+            const parentRoute = Factory.build<RouteDefinition>(
+                FactoryType.RouteDefinition,
+                {
+                    routes: { childRoute },
+                }
+            );
+            const routes = [parentRoute];
+
+            // Act
+            const result = RouteUtils.getFlattenedRoutes(routes);
+
+            // Assert
+            expect(result).toHaveLength(3);
+        });
+
+        test("when routes are already in a flattened state, it returns an equivalent array", () => {
+            // Arrange
+            const routes = Factory.buildList(FactoryType.RouteDefinition, 3);
+
+            // Act
+            const result = RouteUtils.getFlattenedRoutes(routes);
+
+            // Assert
+            expect(result).toHaveLength(routes.length);
+            expect(result).toStrictEqual(routes);
+        });
+    });
+
+    // #endregion getFlattenedRoutes
 });

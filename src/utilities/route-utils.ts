@@ -44,7 +44,7 @@ const debugRoutes = (routes: RouteMap) => {
     });
 };
 
-const getFlattenedRoutes = (routeArray: any[]) => {
+const getFlattenedRoutes = (routeArray: RouteDefinition[]) => {
     const results = [...routeArray];
 
     results.forEach((route: RouteDefinition) => {
