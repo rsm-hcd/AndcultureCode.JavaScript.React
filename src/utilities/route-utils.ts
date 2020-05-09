@@ -30,6 +30,11 @@ const appendQueryParams = (path: string, queryParams: any) => {
 
     const queryString = new URLSearchParams(queryParams).toString();
 
+    // If no query string could be parsed from the given query params, return the unmodified path.
+    if (queryString.length === 0) {
+        return path;
+    }
+
     return `${path}?${queryString}`;
 };
 
@@ -44,7 +49,7 @@ const debugRoutes = (routes: RouteMap) => {
     });
 };
 
-const getFlattenedRoutes = (routeArray: any[]) => {
+const getFlattenedRoutes = (routeArray: RouteDefinition[]) => {
     const results = [...routeArray];
 
     results.forEach((route: RouteDefinition) => {
@@ -119,12 +124,6 @@ const replacePathParams = (path: string, pathParams: any) => {
 };
 
 // #endregion Private Methods
-
-/*
----------------------------------------------------------------------------------------------
-Exports
----------------------------------------------------------------------------------------------
-*/
 
 // -----------------------------------------------------------------------------------------
 // #region Exports
