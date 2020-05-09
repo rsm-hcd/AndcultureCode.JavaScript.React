@@ -14,9 +14,7 @@ const RouteDefinitionFactory = Factory.define<RouteDefinition>(
     .sequence("component", () => React.Fragment)
     .sequence("exact", () => true)
     .sequence("path", (i: number) => `path${i}/`)
-    .sequence("routes", () => {
-        return {};
-    });
+    .sequence("routes", () => {});
 
 const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
     FactoryType.RouteDefinition.Nested
