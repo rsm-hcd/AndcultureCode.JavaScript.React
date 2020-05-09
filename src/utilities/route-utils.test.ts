@@ -188,8 +188,8 @@ describe("RouteUtils", () => {
             // Arrange
             const path = "users/:userId/roles/:id";
             const pathParams = {
-                userId: 1,
                 id: 1,
+                userId: 1,
             };
             const queryParams = {};
 
@@ -248,7 +248,61 @@ describe("RouteUtils", () => {
     // #region replacePathParams
     // -----------------------------------------------------------------------------------------
 
-    describe("replacePathParams", () => {});
+    describe("replacePathParams", () => {
+        test("when path is null, it returns null", () => {
+            // Arrange
+            const path = null;
+            const pathParams = {};
+
+            // Act
+            const result = RouteUtils.replacePathParams(path, pathParams);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        test("when path has a value but pathParams is null, it returns the unmodified path", () => {
+            // Arrange
+            const path = "some/nested/route";
+            const pathParams = null;
+
+            // Act
+            const result = RouteUtils.replacePathParams(path, pathParams);
+
+            // Assert
+            expect(result).toBe(path);
+        });
+
+        test("when a path param is encountered that can't be mapped, it calls console.error", () => {
+            // Arrange
+            const path = "users/:userId/roles/:id";
+            const pathParams = {
+                userId: 1,
+            };
+            const consoleErrorSpy = jest.spyOn(console, "error");
+
+            // Act
+            RouteUtils.replacePathParams(path, pathParams);
+
+            // Assert
+            expect(consoleErrorSpy).toHaveBeenCalled();
+        });
+
+        test("when given path with replaceable params, it returns path with replaced values", () => {
+            // Arrange
+            const path = "users/:userId/roles/:id";
+            const pathParams = {
+                id: 1,
+                userId: 1,
+            };
+
+            // Act
+            const result = RouteUtils.replacePathParams(path, pathParams);
+
+            // Assert
+            expect(result).toBe("users/1/roles/1");
+        });
+    });
 
     // #endregion replacePathParams
 });
