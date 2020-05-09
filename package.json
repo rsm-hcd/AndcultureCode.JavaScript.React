@@ -1,5 +1,5 @@
 {
-    "name": "@brandongregoryscott/andculturecode.javascript.react",
+    "name": "brandongregoryscott.andculturecode.javascript.react",
     "private": false,
     "version": "0.0.1",
     "description": "Common patterns, functions, etc... used when building react applications",
