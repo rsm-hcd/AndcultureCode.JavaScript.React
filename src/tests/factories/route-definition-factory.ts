@@ -39,6 +39,8 @@ const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export { RouteDefinitionFactory, RouteDefinitionNestedFactory };
+// Looks like only one of the factories for a specific type needs to be exported for Rosie to
+// register both of them. Weird.
+export { RouteDefinitionFactory };
 
 // #endregion Export
