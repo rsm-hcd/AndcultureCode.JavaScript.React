@@ -1,9 +1,5 @@
-import { ServiceUtils } from "./service-utils";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
 import { Factory } from "rosie";
-import { AxiosResponse } from "axios";
 import { FactoryType } from "../tests/factories/factory-type";
-import { ResultRecord } from "../view-models/result-record";
 import "jest-extended";
 import { RouteUtils } from "./route-utils";
 import { RouteDefinition } from "../interfaces/route-definition";
@@ -99,7 +95,7 @@ describe("RouteUtils", () => {
     // -----------------------------------------------------------------------------------------
 
     describe("getFlattenedRoutes", () => {
-        test.only("when a route has nested routes, it returns a flattened list", () => {
+        test("when a route has nested routes, it returns a flattened list", () => {
             // Arrange
             const parentRoute = Factory.build<RouteDefinition>(
                 FactoryType.RouteDefinition.Nested
