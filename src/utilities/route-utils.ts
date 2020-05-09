@@ -30,6 +30,11 @@ const appendQueryParams = (path: string, queryParams: any) => {
 
     const queryString = new URLSearchParams(queryParams).toString();
 
+    // If no query string could be parsed from the given query params, return the unmodified path.
+    if (queryString.length === 0) {
+        return path;
+    }
+
     return `${path}?${queryString}`;
 };
 
