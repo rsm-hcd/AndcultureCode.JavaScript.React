@@ -7,7 +7,7 @@ import { ResultRecord } from "../view-models/result-record";
 import "jest-extended";
 import { RouteUtils } from "./route-utils";
 import { RouteDefinition } from "../interfaces/route-definition";
-import { RouteUtils } from "../../dist/utilities/route-utils";
+import { RouteMap } from "../interfaces/route-map";
 
 describe("RouteUtils", () => {
     // -----------------------------------------------------------------------------------------
@@ -58,26 +58,51 @@ describe("RouteUtils", () => {
     // #endregion appendQueryParams
 
     // -----------------------------------------------------------------------------------------
+    // #region debugRoutes
+    // -----------------------------------------------------------------------------------------
+
+    describe("debugRoutes", () => {
+        test("when given a route map with a single route, it calls console.log once", () => {
+            // Arrange
+            const routeMap = Factory.build<RouteMap>(FactoryType.RouteMap);
+            const consoleLogSpy = jest.spyOn(console, "log");
+
+            // Act
+            RouteUtils.debugRoutes(routeMap);
+
+            // Assert
+            expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+        });
+
+        test("when given a route map with multiple routes, it calls console.log at least once", () => {
+            // Arrange
+            const routeMap = Factory.build<RouteMap>(FactoryType.RouteMap, {
+                routes: Factory.build<RouteDefinition>(
+                    FactoryType.RouteDefinition.Nested
+                ),
+            });
+            const consoleLogSpy = jest.spyOn(console, "log");
+
+            // Act
+            RouteUtils.debugRoutes(routeMap);
+
+            // Assert
+            expect(consoleLogSpy).toHaveBeenCalled();
+            expect(consoleLogSpy).not.toHaveBeenCalledTimes(1);
+        });
+    });
+
+    // #endregion debugRoutes
+
+    // -----------------------------------------------------------------------------------------
     // #region getFlattenedRoutes
     // -----------------------------------------------------------------------------------------
 
     describe("getFlattenedRoutes", () => {
-        test("when a route has nested routes, it returns a flattened list", () => {
+        test.only("when a route has nested routes, it returns a flattened list", () => {
             // Arrange
-            const grandChildRoute = Factory.build<RouteDefinition>(
-                FactoryType.RouteDefinition
-            );
-            const childRoute = Factory.build<RouteDefinition>(
-                FactoryType.RouteDefinition,
-                {
-                    routes: { grandChildRoute },
-                }
-            );
             const parentRoute = Factory.build<RouteDefinition>(
-                FactoryType.RouteDefinition,
-                {
-                    routes: { childRoute },
-                }
+                FactoryType.RouteDefinition.Nested
             );
             const routes = [parentRoute];
 
@@ -85,12 +110,15 @@ describe("RouteUtils", () => {
             const result = RouteUtils.getFlattenedRoutes(routes);
 
             // Assert
-            expect(result).toHaveLength(3);
+            expect(result).toHaveLength(2);
         });
 
         test("when routes are already in a flattened state, it returns an equivalent array", () => {
             // Arrange
-            const routes = Factory.buildList(FactoryType.RouteDefinition, 3);
+            const routes = Factory.buildList(
+                FactoryType.RouteDefinition.Default,
+                3
+            );
 
             // Act
             const result = RouteUtils.getFlattenedRoutes(routes);

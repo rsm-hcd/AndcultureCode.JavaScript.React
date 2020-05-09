@@ -8,13 +8,30 @@ import React from "react";
 // -----------------------------------------------------------------------------------------
 
 const RouteDefinitionFactory = Factory.define<RouteDefinition>(
-    FactoryType.RouteDefinition
+    FactoryType.RouteDefinition.Default
 )
     .sequence("authRequired", () => false)
     .sequence("component", () => React.Fragment)
     .sequence("exact", () => true)
     .sequence("path", (i: number) => `path${i}/`)
-    .sequence("routes", () => {});
+    .sequence("routes", () => {
+        return {};
+    });
+
+const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
+    FactoryType.RouteDefinition.Nested
+)
+    .sequence("authRequired", () => false)
+    .sequence("component", () => React.Fragment)
+    .sequence("exact", () => true)
+    .sequence("path", (i: number) => `path${i}/`)
+    .sequence("routes", () => {
+        return {
+            nestedRoute: Factory.build<RouteDefinition>(
+                FactoryType.RouteDefinition.Default
+            ),
+        };
+    });
 
 // #endregion Factory
 
@@ -22,6 +39,6 @@ const RouteDefinitionFactory = Factory.define<RouteDefinition>(
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export default RouteDefinitionFactory;
+export { RouteDefinitionFactory, RouteDefinitionNestedFactory };
 
 // #endregion Export

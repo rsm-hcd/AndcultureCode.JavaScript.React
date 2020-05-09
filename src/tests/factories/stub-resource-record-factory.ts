@@ -19,6 +19,6 @@ const StubResourceRecordFactory = Factory.define<StubResourceRecord>(
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export default StubResourceRecordFactory;
+export { StubResourceRecordFactory };
 
 // #endregion Export

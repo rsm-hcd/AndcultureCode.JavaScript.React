@@ -1,16 +1,17 @@
 import { Factory } from "rosie";
 import { FactoryType } from "./factory-type";
-import { AxiosResponse } from "axios";
+import { RouteMap } from "../../interfaces/route-map";
+import { RouteDefinition } from "../../interfaces/route-definition";
 
 // -----------------------------------------------------------------------------------------
 // #region Factory
 // -----------------------------------------------------------------------------------------
 
-const AxiosResponseFactory = Factory.define<AxiosResponse>(
-    FactoryType.AxiosResponse
-)
-    .sequence("status", () => 200)
-    .sequence("statusText", () => "OK");
+const RouteMapFactory = Factory.define<RouteMap>(
+    FactoryType.RouteMap
+).sequence("/", () =>
+    Factory.build<RouteDefinition>(FactoryType.RouteDefinition.Default)
+);
 
 // #endregion Factory
 
@@ -18,6 +19,6 @@ const AxiosResponseFactory = Factory.define<AxiosResponse>(
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export { AxiosResponseFactory };
+export { RouteMapFactory };
 
 // #endregion Export

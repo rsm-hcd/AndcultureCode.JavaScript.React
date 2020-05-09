@@ -1,7 +1,11 @@
-enum FactoryType {
-    AxiosResponse = "AxiosResponse",
-    RouteDefinition = "RouteDefinition",
-    StubResourceRecord = "StubResourceRecord",
-}
+const FactoryType = {
+    AxiosResponse: "AxiosResponse",
+    RouteDefinition: {
+        Default: "RouteDefinition",
+        Nested: "RouteDefinition.Nested",
+    },
+    RouteMap: "RouteMap",
+    StubResourceRecord: "StubResourceRecord",
+};
 
 export { FactoryType };
