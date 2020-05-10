@@ -12,20 +12,33 @@ import { CoreUtils } from "./utilities/core-utils";
 import { RouteUtils } from "./utilities/route-utils";
 import { ResultErrorRecord } from "./view-models/result-error-record";
 import { ResultRecord } from "./view-models/result-record";
+import { NestedRoute } from "./components/routing/nested-route";
+import { AuthenticatedRoute } from "./components/routing/authenticated-route";
+import { NestedRoutes } from "./components/routing/nested-routes";
+import { NestedRoutesByProperty } from "./components/routing/nested-routes-by-property";
+import { Redirects } from "./components/routing/redirects";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 export {
-    ErrorType,
-    RedirectDefinition,
-    ResultError,
-    Result,
-    RouteDefinition,
-    RouteMap,
-    ServiceResponse,
-    PagedResult,
-    ServiceFactory,
+    AuthenticatedRoute,
     CollectionUtils,
     CoreUtils,
-    RouteUtils,
+    ErrorType,
+    NestedRoute,
+    NestedRoutes,
+    NestedRoutesByProperty,
+    PagedResult,
+    RedirectDefinition,
+    Redirects,
+    Result,
+    ResultError,
     ResultErrorRecord,
     ResultRecord,
+    RouteDefinition,
+    RouteMap,
+    Router,
+    RouteUtils,
+    ServiceFactory,
+    ServiceResponse,
+    Switch,
 };
