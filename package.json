@@ -9,8 +9,9 @@
         "dist"
     ],
     "scripts": {
-        "build": "tsc",
         "clean": "rm -rf dist",
+        "build": "tsc",
+        "watch": "tsc -w",
         "test": "jest"
     },
     "repository": {
