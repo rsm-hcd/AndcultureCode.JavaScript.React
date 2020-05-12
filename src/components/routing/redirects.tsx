@@ -25,12 +25,8 @@ const Redirects = (props: RedirectsProps) => {
     // TODO: Remove Fragment when issue fixed https://github.com/microsoft/TypeScript/issues/21699
     return (
         <React.Fragment>
-            {redirects.map((redirect: RedirectDefinition) => (
-                <Redirect
-                    key={redirect.from}
-                    from={redirect.from}
-                    to={redirect.to}
-                />
+            {redirects.map((redirect: RedirectDefinition, i: number) => (
+                <Redirect key={i} from={redirect.from} to={redirect.to} />
             ))}
         </React.Fragment>
     );

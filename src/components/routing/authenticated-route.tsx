@@ -6,21 +6,48 @@ import { RouteDefinition } from "../../interfaces/route-definition";
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-interface AuthenticatedRouteProps extends RouteComponentProps<any> {
+interface AuthenticatedRouteProps {
+    /**
+     * Flag to determine whether the current user is authenticated or not.
+     *
+     * @type {boolean}
+     * @memberof AuthenticatedRouteProps
+     */
+    isAuthenticated: boolean;
+
+    /**
+     * Route to redirect to if the current user is not authenticated.
+     *
+     * @type {string}
+     * @memberof UnauthenticatedRedirectProps
+     */
     redirectToIfUnauthenticated?: string;
+}
+
+interface AuthenticatedRouteComponentProps
+    extends RouteComponentProps<any>,
+        AuthenticatedRouteProps {
     route: RouteDefinition;
     render: (props: any) => any;
 }
 
 // #endregion Interfaces
 
-const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = (
-    props: AuthenticatedRouteProps
+const AuthenticatedRoute: React.FC<AuthenticatedRouteComponentProps> = (
+    props: AuthenticatedRouteComponentProps
 ) => {
-    const { redirectToIfUnauthenticated, render } = props;
-    const isAuthenticated = true;
+    const {
+        isAuthenticated,
+        redirectToIfUnauthenticated,
+        render,
+        route,
+    } = props;
 
     const renderIfAuthenticated = (props: any): any => {
+        if (isAuthenticated || !route.authRequired) {
+            return render(props);
+        }
+
         if (!isAuthenticated && redirectToIfUnauthenticated != null) {
             return (
                 <Redirect
@@ -42,6 +69,10 @@ const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = (
 // #region Exports
 // -----------------------------------------------------------------------------------------
 
-export { AuthenticatedRoute, AuthenticatedRouteProps };
+export {
+    AuthenticatedRoute,
+    AuthenticatedRouteComponentProps,
+    AuthenticatedRouteProps,
+};
 
 // #endregion Exports

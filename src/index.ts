@@ -17,7 +17,7 @@ import { AuthenticatedRoute } from "./components/routing/authenticated-route";
 import { NestedRoutes } from "./components/routing/nested-routes";
 import { NestedRoutesByProperty } from "./components/routing/nested-routes-by-property";
 import { Redirects } from "./components/routing/redirects";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export {
     AuthenticatedRoute,
@@ -34,6 +34,7 @@ export {
     ResultError,
     ResultErrorRecord,
     ResultRecord,
+    Route,
     RouteDefinition,
     RouteMap,
     Router,
