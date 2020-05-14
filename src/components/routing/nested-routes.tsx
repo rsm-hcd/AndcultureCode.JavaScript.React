@@ -60,6 +60,6 @@ const NestedRoutes = (props: NestedRoutesProps) => {
 // #region Exports
 // -----------------------------------------------------------------------------------------
 
-export { NestedRoutes, NestedRoutesProps, RouteNotFoundProps };
+export { NestedRoutes, NestedRoutesProps };
 
 // #endregion Exports
