@@ -2,14 +2,14 @@ import React from "react";
 import { RouteDefinition } from "../../interfaces/route-definition";
 import { CoreUtils } from "../../utilities/core-utils";
 import { Route } from "react-router-dom";
-import { AuthenticatedRoute } from "./authenticated-route";
-import { AuthenticatedRouteProps } from "../../interfaces/authorized-route-props";
+import { AuthenticatedRoute as AuthenticatedRouteComponent } from "./authenticated-route";
+import { AuthenticatedRoute } from "../../interfaces/authenticated-route";
 
 // -----------------------------------------------------------------------------------------
 // #region NestedRouteProps
 // -----------------------------------------------------------------------------------------
 
-interface NestedRouteProps extends AuthenticatedRouteProps {
+interface NestedRouteProps extends AuthenticatedRoute {
     route: RouteDefinition;
 }
 
@@ -25,7 +25,9 @@ interface NestedRouteProps extends AuthenticatedRouteProps {
  */
 export const NestedRoute = (props: NestedRouteProps) => {
     const { isAuthenticated, redirectToIfUnauthenticated, route } = props;
-    const RouteComponent: any = route.authRequired ? AuthenticatedRoute : Route;
+    const RouteComponent: any = route.authRequired
+        ? AuthenticatedRouteComponent
+        : Route;
     const childRoutes = CoreUtils.objectToArray(route.routes);
 
     return (

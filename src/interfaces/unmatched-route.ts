@@ -2,7 +2,7 @@
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-interface RouteNotFoundProps {
+interface UnmatchedRoute {
     /**
      * Route to redirect to if the specified route cannot be matched.
      *
@@ -18,6 +18,6 @@ interface RouteNotFoundProps {
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export { RouteNotFoundProps };
+export { UnmatchedRoute };
 
 // #endregion Export

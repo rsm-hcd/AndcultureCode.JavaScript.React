@@ -2,7 +2,7 @@
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-interface AuthenticatedRouteProps {
+interface AuthenticatedRoute {
     /**
      * Flag to determine whether the current user is authenticated or not.
      *
@@ -26,6 +26,6 @@ interface AuthenticatedRouteProps {
 // #region Export
 // -----------------------------------------------------------------------------------------
 
-export { AuthenticatedRouteProps };
+export { AuthenticatedRoute };
 
 // #endregion Export

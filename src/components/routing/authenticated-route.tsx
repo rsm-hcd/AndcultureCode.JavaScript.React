@@ -1,23 +1,23 @@
 import React from "react";
 import { Redirect, Route, RouteComponentProps } from "react-router-dom";
 import { RouteDefinition } from "../../interfaces/route-definition";
-import { AuthenticatedRouteProps } from "../../interfaces/authorized-route-props";
+import { AuthenticatedRoute } from "../../interfaces/authenticated-route";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-interface AuthenticatedRouteComponentProps
+interface AuthenticatedRouteProps
     extends RouteComponentProps<any>,
-        AuthenticatedRouteProps {
+        AuthenticatedRoute {
     route: RouteDefinition;
     render: (props: any) => any;
 }
 
 // #endregion Interfaces
 
-const AuthenticatedRoute: React.FC<AuthenticatedRouteComponentProps> = (
-    props: AuthenticatedRouteComponentProps
+const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = (
+    props: AuthenticatedRouteProps
 ) => {
     const {
         isAuthenticated,
@@ -52,6 +52,6 @@ const AuthenticatedRoute: React.FC<AuthenticatedRouteComponentProps> = (
 // #region Exports
 // -----------------------------------------------------------------------------------------
 
-export { AuthenticatedRoute, AuthenticatedRouteComponentProps };
+export { AuthenticatedRoute, AuthenticatedRouteProps };
 
 // #endregion Exports
