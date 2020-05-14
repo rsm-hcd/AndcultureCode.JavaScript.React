@@ -8,6 +8,9 @@ import { Route } from "react-router-dom";
 // -----------------------------------------------------------------------------------------
 
 interface NestedRoutesByPropertyProps {
+    // TODO: BScott - this may need to be generic, something like:
+    // NestedRoutesByPropertyProps<T extends RouteDefinition>
+    // propertyName: keyof T;
     propertyName: keyof RouteDefinition;
     routes: RouteDefinition[];
 }
@@ -40,10 +43,10 @@ const NestedRoutesByProperty = (props: NestedRoutesByPropertyProps) => {
 
                 return (
                     <Route
+                        component={component}
+                        exact={route.exact}
                         key={i}
                         path={route.path}
-                        exact={route.exact}
-                        component={component}
                     />
                 );
             })}

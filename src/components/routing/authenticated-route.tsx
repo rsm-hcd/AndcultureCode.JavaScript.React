@@ -1,28 +1,11 @@
 import React from "react";
 import { Redirect, Route, RouteComponentProps } from "react-router-dom";
 import { RouteDefinition } from "../../interfaces/route-definition";
+import { AuthenticatedRouteProps } from "../../interfaces/authorized-route-props";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
-
-interface AuthenticatedRouteProps {
-    /**
-     * Flag to determine whether the current user is authenticated or not.
-     *
-     * @type {boolean}
-     * @memberof AuthenticatedRouteProps
-     */
-    isAuthenticated: boolean;
-
-    /**
-     * Route to redirect to if the current user is not authenticated.
-     *
-     * @type {string}
-     * @memberof UnauthenticatedRedirectProps
-     */
-    redirectToIfUnauthenticated?: string;
-}
 
 interface AuthenticatedRouteComponentProps
     extends RouteComponentProps<any>,
@@ -69,10 +52,6 @@ const AuthenticatedRoute: React.FC<AuthenticatedRouteComponentProps> = (
 // #region Exports
 // -----------------------------------------------------------------------------------------
 
-export {
-    AuthenticatedRoute,
-    AuthenticatedRouteComponentProps,
-    AuthenticatedRouteProps,
-};
+export { AuthenticatedRoute, AuthenticatedRouteComponentProps };
 
 // #endregion Exports

@@ -2,10 +2,8 @@ import React from "react";
 import { RouteDefinition } from "../../interfaces/route-definition";
 import { CoreUtils } from "../../utilities/core-utils";
 import { Route } from "react-router-dom";
-import {
-    AuthenticatedRoute,
-    AuthenticatedRouteProps,
-} from "./authenticated-route";
+import { AuthenticatedRoute } from "./authenticated-route";
+import { AuthenticatedRouteProps } from "../../interfaces/authorized-route-props";
 
 // -----------------------------------------------------------------------------------------
 // #region NestedRouteProps

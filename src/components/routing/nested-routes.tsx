@@ -3,7 +3,8 @@ import { NestedRoute } from "./nested-route";
 import { Redirect } from "react-router-dom";
 import React from "react";
 import { RouteDefinition } from "../../interfaces/route-definition";
-import { AuthenticatedRouteProps } from "./authenticated-route";
+import { RouteNotFoundProps } from "../../interfaces/route-not-found-props";
+import { AuthenticatedRouteProps } from "../../interfaces/authorized-route-props";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
@@ -13,16 +14,6 @@ interface NestedRoutesProps
     extends RouteNotFoundProps,
         AuthenticatedRouteProps {
     routes: RouteDefinition[];
-}
-
-interface RouteNotFoundProps {
-    /**
-     * Route to redirect to if the specified route cannot be matched.
-     *
-     * @type {string}
-     * @memberof NotFoundRedirectProps
-     */
-    redirectToIfNotFound?: string;
 }
 
 // #endregion Interfaces
