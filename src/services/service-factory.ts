@@ -11,7 +11,7 @@ import { ServiceUtils } from "../utilities/service-utils";
  * Type defining the service function for bulk updating the supplied resource type
  */
 export type BulkUpdateService<TRecord, TPathParams> = (
-    records: Array<TRecord>,
+    records: TRecord[],
     pathParams: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
 
@@ -28,7 +28,7 @@ export type CreateService<TRecord> = (
 export type DeleteService = (
     id: number,
     pathParams?: any
-) => Promise<ServiceResponse<Boolean>>;
+) => Promise<ServiceResponse<boolean>>;
 
 /**
  * Type defining the service function for getting the supplied resource type
@@ -87,7 +87,7 @@ const ServiceFactory = {
         recordType: { new (): TRecord },
         resourceEndpoint: string
     ): BulkUpdateService<TRecord, TPathParams> {
-        return async (records: Array<TRecord>, pathParams?: any) =>
+        return async (records: TRecord[], pathParams?: any) =>
             await _bulkUpdate<TRecord, TPathParams>(
                 recordType,
                 records,
@@ -229,13 +229,16 @@ const _bulkUpdate = async function<
     TPathParams extends any
 >(
     recordType: { new (): TRecord },
-    records: Array<TRecord>,
+    records: TRecord[],
     resourceEndpoint: string,
     pathParams: TPathParams
 ) {
     const url = _buildUrl(pathParams.id, resourceEndpoint, pathParams);
     return await axios
-        .put(url, records.map((r: TRecord) => r.toJS()))
+        .put(
+            url,
+            records.map((r: TRecord) => r.toJS())
+        )
         .then((r) => ServiceUtils.mapPagedAxiosResponse(recordType, r));
 };
 
