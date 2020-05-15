@@ -13,7 +13,7 @@ describe("RouteUtils", () => {
     describe("appendQueryParams", () => {
         test("when path is null, it returns an empty string", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const queryParams = {};
 
             // Act
@@ -226,7 +226,7 @@ describe("RouteUtils", () => {
 
         test("when given a null path, it returns null", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const pathParams = {};
             const queryParams = {};
 
@@ -251,7 +251,7 @@ describe("RouteUtils", () => {
     describe("replacePathParams", () => {
         test("when path is null, it returns null", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const pathParams = {};
 
             // Act

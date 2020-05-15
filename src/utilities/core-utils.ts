@@ -1,4 +1,4 @@
-import { CollectionUtils } from "../utilities/collection-utils";
+import { CollectionUtils } from "./collection-utils";
 
 // -----------------------------------------------------------------------------------------
 // #region Private Methods

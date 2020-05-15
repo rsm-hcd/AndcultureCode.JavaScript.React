@@ -1,6 +1,6 @@
 import { CollectionUtils } from "../utilities/collection-utils";
 import { Record } from "immutable";
-import { ResultErrorRecord } from "../view-models/result-error-record";
+import { ResultErrorRecord } from "./result-error-record";
 import { Result } from "../interfaces/result";
 import { ErrorType } from "../enumerations/error-type";
 

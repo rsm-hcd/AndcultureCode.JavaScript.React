@@ -16,7 +16,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapAxiosResponse(
                 StubResourceRecord,
-                undefined
+                undefined!
             );
 
             // Assert
@@ -27,7 +27,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapAxiosResponse(
                 StubResourceRecord,
-                null
+                null!
             );
 
             // Assert
@@ -170,7 +170,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapPagedAxiosResponse(
                 StubResourceRecord,
-                undefined
+                undefined!
             );
 
             // Assert
@@ -181,7 +181,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapPagedAxiosResponse(
                 StubResourceRecord,
-                null
+                null!
             );
 
             // Assert

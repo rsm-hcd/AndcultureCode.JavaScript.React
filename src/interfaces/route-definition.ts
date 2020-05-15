@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteMap } from "../interfaces/route-map";
+import { RouteMap } from "./route-map";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

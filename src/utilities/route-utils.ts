@@ -1,4 +1,4 @@
-import { CoreUtils } from "../utilities/core-utils";
+import { CoreUtils } from "./core-utils";
 import { RouteDefinition } from "../interfaces/route-definition";
 import { RouteMap } from "../interfaces/route-map";
 

@@ -1,51 +1,68 @@
-import { ErrorType } from "./enumerations/error-type";
-import { RedirectDefinition } from "./interfaces/redirect-definition";
-import { ResultError } from "./interfaces/result-error";
-import { Result } from "./interfaces/result";
-import { RouteDefinition } from "./interfaces/route-definition";
-import { RouteMap } from "./interfaces/route-map";
-import { ServiceResponse } from "./interfaces/service-response";
-import { PagedResult } from "./interfaces/paged-result";
-import { ServiceFactory } from "./services/service-factory";
-import { CollectionUtils } from "./utilities/collection-utils";
-import { CoreUtils } from "./utilities/core-utils";
-import { RouteUtils } from "./utilities/route-utils";
-import { ResultErrorRecord } from "./view-models/result-error-record";
-import { ResultRecord } from "./view-models/result-record";
-import { NestedRoute } from "./components/routing/nested-route";
-import { AuthenticatedRoute } from "./components/routing/authenticated-route";
-import { NestedRoutes } from "./components/routing/nested-routes";
-import { NestedRoutesByProperty } from "./components/routing/nested-routes-by-property";
-import { Redirects } from "./components/routing/redirects";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-} from "react-router-dom";
+// -----------------------------------------------------------------------------------------
+// #region Components
+// -----------------------------------------------------------------------------------------
 
-export {
-    AuthenticatedRoute,
-    CollectionUtils,
-    CoreUtils,
-    ErrorType,
-    NestedRoute,
-    NestedRoutes,
-    NestedRoutesByProperty,
-    PagedResult,
-    Redirect,
-    RedirectDefinition,
-    Redirects,
-    Result,
-    ResultError,
-    ResultErrorRecord,
-    ResultRecord,
-    Route,
-    RouteDefinition,
-    RouteMap,
-    Router,
-    RouteUtils,
-    ServiceFactory,
-    ServiceResponse,
-    Switch,
-};
+export * from "./components/routing/authenticated-route";
+export * from "./components/routing/nested-route";
+export * from "./components/routing/nested-routes";
+export * from "./components/routing/nested-routes-by-property";
+export * from "./components/routing/redirects";
+
+//#endregion Components
+
+// -----------------------------------------------------------------------------------------
+// #region Enumeratinos
+// -----------------------------------------------------------------------------------------
+
+export * from "./enumerations/error-type";
+
+//#endregion Enumerations
+
+// -----------------------------------------------------------------------------------------
+// #region Interfaces
+// -----------------------------------------------------------------------------------------
+
+export * from "./interfaces/paged-result";
+export * from "./interfaces/redirect-definition";
+export * from "./interfaces/result-error";
+export * from "./interfaces/result";
+export * from "./interfaces/route-definition";
+export * from "./interfaces/route-map";
+export * from "./interfaces/service-response";
+
+//#endregion Interfaces
+
+// -----------------------------------------------------------------------------------------
+// #region Services
+// -----------------------------------------------------------------------------------------
+
+export * from "./services/service-factory";
+
+//#endregion Services
+
+// -----------------------------------------------------------------------------------------
+// #region Utilities
+// -----------------------------------------------------------------------------------------
+
+export * from "./utilities/collection-utils";
+export * from "./utilities/core-utils";
+export * from "./utilities/route-utils";
+
+//#endregion Utilities
+
+// -----------------------------------------------------------------------------------------
+// #region Vendor
+// -----------------------------------------------------------------------------------------
+
+export * from "react-router-dom";
+
+//#endregion Vendor
+
+// -----------------------------------------------------------------------------------------
+// #region ViewModels
+// -----------------------------------------------------------------------------------------
+
+export * from "./view-models/result-error-record";
+export * from "./view-models/result-record";
+
+//#endregion ViewModels
