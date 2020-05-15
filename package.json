@@ -5,7 +5,7 @@
         "url": "https://www.andculture.com"
     },
     "bugs": {
-        "url": "https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React/issues"
+        "url": "https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/issues"
     },
     "dependencies": {
         "axios": "0.19.2",
@@ -38,7 +38,7 @@
     "files": [
         "dist"
     ],
-    "homepage": "https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React#readme",
+    "homepage": "https://github.com/AndcultureCode/AndcultureCode.JavaScript.React#readme",
     "license": "ISC",
     "jest": {
         "preset": "ts-jest"
@@ -52,7 +52,7 @@
     "name": "andculturecode-javascript-react",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/brandongregoryscott/AndcultureCode.JavaScript.React.git"
+        "url": "git+https://github.com/AndcultureCode/AndcultureCode.JavaScript.React.git"
     },
     "scripts": {
         "build": "tsc --pretty",
