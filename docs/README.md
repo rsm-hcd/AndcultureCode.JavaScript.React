@@ -109,7 +109,7 @@
 
 Ƭ **AxiosJestMock**: *Mock‹Promise‹object›, []›*
 
-*Defined in [src/tests/mocks/mock-axios.ts:12](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L12)*
+*Defined in [src/tests/mocks/mock-axios.ts:12](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L12)*
 
 MockAxios is merely a typed wrapper around the dynamically
 mocked __mocks__/axios implementation.
@@ -120,19 +120,19 @@ ___
 
 Ƭ **BulkUpdateService**: *function*
 
-*Defined in [src/services/service-factory.ts:13](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L13)*
+*Defined in [src/services/service-factory.ts:13](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L13)*
 
 Type defining the service function for bulk updating the supplied resource type
 
 #### Type declaration:
 
-▸ (`records`: Array‹TRecord›, `pathParams`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
+▸ (`records`: TRecord[], `pathParams`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`records` | Array‹TRecord› |
+`records` | TRecord[] |
 `pathParams` | TPathParams |
 
 ___
@@ -141,7 +141,7 @@ ___
 
 Ƭ **CreateService**: *function*
 
-*Defined in [src/services/service-factory.ts:21](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L21)*
+*Defined in [src/services/service-factory.ts:21](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L21)*
 
 Type defining the service function for creating the supplied resource type
 
@@ -161,7 +161,7 @@ ___
 
 Ƭ **DeleteService**: *function*
 
-*Defined in [src/services/service-factory.ts:28](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L28)*
+*Defined in [src/services/service-factory.ts:28](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L28)*
 
 Type defining the service function for deleting the supplied resource
 
@@ -182,7 +182,7 @@ ___
 
 Ƭ **GetService**: *function*
 
-*Defined in [src/services/service-factory.ts:36](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L36)*
+*Defined in [src/services/service-factory.ts:36](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L36)*
 
 Type defining the service function for getting the supplied resource type
 
@@ -202,7 +202,7 @@ ___
 
 Ƭ **ListService**: *function*
 
-*Defined in [src/services/service-factory.ts:43](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L43)*
+*Defined in [src/services/service-factory.ts:43](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L43)*
 
 Type defining the service function for listing resources by supplied type
 
@@ -222,7 +222,7 @@ ___
 
 Ƭ **NestedCreateService**: *function*
 
-*Defined in [src/services/service-factory.ts:50](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L50)*
+*Defined in [src/services/service-factory.ts:50](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L50)*
 
 Type defining the service function for creating the supplied resource type when resource is nested
 
@@ -243,7 +243,7 @@ ___
 
 Ƭ **NestedListService**: *function*
 
-*Defined in [src/services/service-factory.ts:58](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L58)*
+*Defined in [src/services/service-factory.ts:58](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L58)*
 
 Type defining the service function for listing resources by supplied type when resource is nested
 
@@ -264,7 +264,7 @@ ___
 
 Ƭ **UpdateService**: *function*
 
-*Defined in [src/services/service-factory.ts:66](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L66)*
+*Defined in [src/services/service-factory.ts:66](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L66)*
 
 Type defining the service function for updating the supplied resource type
 
@@ -289,7 +289,7 @@ Name | Type |
     .sequence("status", () => 200)
     .sequence("statusText", () => "OK")
 
-*Defined in [src/tests/factories/axios-response-factory.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/axios-response-factory.ts#L9)*
+*Defined in [src/tests/factories/axios-response-factory.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/axios-response-factory.ts#L9)*
 
 ___
 
@@ -304,7 +304,7 @@ ___
     .sequence("path", (i: number) => `path${i}/`)
     .sequence("routes", () => {})
 
-*Defined in [src/tests/factories/route-definition-factory.ts:10](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/route-definition-factory.ts#L10)*
+*Defined in [src/tests/factories/route-definition-factory.ts:10](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/route-definition-factory.ts#L10)*
 
 ___
 
@@ -325,18 +325,19 @@ ___
         };
     })
 
-*Defined in [src/tests/factories/route-definition-factory.ts:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/route-definition-factory.ts#L19)*
+*Defined in [src/tests/factories/route-definition-factory.ts:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/route-definition-factory.ts#L19)*
 
 ___
 
 ### `Const` RouteMapFactory
 
-• **RouteMapFactory**: *IFactory‹[RouteMap](interfaces/routemap.md)›* = Factory.define<RouteMap>(FactoryType.RouteMap).sequence(
-    "/",
-    () => Factory.build<RouteDefinition>(FactoryType.RouteDefinition.Default)
+• **RouteMapFactory**: *IFactory‹[RouteMap](interfaces/routemap.md)›* = Factory.define<RouteMap>(
+    FactoryType.RouteMap
+).sequence("/", () =>
+    Factory.build<RouteDefinition>(FactoryType.RouteDefinition.Default)
 )
 
-*Defined in [src/tests/factories/route-map-factory.ts:10](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/route-map-factory.ts#L10)*
+*Defined in [src/tests/factories/route-map-factory.ts:10](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/route-map-factory.ts#L10)*
 
 ___
 
@@ -349,7 +350,7 @@ ___
     .sequence("id", (i: number) => i)
     .sequence("name", (i: number) => `Name ${i}`)
 
-*Defined in [src/tests/factories/stub-resource-record-factory.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/stub-resource-record-factory.ts#L9)*
+*Defined in [src/tests/factories/stub-resource-record-factory.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/stub-resource-record-factory.ts#L9)*
 
 ___
 
@@ -357,7 +358,7 @@ ___
 
 • **_routeParamRegEx**: *RegExp‹›* = /(:[a-z_-]*)/gi
 
-*Defined in [src/utilities/route-utils.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L9)*
+*Defined in [src/utilities/route-utils.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L9)*
 
 ## Functions
 
@@ -365,7 +366,7 @@ ___
 
 ▸ **AuthenticatedRoute**(`props`: [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md)): *Element‹›*
 
-*Defined in [src/components/routing/authenticated-route.tsx:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/components/routing/authenticated-route.tsx#L19)*
+*Defined in [src/components/routing/authenticated-route.tsx:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/components/routing/authenticated-route.tsx#L19)*
 
 **Parameters:**
 
@@ -381,7 +382,7 @@ ___
 
 ▸ **NestedRoute**(`props`: [NestedRouteProps](interfaces/nestedrouteprops.md)): *Element‹›*
 
-*Defined in [src/components/routing/nested-route.tsx:26](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/components/routing/nested-route.tsx#L26)*
+*Defined in [src/components/routing/nested-route.tsx:26](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/components/routing/nested-route.tsx#L26)*
 
 Dynamically renders a route and its subroutes, accounting
 for additional custom properties on RouteDefinition
@@ -400,7 +401,7 @@ ___
 
 ▸ **NestedRoutes**(`props`: [NestedRoutesProps](interfaces/nestedroutesprops.md)): *null | Element‹›*
 
-*Defined in [src/components/routing/nested-routes.tsx:27](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/components/routing/nested-routes.tsx#L27)*
+*Defined in [src/components/routing/nested-routes.tsx:27](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/components/routing/nested-routes.tsx#L27)*
 
 Component to easily render nested sub-route components from a list of routes.
 Commonly used when setting up a layout
@@ -419,7 +420,7 @@ ___
 
 ▸ **NestedRoutesByProperty**(`props`: [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md)): *null | Element‹›*
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:27](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/components/routing/nested-routes-by-property.tsx#L27)*
+*Defined in [src/components/routing/nested-routes-by-property.tsx:27](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/components/routing/nested-routes-by-property.tsx#L27)*
 
 Renders Route components mapped to a custom property
 
@@ -437,7 +438,7 @@ ___
 
 ▸ **Redirects**(`props`: [RedirectsProps](interfaces/redirectsprops.md)): *Element‹›*
 
-*Defined in [src/components/routing/redirects.tsx:22](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/components/routing/redirects.tsx#L22)*
+*Defined in [src/components/routing/redirects.tsx:22](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/components/routing/redirects.tsx#L22)*
 
 Simple way to redirect a flat array of RedirectDefinitions
 
@@ -455,7 +456,7 @@ ___
 
 ▸ **_buildUrl**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): *string*
 
-*Defined in [src/services/service-factory.ts:219](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L219)*
+*Defined in [src/services/service-factory.ts:219](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L219)*
 
 **Parameters:**
 
@@ -471,9 +472,9 @@ ___
 
 ### `Const` _bulkUpdate
 
-▸ **_bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `records`: Array‹TRecord›, `resourceEndpoint`: string, `pathParams`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
+▸ **_bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `records`: TRecord[], `resourceEndpoint`: string, `pathParams`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
-*Defined in [src/services/service-factory.ts:227](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L227)*
+*Defined in [src/services/service-factory.ts:227](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L227)*
 
 **Type parameters:**
 
@@ -489,7 +490,7 @@ Name | Type |
 ------ | ------ |
 `constructor` |  |
 
-▪ **records**: *Array‹TRecord›*
+▪ **records**: *TRecord[]*
 
 ▪ **resourceEndpoint**: *string*
 
@@ -503,7 +504,7 @@ ___
 
 ▸ **_create**<**TRecord**>(`recordType`: object, `url`: string, `record?`: TRecord): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
-*Defined in [src/services/service-factory.ts:242](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L242)*
+*Defined in [src/services/service-factory.ts:245](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L245)*
 
 **Type parameters:**
 
@@ -529,7 +530,7 @@ ___
 
 ▸ **_delete**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹Boolean››*
 
-*Defined in [src/services/service-factory.ts:254](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L254)*
+*Defined in [src/services/service-factory.ts:257](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L257)*
 
 **Parameters:**
 
@@ -547,7 +548,7 @@ ___
 
 ▸ **_get**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string, `pathParams`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
-*Defined in [src/services/service-factory.ts:265](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L265)*
+*Defined in [src/services/service-factory.ts:268](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L268)*
 
 **Type parameters:**
 
@@ -575,7 +576,7 @@ ___
 
 ▸ **_hasValues**(...`collections`: Array‹any[] | List‹any› | undefined›): *boolean*
 
-*Defined in [src/utilities/collection-utils.ts:18](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L18)*
+*Defined in [src/utilities/collection-utils.ts:18](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L18)*
 
 Checks for values in a collection/object. Returns false if the collection is undefined, null,
 or the respective object type's "empty" state, ie length 0, size 0, or has no keys.
@@ -600,7 +601,7 @@ ___
 
 ▸ **_isEmpty**(...`collections`: Array‹any[] | List‹any› | undefined›): *boolean*
 
-*Defined in [src/utilities/collection-utils.ts:45](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L45)*
+*Defined in [src/utilities/collection-utils.ts:45](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L45)*
 
 Checks for values in a collection/object. Returns true if the collection is undefined, null,
 or the respective object type's "empty" state, ie length 0, size 0, or has no keys.
@@ -625,7 +626,7 @@ ___
 
 ▸ **_isNotEmpty**(...`collections`: Array‹any[] | List‹any› | undefined›): *boolean*
 
-*Defined in [src/utilities/collection-utils.ts:85](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L85)*
+*Defined in [src/utilities/collection-utils.ts:85](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L85)*
 
 Checks if there aren't any values in a collection/object. Returns false if the collection is undefined, null,
 or the respective object type's "empty" state, ie length 0, size 0, or has no keys.
@@ -650,7 +651,7 @@ ___
 
 ▸ **_list**<**TRecord**>(`recordType`: object, `baseEndpoint`: string, `pathParams?`: any, `queryParams?`: any): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
-*Defined in [src/services/service-factory.ts:276](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L276)*
+*Defined in [src/services/service-factory.ts:279](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L279)*
 
 **Type parameters:**
 
@@ -678,7 +679,7 @@ ___
 
 ▸ **_mapAxiosResponse**<**TRecord**>(`recordType`: object, `axiosResponse`: AxiosResponse‹[Result](interfaces/result.md)‹TRecord››): *[ServiceResponse](interfaces/serviceresponse.md)‹TRecord›*
 
-*Defined in [src/utilities/service-utils.ts:15](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/service-utils.ts#L15)*
+*Defined in [src/utilities/service-utils.ts:15](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/service-utils.ts#L15)*
 
 Translates axios specific data response to a more generic ServiceResponse
 type for consumption throughout the system
@@ -705,7 +706,7 @@ ___
 
 ▸ **_mapPagedAxiosResponse**<**TRecord**>(`recordType`: object, `axiosResponse`: AxiosResponse‹[PagedResult](interfaces/pagedresult.md)‹TRecord››): *[ServiceResponse](interfaces/serviceresponse.md)‹TRecord›*
 
-*Defined in [src/utilities/service-utils.ts:42](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/service-utils.ts#L42)*
+*Defined in [src/utilities/service-utils.ts:42](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/service-utils.ts#L42)*
 
 Translates axios specific data responses to a more generic ServiceResponse
 type for consumption throughout the system
@@ -732,7 +733,7 @@ ___
 
 ▸ **_mockSuccess**(`method`: [AxiosJestMock](README.md#axiosjestmock), `resultObject`: any | any[], `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:86](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L86)*
+*Defined in [src/tests/mocks/mock-axios.ts:86](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L86)*
 
 **Parameters:**
 
@@ -750,7 +751,7 @@ ___
 
 ▸ **_numericEnumToPojo**(`enumObject`: any): *object*
 
-*Defined in [src/utilities/core-utils.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L7)*
+*Defined in [src/utilities/core-utils.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L7)*
 
 **Parameters:**
 
@@ -766,7 +767,7 @@ ___
 
 ▸ **_objectToArray**(`object`: any): *any[]*
 
-*Defined in [src/utilities/core-utils.ts:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L19)*
+*Defined in [src/utilities/core-utils.ts:19](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L19)*
 
 **Parameters:**
 
@@ -782,7 +783,7 @@ ___
 
 ▸ **_resultObjectToJS**(`resultObject`: any | any[]): *any | any[]*
 
-*Defined in [src/tests/mocks/mock-axios.ts:111](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L111)*
+*Defined in [src/tests/mocks/mock-axios.ts:111](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L111)*
 
 **Parameters:**
 
@@ -798,7 +799,7 @@ ___
 
 ▸ **_timer**(`name`: string): *object*
 
-*Defined in [src/utilities/core-utils.ts:40](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L40)*
+*Defined in [src/utilities/core-utils.ts:40](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L40)*
 
 Creates a timer instance that when stopped will supply elapsed time in milliseconds.
 Useful for benchmarking or providing counters
@@ -819,7 +820,7 @@ ___
 
 ▸ **_update**<**TRecord**, **TPathParams**>(`recordType`: object, `record`: TRecord, `resourceEndpoint`: string, `pathParams?`: TPathParams): *Promise‹[ServiceResponse](interfaces/serviceresponse.md)‹TRecord››*
 
-*Defined in [src/services/service-factory.ts:292](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L292)*
+*Defined in [src/services/service-factory.ts:295](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L295)*
 
 **Type parameters:**
 
@@ -849,7 +850,7 @@ ___
 
 ▸ **appendQueryParams**(`path`: string, `queryParams`: any): *string*
 
-*Defined in [src/utilities/route-utils.ts:22](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L22)*
+*Defined in [src/utilities/route-utils.ts:22](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L22)*
 
 Appends the supplied query params object as a query string to path. Even if path is null.
 
@@ -868,7 +869,7 @@ ___
 
 ▸ **debugRoutes**(`routes`: [RouteMap](interfaces/routemap.md)): *void*
 
-*Defined in [src/utilities/route-utils.ts:44](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L44)*
+*Defined in [src/utilities/route-utils.ts:44](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L44)*
 
 Outputs flattened routing table for debugging purposes
 
@@ -886,7 +887,7 @@ ___
 
 ▸ **deleteSuccess**(`record?`: any, `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:65](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L65)*
+*Defined in [src/tests/mocks/mock-axios.ts:65](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L65)*
 
 **Parameters:**
 
@@ -903,7 +904,7 @@ ___
 
 ▸ **getFlattenedRoutes**(`routeArray`: [RouteDefinition](interfaces/routedefinition.md)[]): *[RouteDefinition](interfaces/routedefinition.md)[]*
 
-*Defined in [src/utilities/route-utils.ts:52](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L52)*
+*Defined in [src/utilities/route-utils.ts:52](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L52)*
 
 **Parameters:**
 
@@ -919,7 +920,7 @@ ___
 
 ▸ **getSuccess**(`record`: any, `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:68](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L68)*
+*Defined in [src/tests/mocks/mock-axios.ts:68](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L68)*
 
 **Parameters:**
 
@@ -936,7 +937,7 @@ ___
 
 ▸ **getUrl**(`path`: string, `pathParams?`: any): *string*
 
-*Defined in [src/utilities/route-utils.ts:73](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L73)*
+*Defined in [src/utilities/route-utils.ts:73](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L73)*
 
 Convenience method to get a Url from a RouteDefinition
 
@@ -955,7 +956,7 @@ ___
 
 ▸ **getUrlFromPath**(`path`: string, `pathParams?`: any, `queryParams?`: any): *string*
 
-*Defined in [src/utilities/route-utils.ts:83](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L83)*
+*Defined in [src/utilities/route-utils.ts:83](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L83)*
 
 Constructs a url from a formatted route path.
 
@@ -975,7 +976,7 @@ ___
 
 ▸ **listSuccess**(`records`: any[], `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:71](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L71)*
+*Defined in [src/tests/mocks/mock-axios.ts:71](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L71)*
 
 **Parameters:**
 
@@ -992,7 +993,7 @@ ___
 
 ▸ **postSuccess**(`record`: any, `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:74](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L74)*
+*Defined in [src/tests/mocks/mock-axios.ts:74](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L74)*
 
 **Parameters:**
 
@@ -1009,7 +1010,7 @@ ___
 
 ▸ **putSuccess**(`record`: any, `delay?`: undefined | number): *void*
 
-*Defined in [src/tests/mocks/mock-axios.ts:77](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L77)*
+*Defined in [src/tests/mocks/mock-axios.ts:77](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L77)*
 
 **Parameters:**
 
@@ -1026,7 +1027,7 @@ ___
 
 ▸ **replacePathParams**(`path`: string, `pathParams`: any): *string*
 
-*Defined in [src/utilities/route-utils.ts:106](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L106)*
+*Defined in [src/utilities/route-utils.ts:106](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L106)*
 
 Replace routing components in supplied path with keys and values
 of supplied pathParams.
@@ -1046,7 +1047,7 @@ ___
 
 ▸ **sleep**(`milliseconds`: number, `debug`: boolean): *Promise‹unknown›*
 
-*Defined in [src/tests/test-utils.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/test-utils.ts#L9)*
+*Defined in [src/tests/test-utils.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/test-utils.ts#L9)*
 
 Wrap timeout in a promise so tests can easily block execution for testing time
 
@@ -1065,25 +1066,25 @@ Name | Type | Default | Description |
 
 ### ▪ **CollectionUtils**: *object*
 
-*Defined in [src/utilities/collection-utils.ts:97](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L97)*
+*Defined in [src/utilities/collection-utils.ts:97](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L97)*
 
 ###  hasValues
 
 • **hasValues**: *[_hasValues](README.md#const-_hasvalues)* = _hasValues
 
-*Defined in [src/utilities/collection-utils.ts:98](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L98)*
+*Defined in [src/utilities/collection-utils.ts:98](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L98)*
 
 ###  isEmpty
 
 • **isEmpty**: *[_isEmpty](README.md#const-_isempty)* = _isEmpty
 
-*Defined in [src/utilities/collection-utils.ts:99](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L99)*
+*Defined in [src/utilities/collection-utils.ts:99](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L99)*
 
 ###  isNotEmpty
 
 • **isNotEmpty**: *[_isNotEmpty](README.md#const-_isnotempty)* = _isNotEmpty
 
-*Defined in [src/utilities/collection-utils.ts:100](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/collection-utils.ts#L100)*
+*Defined in [src/utilities/collection-utils.ts:100](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/collection-utils.ts#L100)*
 
 ___
 
@@ -1091,25 +1092,25 @@ ___
 
 ### ▪ **CoreUtils**: *object*
 
-*Defined in [src/utilities/core-utils.ts:66](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L66)*
+*Defined in [src/utilities/core-utils.ts:66](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L66)*
 
 ###  numericEnumToPojo
 
 • **numericEnumToPojo**: *[_numericEnumToPojo](README.md#const-_numericenumtopojo)* = _numericEnumToPojo
 
-*Defined in [src/utilities/core-utils.ts:67](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L67)*
+*Defined in [src/utilities/core-utils.ts:67](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L67)*
 
 ###  objectToArray
 
 • **objectToArray**: *[_objectToArray](README.md#const-_objecttoarray)* = _objectToArray
 
-*Defined in [src/utilities/core-utils.ts:68](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L68)*
+*Defined in [src/utilities/core-utils.ts:68](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L68)*
 
 ###  timer
 
 • **timer**: *[_timer](README.md#const-_timer)* = _timer
 
-*Defined in [src/utilities/core-utils.ts:69](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/core-utils.ts#L69)*
+*Defined in [src/utilities/core-utils.ts:69](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/core-utils.ts#L69)*
 
 ___
 
@@ -1117,29 +1118,29 @@ ___
 
 ### ▪ **FactoryType**: *object*
 
-*Defined in [src/tests/factories/factory-type.ts:1](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/factory-type.ts#L1)*
+*Defined in [src/tests/factories/factory-type.ts:1](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/factory-type.ts#L1)*
 
 ###  AxiosResponse
 
 • **AxiosResponse**: *string* = "AxiosResponse"
 
-*Defined in [src/tests/factories/factory-type.ts:2](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/factory-type.ts#L2)*
+*Defined in [src/tests/factories/factory-type.ts:2](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/factory-type.ts#L2)*
 
 ###  RouteMap
 
 • **RouteMap**: *string* = "RouteMap"
 
-*Defined in [src/tests/factories/factory-type.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/factory-type.ts#L7)*
+*Defined in [src/tests/factories/factory-type.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/factory-type.ts#L7)*
 
 ###  StubResourceRecord
 
 • **StubResourceRecord**: *string* = "StubResourceRecord"
 
-*Defined in [src/tests/factories/factory-type.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/factory-type.ts#L8)*
+*Defined in [src/tests/factories/factory-type.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/factory-type.ts#L8)*
 
 ▪ **RouteDefinition**: *object*
 
-*Defined in [src/tests/factories/factory-type.ts:3](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/factories/factory-type.ts#L3)*
+*Defined in [src/tests/factories/factory-type.ts:3](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/factories/factory-type.ts#L3)*
 
 * **Default**: *string* = "RouteDefinition"
 
@@ -1151,43 +1152,43 @@ ___
 
 ### ▪ **RouteUtils**: *object*
 
-*Defined in [src/utilities/route-utils.ts:132](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L132)*
+*Defined in [src/utilities/route-utils.ts:132](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L132)*
 
 ###  appendQueryParams
 
 • **appendQueryParams**: *[appendQueryParams](README.md#const-appendqueryparams)*
 
-*Defined in [src/utilities/route-utils.ts:133](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L133)*
+*Defined in [src/utilities/route-utils.ts:133](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L133)*
 
 ###  debugRoutes
 
 • **debugRoutes**: *[debugRoutes](README.md#const-debugroutes)*
 
-*Defined in [src/utilities/route-utils.ts:134](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L134)*
+*Defined in [src/utilities/route-utils.ts:134](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L134)*
 
 ###  getFlattenedRoutes
 
 • **getFlattenedRoutes**: *[getFlattenedRoutes](README.md#const-getflattenedroutes)*
 
-*Defined in [src/utilities/route-utils.ts:135](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L135)*
+*Defined in [src/utilities/route-utils.ts:135](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L135)*
 
 ###  getUrl
 
 • **getUrl**: *[getUrl](README.md#const-geturl)*
 
-*Defined in [src/utilities/route-utils.ts:136](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L136)*
+*Defined in [src/utilities/route-utils.ts:136](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L136)*
 
 ###  getUrlFromPath
 
 • **getUrlFromPath**: *[getUrlFromPath](README.md#const-geturlfrompath)*
 
-*Defined in [src/utilities/route-utils.ts:137](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L137)*
+*Defined in [src/utilities/route-utils.ts:137](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L137)*
 
 ###  replacePathParams
 
 • **replacePathParams**: *[replacePathParams](README.md#const-replacepathparams)*
 
-*Defined in [src/utilities/route-utils.ts:138](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/route-utils.ts#L138)*
+*Defined in [src/utilities/route-utils.ts:138](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/route-utils.ts#L138)*
 
 ___
 
@@ -1195,7 +1196,7 @@ ___
 
 ### ▪ **ServiceFactory**: *object*
 
-*Defined in [src/services/service-factory.ts:80](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L80)*
+*Defined in [src/services/service-factory.ts:80](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L80)*
 
 Factory to encapsulate common service function logic
 
@@ -1203,7 +1204,7 @@ Factory to encapsulate common service function logic
 
 ▸ **bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›*
 
-*Defined in [src/services/service-factory.ts:86](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L86)*
+*Defined in [src/services/service-factory.ts:86](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L86)*
 
 Creates a conventional Service Update function for an Array of the supplied resource type
 
@@ -1229,7 +1230,7 @@ Name | Type |
 
 ▸ **create**<**TRecord**>(`recordType`: object, `baseEndpoint`: string): *[CreateService](README.md#createservice)‹TRecord›*
 
-*Defined in [src/services/service-factory.ts:108](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L108)*
+*Defined in [src/services/service-factory.ts:108](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L108)*
 
 Creates conventional Service Create function for the supplied resource type
 
@@ -1256,7 +1257,7 @@ Name | Type |
 
 ▸ **delete**(`resourceEndpoint`: string): *[DeleteService](README.md#deleteservice)*
 
-*Defined in [src/services/service-factory.ts:121](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L121)*
+*Defined in [src/services/service-factory.ts:121](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L121)*
 
 Creates conventional Service Delete function for the supplied resource type
 
@@ -1272,7 +1273,7 @@ Name | Type | Description |
 
 ▸ **get**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[GetService](README.md#getservice)‹TRecord, TPathParams›*
 
-*Defined in [src/services/service-factory.ts:131](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L131)*
+*Defined in [src/services/service-factory.ts:131](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L131)*
 
 Creates conventional Service Get function for the supplied resource type
 
@@ -1298,7 +1299,7 @@ Name | Type |
 
 ▸ **list**<**TRecord**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[ListService](README.md#listservice)‹TRecord, TQueryParams›*
 
-*Defined in [src/services/service-factory.ts:152](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L152)*
+*Defined in [src/services/service-factory.ts:152](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L152)*
 
 Creates conventional Service List function for the supplied resource type
 
@@ -1327,7 +1328,7 @@ Name | Type |
 
 ▸ **nestedCreate**<**TRecord**, **TPathParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›*
 
-*Defined in [src/services/service-factory.ts:166](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L166)*
+*Defined in [src/services/service-factory.ts:166](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L166)*
 
 Creates conventional Service Create function for the supplied resource type
 when the resource is nested
@@ -1354,7 +1355,7 @@ Name | Type |
 
 ▸ **nestedList**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›*
 
-*Defined in [src/services/service-factory.ts:181](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L181)*
+*Defined in [src/services/service-factory.ts:181](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L181)*
 
 Creates conventional Service List function for the supplied resource type
 
@@ -1382,7 +1383,7 @@ Name | Type |
 
 ▸ **update**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[UpdateService](README.md#updateservice)‹TRecord, TPathParams›*
 
-*Defined in [src/services/service-factory.ts:199](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/services/service-factory.ts#L199)*
+*Defined in [src/services/service-factory.ts:199](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/services/service-factory.ts#L199)*
 
 Creates conventional Service Update function for the supplied resource type
 
@@ -1410,19 +1411,19 @@ ___
 
 ### ▪ **ServiceUtils**: *object*
 
-*Defined in [src/utilities/service-utils.ts:72](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/service-utils.ts#L72)*
+*Defined in [src/utilities/service-utils.ts:72](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/service-utils.ts#L72)*
 
 ###  mapAxiosResponse
 
 • **mapAxiosResponse**: *[_mapAxiosResponse](README.md#const-_mapaxiosresponse)* = _mapAxiosResponse
 
-*Defined in [src/utilities/service-utils.ts:73](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/service-utils.ts#L73)*
+*Defined in [src/utilities/service-utils.ts:73](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/service-utils.ts#L73)*
 
 ###  mapPagedAxiosResponse
 
 • **mapPagedAxiosResponse**: *[_mapPagedAxiosResponse](README.md#const-_mappagedaxiosresponse)* = _mapPagedAxiosResponse
 
-*Defined in [src/utilities/service-utils.ts:74](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/utilities/service-utils.ts#L74)*
+*Defined in [src/utilities/service-utils.ts:74](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/utilities/service-utils.ts#L74)*
 
 ___
 
@@ -1430,13 +1431,13 @@ ___
 
 ### ▪ **TestUtils**: *object*
 
-*Defined in [src/tests/test-utils.ts:31](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/test-utils.ts#L31)*
+*Defined in [src/tests/test-utils.ts:31](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/test-utils.ts#L31)*
 
 ###  sleep
 
 • **sleep**: *[sleep](README.md#const-sleep)*
 
-*Defined in [src/tests/test-utils.ts:32](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/test-utils.ts#L32)*
+*Defined in [src/tests/test-utils.ts:32](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/test-utils.ts#L32)*
 
 ___
 
@@ -1444,39 +1445,39 @@ ___
 
 ### ▪ **defaultValues**: *object*
 
-*Defined in [src/view-models/result-error-record.ts:5](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L5)*
+*Defined in [src/view-models/result-error-record.ts:5](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L5)*
 
-*Defined in [src/view-models/result-record.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-record.ts#L7)*
+*Defined in [src/view-models/result-record.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-record.ts#L7)*
 
 ###  errors
 
 • **errors**: *undefined* = undefined
 
-*Defined in [src/view-models/result-record.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-record.ts#L8)*
+*Defined in [src/view-models/result-record.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-record.ts#L8)*
 
 ###  key
 
 • **key**: *undefined* = undefined
 
-*Defined in [src/view-models/result-error-record.ts:6](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L6)*
+*Defined in [src/view-models/result-error-record.ts:6](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L6)*
 
 ###  message
 
 • **message**: *undefined* = undefined
 
-*Defined in [src/view-models/result-error-record.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L7)*
+*Defined in [src/view-models/result-error-record.ts:7](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L7)*
 
 ###  resultObject
 
 • **resultObject**: *undefined* = undefined
 
-*Defined in [src/view-models/result-record.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-record.ts#L9)*
+*Defined in [src/view-models/result-record.ts:9](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-record.ts#L9)*
 
 ###  type
 
 • **type**: *[Error](enums/errortype.md#error)* = ErrorType.Error
 
-*Defined in [src/view-models/result-error-record.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L8)*
+*Defined in [src/view-models/result-error-record.ts:8](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L8)*
 
 ___
 
@@ -1484,58 +1485,58 @@ ___
 
 ### ▪ **mockAxios**: *object*
 
-*Defined in [src/tests/mocks/mock-axios.ts:129](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L129)*
+*Defined in [src/tests/mocks/mock-axios.ts:129](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L129)*
 
 ###  delete
 
 • **delete**: *Mock‹Promise‹object›, []›* = axios.delete as AxiosJestMock
 
-*Defined in [src/tests/mocks/mock-axios.ts:130](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L130)*
+*Defined in [src/tests/mocks/mock-axios.ts:130](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L130)*
 
 ###  deleteSuccess
 
 • **deleteSuccess**: *[deleteSuccess](README.md#const-deletesuccess)*
 
-*Defined in [src/tests/mocks/mock-axios.ts:131](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L131)*
+*Defined in [src/tests/mocks/mock-axios.ts:131](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L131)*
 
 ###  get
 
 • **get**: *Mock‹Promise‹object›, []›* = axios.get as AxiosJestMock
 
-*Defined in [src/tests/mocks/mock-axios.ts:132](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L132)*
+*Defined in [src/tests/mocks/mock-axios.ts:132](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L132)*
 
 ###  getSuccess
 
 • **getSuccess**: *[getSuccess](README.md#const-getsuccess)*
 
-*Defined in [src/tests/mocks/mock-axios.ts:133](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L133)*
+*Defined in [src/tests/mocks/mock-axios.ts:133](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L133)*
 
 ###  listSuccess
 
 • **listSuccess**: *[listSuccess](README.md#const-listsuccess)*
 
-*Defined in [src/tests/mocks/mock-axios.ts:134](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L134)*
+*Defined in [src/tests/mocks/mock-axios.ts:134](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L134)*
 
 ###  post
 
 • **post**: *Mock‹Promise‹object›, []›* = axios.post as AxiosJestMock
 
-*Defined in [src/tests/mocks/mock-axios.ts:135](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L135)*
+*Defined in [src/tests/mocks/mock-axios.ts:135](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L135)*
 
 ###  postSuccess
 
 • **postSuccess**: *[postSuccess](README.md#const-postsuccess)*
 
-*Defined in [src/tests/mocks/mock-axios.ts:136](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L136)*
+*Defined in [src/tests/mocks/mock-axios.ts:136](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L136)*
 
 ###  put
 
 • **put**: *Mock‹Promise‹object›, []›* = axios.put as AxiosJestMock
 
-*Defined in [src/tests/mocks/mock-axios.ts:137](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L137)*
+*Defined in [src/tests/mocks/mock-axios.ts:137](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L137)*
 
 ###  putSuccess
 
 • **putSuccess**: *[putSuccess](README.md#const-putsuccess)*
 
-*Defined in [src/tests/mocks/mock-axios.ts:138](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/tests/mocks/mock-axios.ts#L138)*
+*Defined in [src/tests/mocks/mock-axios.ts:138](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/tests/mocks/mock-axios.ts#L138)*

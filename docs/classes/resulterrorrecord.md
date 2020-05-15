@@ -157,7 +157,7 @@ The name provided to `Record(values, name)` can be accessed with
 
 \+ **new ResultErrorRecord**(`params?`: [ResultError](../interfaces/resulterror.md)): *[ResultErrorRecord](resulterrorrecord.md)*
 
-*Defined in [src/view-models/result-error-record.ts:11](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L11)*
+*Defined in [src/view-models/result-error-record.ts:11](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L11)*
 
 **Parameters:**
 
@@ -293,7 +293,7 @@ ___
 
 ▸ **fullError**(): *string*
 
-*Defined in [src/view-models/result-error-record.ts:40](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L40)*
+*Defined in [src/view-models/result-error-record.ts:40](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L40)*
 
 Display error key and message
 
@@ -759,7 +759,7 @@ ___
 
 ▸ **with**(`values`: Partial‹[ResultError](../interfaces/resulterror.md)›): *[ResultErrorRecord](resulterrorrecord.md)*
 
-*Defined in [src/view-models/result-error-record.ts:44](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/b5b0706/src/view-models/result-error-record.ts#L44)*
+*Defined in [src/view-models/result-error-record.ts:44](https://github.com/wintondeshong/AndcultureCode.JavaScript.React/blob/0ffc129/src/view-models/result-error-record.ts#L44)*
 
 **Parameters:**
 

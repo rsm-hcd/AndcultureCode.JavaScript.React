@@ -28,7 +28,7 @@ export type CreateService<TRecord> = (
 export type DeleteService = (
     id: number,
     pathParams?: any
-) => Promise<ServiceResponse<boolean>>;
+) => Promise<ServiceResponse<Boolean>>;
 
 /**
  * Type defining the service function for getting the supplied resource type
