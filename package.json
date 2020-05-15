@@ -57,11 +57,12 @@
         "url": "git+https://github.com/AndcultureCode/AndcultureCode.JavaScript.React.git"
     },
     "scripts": {
-        "build": "tsc --pretty && npm run docs",
+        "build": "tsc --pretty",
         "clean": "rimraf dist && rimraf coverage",
         "coverage": "jest ./src --coverage",
         "docs": "typedoc --mode file --excludeExternals --plugin typedoc-plugin-markdown --readme none",
         "format": "prettier --write \"src/**/*.ts\" --trailing-comma es5",
+        "postbuild": "npm run docs",
         "prebuild": "npm run clean && npm run format && echo Using TypeScript && tsc --version",
         "prepublishOnly": "npm run build",
         "test": "jest ./src",
