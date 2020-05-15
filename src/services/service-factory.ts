@@ -1,7 +1,7 @@
-import { RouteUtils } from "utilities/route-utils";
-import { ServiceResponse } from "interfaces/service-response";
+import { RouteUtils } from "../utilities/route-utils";
+import { ServiceResponse } from "../interfaces/service-response";
 import axios from "axios";
-import { ServiceUtils } from "utilities/service-utils";
+import { ServiceUtils } from "../utilities/service-utils";
 
 // -----------------------------------------------------------------------------------------
 // #region Types

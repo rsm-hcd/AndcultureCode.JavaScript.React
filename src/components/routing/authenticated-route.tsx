@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route, RouteComponentProps } from "react-router-dom";
-import { RouteDefinition } from "interfaces/route-definition";
-import { AuthenticatedRoute } from "interfaces/authenticated-route";
+import { RouteDefinition } from "../../interfaces/route-definition";
+import { AuthenticatedRoute } from "../../interfaces/authenticated-route";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

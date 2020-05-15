@@ -1,5 +1,5 @@
 import { Factory } from "rosie";
-import { StubResourceRecord } from "tests/stubs/stub-resource-record";
+import { StubResourceRecord } from "../stubs/stub-resource-record";
 import { FactoryType } from "./factory-type";
 
 // -----------------------------------------------------------------------------------------

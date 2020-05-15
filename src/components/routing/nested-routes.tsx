@@ -1,10 +1,10 @@
-import { CollectionUtils } from "utilities/collection-utils";
+import { CollectionUtils } from "../../utilities/collection-utils";
 import { NestedRoute } from "./nested-route";
 import { Redirect } from "react-router-dom";
 import React from "react";
-import { RouteDefinition } from "interfaces/route-definition";
-import { UnmatchedRoute } from "interfaces/unmatched-route";
-import { AuthenticatedRoute } from "interfaces/authenticated-route";
+import { RouteDefinition } from "../../interfaces/route-definition";
+import { UnmatchedRoute } from "../../interfaces/unmatched-route";
+import { AuthenticatedRoute } from "../../interfaces/authenticated-route";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

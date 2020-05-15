@@ -1,9 +1,9 @@
 import { Factory } from "rosie";
-import { FactoryType } from "tests/factories/factory-type";
+import { FactoryType } from "../tests/factories/factory-type";
 import "jest-extended";
 import { RouteUtils } from "./route-utils";
-import { RouteDefinition } from "interfaces/route-definition";
-import { RouteMap } from "interfaces/route-map";
+import { RouteDefinition } from "../interfaces/route-definition";
+import { RouteMap } from "../interfaces/route-map";
 
 describe("RouteUtils", () => {
     // -----------------------------------------------------------------------------------------

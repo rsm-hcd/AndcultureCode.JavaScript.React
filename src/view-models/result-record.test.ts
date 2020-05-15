@@ -1,7 +1,7 @@
-import { ResultRecord } from "view-models/result-record";
-import { ErrorType } from "enumerations/error-type";
-import { ResultErrorRecord } from "view-models/result-error-record";
-import { ResultError } from "interfaces/result-error";
+import { ResultRecord } from "./result-record";
+import { ErrorType } from "../enumerations/error-type";
+import { ResultErrorRecord } from "./result-error-record";
+import { ResultError } from "../interfaces/result-error";
 
 describe("ResultRecord", () => {
     /*

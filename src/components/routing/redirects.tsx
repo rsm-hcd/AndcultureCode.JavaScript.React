@@ -1,5 +1,5 @@
 import React from "react";
-import { RedirectDefinition } from "interfaces/redirect-definition";
+import { RedirectDefinition } from "../../interfaces/redirect-definition";
 import { Redirect } from "react-router-dom";
 
 // -----------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 import { Factory } from "rosie";
 import { FactoryType } from "./factory-type";
-import { RouteMap } from "interfaces/route-map";
-import { RouteDefinition } from "interfaces/route-definition";
+import { RouteMap } from "../../interfaces/route-map";
+import { RouteDefinition } from "../../interfaces/route-definition";
 
 // -----------------------------------------------------------------------------------------
 // #region Factory
