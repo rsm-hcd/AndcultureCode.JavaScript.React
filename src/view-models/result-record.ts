@@ -1,8 +1,8 @@
-import { CollectionUtils } from "../utilities/collection-utils";
+import { CollectionUtils } from "utilities/collection-utils";
 import { Record } from "immutable";
-import { ResultErrorRecord } from "../view-models/result-error-record";
-import { Result } from "../interfaces/result";
-import { ErrorType } from "../enumerations/error-type";
+import { ResultErrorRecord } from "view-models/result-error-record";
+import { Result } from "interfaces/result";
+import { ErrorType } from "enumerations/error-type";
 
 const defaultValues: Result<any> = {
     errors: undefined,
@@ -24,10 +24,11 @@ class ResultRecord<T> extends Record(defaultValues) implements Result<T> {
 
         if (CollectionUtils.hasValues(params.errors)) {
             const errors = params.errors as any[];
-            params.errors = errors.map((error) =>
-                error instanceof ResultErrorRecord
-                    ? error
-                    : new ResultErrorRecord(error)
+            params.errors = errors.map(
+                (error) =>
+                    error instanceof ResultErrorRecord
+                        ? error
+                        : new ResultErrorRecord(error)
             );
         }
 

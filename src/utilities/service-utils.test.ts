@@ -1,9 +1,9 @@
 import { ServiceUtils } from "./service-utils";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
+import { StubResourceRecord } from "tests/stubs/stub-resource-record";
 import { Factory } from "rosie";
 import { AxiosResponse } from "axios";
-import { FactoryType } from "../tests/factories/factory-type";
-import { ResultRecord } from "../view-models/result-record";
+import { FactoryType } from "tests/factories/factory-type";
+import { ResultRecord } from "view-models/result-record";
 import "jest-extended";
 
 describe("ServiceUtils", () => {
@@ -16,7 +16,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapAxiosResponse(
                 StubResourceRecord,
-                undefined
+                undefined!
             );
 
             // Assert
@@ -27,7 +27,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapAxiosResponse(
                 StubResourceRecord,
-                null
+                null!
             );
 
             // Assert
@@ -170,7 +170,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapPagedAxiosResponse(
                 StubResourceRecord,
-                undefined
+                undefined!
             );
 
             // Assert
@@ -181,7 +181,7 @@ describe("ServiceUtils", () => {
             // Arrange & Act
             const result = ServiceUtils.mapPagedAxiosResponse(
                 StubResourceRecord,
-                null
+                null!
             );
 
             // Assert

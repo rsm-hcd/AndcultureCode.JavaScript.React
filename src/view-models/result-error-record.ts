@@ -1,6 +1,6 @@
 import { Record } from "immutable";
-import { ResultError } from "../interfaces/result-error";
-import { ErrorType } from "../enumerations/error-type";
+import { ResultError } from "interfaces/result-error";
+import { ErrorType } from "enumerations/error-type";
 
 const defaultValues: ResultError = {
     key: undefined,

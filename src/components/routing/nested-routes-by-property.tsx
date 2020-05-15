@@ -1,6 +1,6 @@
 import React from "react";
-import { CollectionUtils } from "../../utilities/collection-utils";
-import { RouteDefinition } from "../../interfaces/route-definition";
+import { CollectionUtils } from "utilities/collection-utils";
+import { RouteDefinition } from "interfaces/route-definition";
 import { Route } from "react-router-dom";
 
 // -----------------------------------------------------------------------------------------

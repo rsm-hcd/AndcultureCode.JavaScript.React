@@ -1,4 +1,4 @@
-import { ErrorType } from "../enumerations/error-type";
+import { ErrorType } from "enumerations/error-type";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

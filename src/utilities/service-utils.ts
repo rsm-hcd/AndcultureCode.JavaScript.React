@@ -1,8 +1,8 @@
 import { AxiosResponse } from "axios";
-import { ServiceResponse } from "../interfaces/service-response";
-import { PagedResult } from "../interfaces/paged-result";
-import { ResultRecord } from "../view-models/result-record";
-import { Result } from "../interfaces/result";
+import { ServiceResponse } from "interfaces/service-response";
+import { PagedResult } from "interfaces/paged-result";
+import { ResultRecord } from "view-models/result-record";
+import { Result } from "interfaces/result";
 
 // -----------------------------------------------------------------------------------------
 // #region Functions

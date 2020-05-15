@@ -1,4 +1,4 @@
-import { ResultRecord } from "../view-models/result-record";
+import { ResultRecord } from "view-models/result-record";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

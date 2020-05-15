@@ -1,9 +1,9 @@
 import { Factory } from "rosie";
-import { FactoryType } from "../tests/factories/factory-type";
+import { FactoryType } from "tests/factories/factory-type";
 import "jest-extended";
 import { RouteUtils } from "./route-utils";
-import { RouteDefinition } from "../interfaces/route-definition";
-import { RouteMap } from "../interfaces/route-map";
+import { RouteDefinition } from "interfaces/route-definition";
+import { RouteMap } from "interfaces/route-map";
 
 describe("RouteUtils", () => {
     // -----------------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ describe("RouteUtils", () => {
     describe("appendQueryParams", () => {
         test("when path is null, it returns an empty string", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const queryParams = {};
 
             // Act
@@ -226,7 +226,7 @@ describe("RouteUtils", () => {
 
         test("when given a null path, it returns null", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const pathParams = {};
             const queryParams = {};
 
@@ -251,7 +251,7 @@ describe("RouteUtils", () => {
     describe("replacePathParams", () => {
         test("when path is null, it returns null", () => {
             // Arrange
-            const path = null;
+            const path: any = null;
             const pathParams = {};
 
             // Act

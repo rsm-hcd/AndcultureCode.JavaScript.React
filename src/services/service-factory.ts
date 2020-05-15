@@ -1,7 +1,7 @@
-import { RouteUtils } from "../utilities/route-utils";
-import { ServiceResponse } from "../interfaces/service-response";
+import { RouteUtils } from "utilities/route-utils";
+import { ServiceResponse } from "interfaces/service-response";
 import axios from "axios";
-import { ServiceUtils } from "../utilities/service-utils";
+import { ServiceUtils } from "utilities/service-utils";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -55,7 +55,7 @@ export type NestedCreateService<TRecord, TPathParams> = (
 /**
  * Type defining the service function for listing resources by supplied type when resource is nested
  */
-type NestedListService<TRecord, TPathParams, TQueryParams> = (
+export type NestedListService<TRecord, TPathParams, TQueryParams> = (
     pathParams: TPathParams,
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -224,7 +224,7 @@ const _buildUrl = (id: number, resourceEndpoint: string, pathParams?: any) => {
     return RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
 };
 
-const _bulkUpdate = async function <
+const _bulkUpdate = async function<
     TRecord extends any,
     TPathParams extends any
 >(
@@ -235,14 +235,11 @@ const _bulkUpdate = async function <
 ) {
     const url = _buildUrl(pathParams.id, resourceEndpoint, pathParams);
     return await axios
-        .put(
-            url,
-            records.map((r: TRecord) => r.toJS())
-        )
+        .put(url, records.map((r: TRecord) => r.toJS()))
         .then((r) => ServiceUtils.mapPagedAxiosResponse(recordType, r));
 };
 
-const _create = async function <TRecord extends any>(
+const _create = async function<TRecord extends any>(
     recordType: { new (): TRecord },
     url: string,
     record?: TRecord
@@ -254,7 +251,7 @@ const _create = async function <TRecord extends any>(
         .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
 };
 
-const _delete = async function (
+const _delete = async function(
     id: number,
     resourceEndpoint: string,
     pathParams?: any
@@ -265,7 +262,7 @@ const _delete = async function (
         .then((r) => ServiceUtils.mapAxiosResponse(Boolean, r));
 };
 
-const _get = async function <TRecord, TPathParams>(
+const _get = async function<TRecord, TPathParams>(
     recordType: { new (): TRecord },
     resourceEndpoint: string,
     pathParams: TPathParams
@@ -276,7 +273,7 @@ const _get = async function <TRecord, TPathParams>(
         .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
 };
 
-const _list = async function <TRecord extends any>(
+const _list = async function<TRecord extends any>(
     recordType: { new (): TRecord },
     baseEndpoint: string,
     pathParams?: any,
@@ -292,7 +289,7 @@ const _list = async function <TRecord extends any>(
         .then((r) => ServiceUtils.mapPagedAxiosResponse(recordType, r));
 };
 
-const _update = async function <TRecord extends any, TPathParams extends any>(
+const _update = async function<TRecord extends any, TPathParams extends any>(
     recordType: { new (): TRecord },
     record: TRecord,
     resourceEndpoint: string,

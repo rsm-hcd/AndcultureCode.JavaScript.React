@@ -1,6 +1,6 @@
 import { Factory } from "rosie";
 import { FactoryType } from "./factory-type";
-import { RouteDefinition } from "../../interfaces/route-definition";
+import { RouteDefinition } from "interfaces/route-definition";
 import React from "react";
 
 // -----------------------------------------------------------------------------------------
@@ -39,6 +39,6 @@ const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
 
 // Looks like only one of the factories for a specific type needs to be exported for Rosie to
 // register both of them. Weird.
-export { RouteDefinitionFactory };
+export { RouteDefinitionFactory, RouteDefinitionNestedFactory };
 
 // #endregion Export

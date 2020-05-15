@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { act, render } from "@testing-library/react";
 import { ServiceFactory } from "./service-factory";
-import { TestUtils } from "../tests/test-utils";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
-import { FactoryType } from "../tests/factories/factory-type";
-import mockAxios from "../tests/mocks/mock-axios";
+import { TestUtils } from "tests/test-utils";
+import { StubResourceRecord } from "tests/stubs/stub-resource-record";
+import { FactoryType } from "tests/factories/factory-type";
+import mockAxios from "tests/mocks/mock-axios";
 
 // -----------------------------------------------------------------------------------------
 // #region Variables

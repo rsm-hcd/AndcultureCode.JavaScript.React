@@ -1,4 +1,4 @@
-import { RouteDefinition } from "../interfaces/route-definition";
+import { RouteDefinition } from "interfaces/route-definition";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
