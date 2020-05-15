@@ -23,5 +23,5 @@
         "target": "es5"
     },
     "exclude": ["**/*.test.*", "node_modules", "src/setupTests.ts"],
-    "include": ["src/**/*", "src/jest.config.js"]
+    "include": ["src"]
 }

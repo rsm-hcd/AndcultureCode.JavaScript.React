@@ -2,7 +2,7 @@ module.exports = {
     globals: {
         "ts-jest": {
             diagnostics: false,
-            tsConfig: "<rootDir>/tsconfig.json",
+            tsConfig: "<rootDir>/src/tsconfig.json",
         },
     },
     moduleDirectories: ["node_modules", "src"],
