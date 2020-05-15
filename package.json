@@ -33,6 +33,8 @@
         "ts-jest": "25.5.1",
         "tslint": "6.1.2",
         "tslint-config-prettier": "1.18.0",
+        "typedoc": "^0.17.6",
+        "typedoc-plugin-markdown": "^2.2.17",
         "typescript": "3.8.3"
     },
     "files": [
@@ -55,12 +57,13 @@
         "url": "git+https://github.com/AndcultureCode/AndcultureCode.JavaScript.React.git"
     },
     "scripts": {
-        "build": "tsc --pretty",
+        "build": "tsc --pretty && npm run docs",
         "clean": "rimraf dist && rimraf coverage",
         "coverage": "jest ./src --coverage",
+        "docs": "typedoc --mode file --excludeExternals --plugin typedoc-plugin-markdown --readme none",
         "format": "prettier --write \"{src}/**/*.ts\" --trailing-comma es5",
         "lint": "tslint --force --format verbose \"src/**/*.ts\"",
-        "prebuild": "npm run clean && echo Using TypeScript && tsc --version",
+        "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
         "prepublishOnly": "npm run build",
         "test": "jest ./src",
         "watch": "npm run build -- --watch",

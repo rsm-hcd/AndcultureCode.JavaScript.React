@@ -31,7 +31,9 @@ import {
 } from "andculturecode-javascript-react";
 ```
 
-## Troubleshooting
+## Documentation
+
+[Full API documentation](docs/README.md)
 
 # Contributing
 
