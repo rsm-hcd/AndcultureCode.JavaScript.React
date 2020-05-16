@@ -6,12 +6,13 @@ import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
 import { ServiceHookFactory } from "./service-hook-factory";
 import mockAxios from "../tests/mocks/mock-axios";
 import { FactoryType } from "../tests/factories/factory-type";
+import { TestUtils } from "../tests/test-utils";
 
 // ---------------------------------------------------------------------------------------------
 // #region Variables
 // ---------------------------------------------------------------------------------------------
 
-const baseEndpoint = "users";
+const baseEndpoint = "records";
 const cancellationTestsApiDelay = 10;
 const cancellationTestsAssertionDelay = 20;
 const resourceEndpoint = `${baseEndpoint}/:id`;
@@ -68,20 +69,20 @@ describe("ServiceHookFactory", () => {
 
             const CreateStubComponent = () => {
                 const { create } = useCreate();
-                const [user, setUser] = useState<StubResourceRecord>(
+                const [record, setRecord] = useState<StubResourceRecord>(
                     null as any
                 );
 
                 useEffect(() => {
-                    async function createUser() {
+                    async function createRecord() {
                         const result = await create(new StubResourceRecord());
-                        setUser(result.resultObject!);
+                        setRecord(result.resultObject!);
                     }
 
-                    createUser();
+                    createRecord();
                 }, []);
 
-                return <div>{user != null && user!.name}</div>;
+                return <div>{record != null && record!.name}</div>;
             };
 
             // Act
@@ -104,12 +105,12 @@ describe("ServiceHookFactory", () => {
             const consoleErrorSpy = jest.spyOn(console, "error");
 
             const useCreate = sut.useCreate<StubResourceRecord>(
-                UserRecord,
+                StubResourceRecord,
                 baseEndpoint
             );
 
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.userRecord
+                FactoryType.StubResourceRecord
             );
             mockAxios.postSuccess(record, cancellationTestsApiDelay);
 
@@ -117,24 +118,24 @@ describe("ServiceHookFactory", () => {
 
             const CreateStubComponent = () => {
                 const { create } = useCreate();
-                const [user, setUser] = useState<StubResourceRecord>(
+                const [record, setRecord] = useState<StubResourceRecord>(
                     null as any
                 );
 
                 useEffect(() => {
-                    async function createUser() {
+                    async function createRecord() {
                         const result = await create(new StubResourceRecord());
-                        setUser(result.resultObject!);
+                        setRecord(result.resultObject!);
                     }
 
-                    createUser();
+                    createRecord();
 
                     return () => {
                         isUnmounted = true;
                     };
                 }, []);
 
-                return <div>{user != null && user!.name}</div>;
+                return <div>{record != null && record!.name}</div>;
             };
 
             // Act
@@ -142,7 +143,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<CreateStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await CoreUtils.sleep(cancellationTestsAssertionDelay);
+                await TestUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -153,102 +154,107 @@ describe("ServiceHookFactory", () => {
 
     // #endregion useCreate
 
-    // // ---------------------------------------------------------------------------------------------
-    // // #region useDelete
-    // // ---------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------
+    // #region useDelete
+    // ---------------------------------------------------------------------------------------------
 
-    // describe("useDelete", () => {
-    //     itReturnsFunction(sut.useDelete, baseEndpoint);
+    describe("useDelete", () => {
+        itReturnsFunction(sut.useDelete, baseEndpoint);
 
-    //     it("when not-cancelled, resolves successfully", async () => {
-    //         // Arrange
-    //         const useDelete = sut.useDelete(resourceEndpoint);
-    //         const userIdToDelete = 10;
+        it("when not-cancelled, resolves successfully", async () => {
+            // Arrange
+            const useDelete = sut.useDelete(resourceEndpoint);
+            const recordIdToDelete = 10;
 
-    //         mockAxios.deleteSuccess(new Boolean(true));
+            mockAxios.deleteSuccess(new Boolean(true));
 
-    //         const DeleteStubComponent = () => {
-    //             const { delete: deleteRecord } = useDelete();
-    //             const [isDeleted, setIsDeleted] = useState<boolean>(false);
+            const DeleteStubComponent = () => {
+                const { delete: deleteRecord } = useDelete();
+                const [isDeleted, setIsDeleted] = useState<boolean>(false);
 
-    //             useEffect(() => {
-    //                 async function deleteUser() {
-    //                     try {
-    //                         const deleteResult = await deleteRecord(
-    //                             userIdToDelete
-    //                         );
-    //                         setIsDeleted(
-    //                             (deleteResult.resultObject || false) as boolean
-    //                         );
-    //                     } catch (e) {}
-    //                 }
-    //                 deleteUser();
-    //             }, []);
+                useEffect(() => {
+                    async function deleteStubRecord() {
+                        try {
+                            const deleteResult = await deleteRecord(
+                                recordIdToDelete
+                            );
+                            setIsDeleted(
+                                (deleteResult.resultObject || false) as boolean
+                            );
+                        } catch (e) {}
+                    }
+                    deleteStubRecord();
+                }, []);
 
-    //             return <div>{isDeleted && "deleted"}</div>;
-    //         };
+                return <div>{isDeleted && "deleted"}</div>;
+            };
 
-    //         // Act
-    //         const { getByText } = render(<DeleteStubComponent />);
+            // Act
+            const { getByText } = render(<DeleteStubComponent />);
 
-    //         // Assert
-    //         await wait(() => {
-    //             expect(getByText("deleted")).toBeInTheDocument();
-    //         });
-    //     });
+            // Assert
+            await wait(() => {
+                expect(getByText("deleted")).toBeInTheDocument();
+            });
+        });
 
-    //     /**
-    //      * Test ensures service hook factory in fact protects against a react error
-    //      * when the component is unmounted before the promise resolves.
-    //      *
-    //      * See ServiceFactory.test.tsx for test that verifies react error thrown
-    //      */
-    //     it("when unmounted before resolution, promise is cancelled successfully", async () => {
-    //         // Arrange
-    //         const consoleErrorSpy = jest.spyOn(console, "error");
+        /**
+         * Test ensures service hook factory in fact protects against a react error
+         * when the component is unmounted before the promise resolves.
+         *
+         * See ServiceFactory.test.tsx for test that verifies react error thrown
+         */
+        it("when unmounted before resolution, promise is cancelled successfully", async () => {
+            // Arrange
+            const consoleErrorSpy = jest.spyOn(console, "error");
 
-    //         const useDelete = sut.useDelete(baseEndpoint);
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord, {
-    //             id: 10,
-    //         });
-    //         mockAxios.deleteSuccess(record, cancellationTestsApiDelay);
-    //         let isUnmounted = false;
+            const useDelete = sut.useDelete(baseEndpoint);
+            const record = Factory.build<StubResourceRecord>(
+                FactoryType.StubResourceRecord,
+                {
+                    id: 10,
+                }
+            );
+            mockAxios.deleteSuccess(record, cancellationTestsApiDelay);
+            let isUnmounted = false;
 
-    //         const DeleteStubComponent = () => {
-    //             const { delete: deleteRecord } = useDelete();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+            const DeleteStubComponent = () => {
+                const { delete: deleteRecord } = useDelete();
+                const [record, setRecord] = useState<StubResourceRecord>(
+                    new StubResourceRecord()
+                );
 
-    //             useEffect(() => {
-    //                 async function deleteUser() {
-    //                     await deleteRecord(record.id!);
-    //                     setUser(record);
-    //                 }
+                useEffect(() => {
+                    async function deleteStubRecord() {
+                        await deleteRecord(record.id);
+                        setRecord(record);
+                    }
 
-    //                 deleteUser();
+                    deleteStubRecord();
 
-    //                 return () => {
-    //                     isUnmounted = true;
-    //                 };
-    //             }, []);
+                    return () => {
+                        isUnmounted = true;
+                    };
+                }, []);
 
-    //             return <div>{user != null && user!.id}</div>;
-    //         };
+                return <div>{record != null && record!.id}</div>;
+            };
 
-    //         // Act
-    //         await act(async () => {
-    //             const { unmount } = render(<DeleteStubComponent />);
-    //             unmount();
-    //             // Force a sleep longer than when API promise resolves
-    //             await CoreUtils.sleep(cancellationTestsAssertionDelay);
-    //         });
+            // Act
+            await act(async () => {
+                const { unmount } = render(<DeleteStubComponent />);
+                unmount();
+                // Force a sleep longer than when API promise resolves
+                await TestUtils.sleep(cancellationTestsAssertionDelay);
+            });
 
-    //         // Assert
-    //         expect(isUnmounted).toBeTrue();
-    //         expect(consoleErrorSpy).not.toHaveBeenCalled();
-    //     });
-    // });
+            // Assert
+            expect(isUnmounted).toBeTrue();
+            expect(consoleErrorSpy).not.toHaveBeenCalled();
+        });
+    });
 
-    // // #endregion useDelete
+    // #endregion useDelete
 
     // // ---------------------------------------------------------------------------------------------
     // // #region useGet
@@ -259,9 +265,9 @@ describe("ServiceHookFactory", () => {
 
     //     it("when not-cancelled, resolves successfully", async () => {
     //         // Arrange
-    //         const useGet = sut.useGet(UserRecord, resourceEndpoint);
+    //         const useGet = sut.useGet(StubResourceRecord, resourceEndpoint);
     //         const expectedStubRecord = Factory.build<StubResourceRecord>(
-    //             FactoryType.userRecord,
+    //             FactoryType.StubResourceRecord,
     //             { id: 10 }
     //         );
 
@@ -269,7 +275,7 @@ describe("ServiceHookFactory", () => {
 
     //         const GetStubComponent = () => {
     //             const { get } = useGet();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
     //                 async function getUser() {
@@ -277,14 +283,14 @@ describe("ServiceHookFactory", () => {
     //                         const result = await get({
     //                             id: expectedStubRecord.id!,
     //                         });
-    //                         setUser(result.resultObject!);
+    //                         setRecord(result.resultObject!);
     //                     } catch (e) {}
     //                 }
 
     //                 getUser();
     //             }, []);
 
-    //             return <div>{user != null && user.name}</div>;
+    //             return <div>{record != null && record.name}</div>;
     //         };
 
     //         // Act
@@ -308,8 +314,8 @@ describe("ServiceHookFactory", () => {
     //         // Arrange
     //         const consoleErrorSpy = jest.spyOn(console, "error");
 
-    //         const useGet = sut.useGet(UserRecord, baseEndpoint);
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord, {
+    //         const useGet = sut.useGet(StubResourceRecord, baseEndpoint);
+    //         const record = Factory.build<StubResourceRecord>(FactoryType.recordRecord, {
     //             id: 10,
     //         });
     //         mockAxios.getSuccess(record, cancellationTestsApiDelay);
@@ -317,12 +323,12 @@ describe("ServiceHookFactory", () => {
 
     //         const GetStubComponent = () => {
     //             const { get } = useGet();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
     //                 async function getUser() {
     //                     const result = await get(record.id!);
-    //                     setUser(result.resultObject!);
+    //                     setRecord(result.resultObject!);
     //                 }
 
     //                 getUser();
@@ -332,7 +338,7 @@ describe("ServiceHookFactory", () => {
     //                 };
     //             }, []);
 
-    //             return <div>{user != null && user!.name}</div>;
+    //             return <div>{record != null && record!.name}</div>;
     //         };
 
     //         // Act
@@ -360,9 +366,9 @@ describe("ServiceHookFactory", () => {
 
     //     it("when not-cancelled, resolves successfully", async () => {
     //         // Arrange
-    //         const useList = sut.useList(UserRecord, baseEndpoint);
+    //         const useList = sut.useList(StubResourceRecord, baseEndpoint);
     //         const expectedStubRecords = Factory.buildList(
-    //             FactoryType.userRecord,
+    //             FactoryType.recordRecord,
     //             2
     //         ) as UserRecord[];
 
@@ -370,19 +376,19 @@ describe("ServiceHookFactory", () => {
 
     //         const ListStubComponent = () => {
     //             const { list } = useList();
-    //             const [users, setUsers] = useState<UserRecord[]>([]);
+    //             const [records, setRecords] = useState<UserRecord[]>([]);
 
     //             useEffect(() => {
     //                 async function listUsers() {
     //                     try {
     //                         const result = await list();
-    //                         setUsers(result.resultObjects!);
+    //                         setRecords(result.resultObjects!);
     //                     } catch (e) {}
     //                 }
     //                 listUsers();
     //             }, []);
 
-    //             return <div>{users != null && users.map((u) => u.name!)}</div>;
+    //             return <div>{records != null && records.map((u) => u.name!)}</div>;
     //         };
 
     //         // Act
@@ -409,7 +415,7 @@ describe("ServiceHookFactory", () => {
     //         const consoleErrorSpy = jest.spyOn(console, "error");
 
     //         const useList = sut.useList(UserRecord, baseEndpoint);
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord, {
+    //         const record = Factory.build<StubResourceRecord>(FactoryType.recordRecord, {
     //             id: 10,
     //         });
     //         mockAxios.getSuccess(record, cancellationTestsApiDelay);
@@ -417,12 +423,12 @@ describe("ServiceHookFactory", () => {
 
     //         const ListStubComponent = () => {
     //             const { list } = useList();
-    //             const [users, setUsers] = useState<UserRecord[]>([]);
+    //             const [records, setRecords] = useState<UserRecord[]>([]);
 
     //             useEffect(() => {
     //                 async function listUsers() {
     //                     const result = await list();
-    //                     setUsers(result.resultObjects!);
+    //                     setRecords(result.resultObjects!);
     //                 }
 
     //                 listUsers();
@@ -432,7 +438,7 @@ describe("ServiceHookFactory", () => {
     //                 };
     //             }, []);
 
-    //             return <div>{users != null && users.map((u) => u.name!)}</div>;
+    //             return <div>{records != null && records.map((u) => u.name!)}</div>;
     //         };
 
     //         // Act
@@ -465,26 +471,26 @@ describe("ServiceHookFactory", () => {
     //             nestedBaseEndpoint
     //         );
     //         const expectedStubRecord = Factory.build<StubResourceRecord>(
-    //             FactoryType.userRecord
+    //             FactoryType.recordRecord
     //         );
 
     //         mockAxios.postSuccess(expectedStubRecord);
 
     //         const NestedCreateStubComponent = () => {
     //             const { create } = useCreate();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
     //                 async function createLogin() {
     //                     const result = await create(new StubResourceRecord(), {
     //                         nestedId: 10,
     //                     });
-    //                     setUser(result.resultObject!);
+    //                     setRecord(result.resultObject!);
     //                 }
     //                 createLogin();
     //             }, []);
 
-    //             return <div>{user != null && user!.name}</div>;
+    //             return <div>{record != null && record!.name}</div>;
     //         };
 
     //         // Act
@@ -512,7 +518,7 @@ describe("ServiceHookFactory", () => {
     //             UserRecord,
     //             nestedBaseEndpoint
     //         );
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord);
+    //         const record = Factory.build<StubResourceRecord>(FactoryType.recordRecord);
 
     //         mockAxios.postSuccess(record, cancellationTestsApiDelay);
 
@@ -520,24 +526,24 @@ describe("ServiceHookFactory", () => {
 
     //         const NestedCreateStubComponent = () => {
     //             const { create } = useCreate();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
-    //                 async function createUser() {
+    //                 async function createRecord() {
     //                     const result = await create(new StubResourceRecord(), {
     //                         nestedId: 10,
     //                     });
-    //                     setUser(result.resultObject!);
+    //                     setRecord(result.resultObject!);
     //                 }
 
-    //                 createUser();
+    //                 createRecord();
 
     //                 return () => {
     //                     isUnmounted = true;
     //                 };
     //             }, []);
 
-    //             return <div>{user != null && user.name!}</div>;
+    //             return <div>{record != null && record.name!}</div>;
     //         };
 
     //         // Act
@@ -570,7 +576,7 @@ describe("ServiceHookFactory", () => {
     //             nestedBaseEndpoint
     //         );
     //         const expectedStubRecords = Factory.buildList(
-    //             FactoryType.userRecord,
+    //             FactoryType.recordRecord,
     //             2
     //         ) as UserRecord[];
 
@@ -578,19 +584,19 @@ describe("ServiceHookFactory", () => {
 
     //         const NestedListStubComponent = () => {
     //             const { list } = useList();
-    //             const [users, setUsers] = useState<UserRecord[]>([]);
+    //             const [records, setRecords] = useState<UserRecord[]>([]);
 
     //             useEffect(() => {
     //                 async function getUsers() {
     //                     const result = await list({
     //                         nestedId: 10,
     //                     });
-    //                     setUsers(result.resultObjects!);
+    //                     setRecords(result.resultObjects!);
     //                 }
     //                 getUsers();
     //             }, []);
 
-    //             return <div>{users != null && users.map((u) => u.name!)}</div>;
+    //             return <div>{records != null && records.map((u) => u.name!)}</div>;
     //         };
 
     //         // Act
@@ -621,7 +627,7 @@ describe("ServiceHookFactory", () => {
     //             nestedBaseEndpoint
     //         );
     //         const records = Factory.buildList(
-    //             FactoryType.userRecord,
+    //             FactoryType.recordRecord,
     //             2
     //         ) as UserRecord[];
 
@@ -631,12 +637,12 @@ describe("ServiceHookFactory", () => {
 
     //         const NestedListStubComponent = () => {
     //             const { list } = useList();
-    //             const [users, setUsers] = useState<UserRecord[]>([]);
+    //             const [records, setRecords] = useState<UserRecord[]>([]);
 
     //             useEffect(() => {
     //                 async function listUsers() {
     //                     const result = await list({ nestedId: 10 });
-    //                     setUsers(result.resultObjects!);
+    //                     setRecords(result.resultObjects!);
     //                 }
 
     //                 listUsers();
@@ -646,7 +652,7 @@ describe("ServiceHookFactory", () => {
     //                 };
     //             }, []);
 
-    //             return <div>{users != null && users.map((u) => u.name!)}</div>;
+    //             return <div>{records != null && records.map((u) => u.name!)}</div>;
     //         };
 
     //         // Act
@@ -676,7 +682,7 @@ describe("ServiceHookFactory", () => {
     //         // Arrange
     //         const useUpdate = sut.useUpdate(UserRecord, resourceEndpoint);
     //         const expectedStubRecord = Factory.build<StubResourceRecord>(
-    //             FactoryType.userRecord,
+    //             FactoryType.recordRecord,
     //             { id: 10 }
     //         );
 
@@ -684,17 +690,17 @@ describe("ServiceHookFactory", () => {
 
     //         const UpdateStubComponent = () => {
     //             const { update } = useUpdate();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
     //                 async function updateUser() {
     //                     const result = await update(expectedStubRecord);
-    //                     setUser(result.resultObject!);
+    //                     setRecord(result.resultObject!);
     //                 }
     //                 updateUser();
     //             }, []);
 
-    //             return <div>{user != null && user!.name}</div>;
+    //             return <div>{record != null && record!.name}</div>;
     //         };
 
     //         // Act
@@ -719,7 +725,7 @@ describe("ServiceHookFactory", () => {
     //         const consoleErrorSpy = jest.spyOn(console, "error");
 
     //         const useUpdate = sut.useUpdate(UserRecord, baseEndpoint);
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord, {
+    //         const record = Factory.build<StubResourceRecord>(FactoryType.recordRecord, {
     //             id: 10,
     //         });
 
@@ -729,12 +735,12 @@ describe("ServiceHookFactory", () => {
 
     //         const UpdateStubComponent = () => {
     //             const { update } = useUpdate();
-    //             const [user, setUser] = useState<StubResourceRecord>(null as any);
+    //             const [record, setRecord] = useState<StubResourceRecord>(null as any);
 
     //             useEffect(() => {
     //                 async function updateUser() {
     //                     const result = await update(record);
-    //                     setUser(result.resultObject!);
+    //                     setRecord(result.resultObject!);
     //                 }
 
     //                 updateUser();
@@ -744,7 +750,7 @@ describe("ServiceHookFactory", () => {
     //                 };
     //             }, []);
 
-    //             return <div>{user != null && user!.name}</div>;
+    //             return <div>{record != null && record!.name}</div>;
     //         };
 
     //         // Act
@@ -777,7 +783,7 @@ describe("ServiceHookFactory", () => {
     //             resourceEndpoint
     //         );
     //         const expectedStubRecord = Factory.build<StubResourceRecord>(
-    //             FactoryType.userRecord,
+    //             FactoryType.recordRecord,
     //             { id: 10 }
     //         );
 
@@ -785,7 +791,7 @@ describe("ServiceHookFactory", () => {
 
     //         const UpdateStubComponent = () => {
     //             const { update } = useBulkUpdate();
-    //             const [users, setUsers] = useState<Array<StubResourceRecord>>(
+    //             const [records, setRecords] = useState<Array<StubResourceRecord>>(
     //                 null as any
     //             );
 
@@ -794,12 +800,12 @@ describe("ServiceHookFactory", () => {
     //                     const result = await update([expectedStubRecord], {
     //                         id: expectedStubRecord.id!,
     //                     });
-    //                     setUsers(result.resultObjects!);
+    //                     setRecords(result.resultObjects!);
     //                 }
     //                 updateUser();
     //             }, []);
 
-    //             return <div>{users != null && users[0].name}</div>;
+    //             return <div>{records != null && records[0].name}</div>;
     //         };
 
     //         // Act
@@ -824,7 +830,7 @@ describe("ServiceHookFactory", () => {
     //         const consoleErrorSpy = jest.spyOn(console, "error");
 
     //         const useBulkUpdate = sut.useBulkUpdate(UserRecord, baseEndpoint);
-    //         const record = Factory.build<StubResourceRecord>(FactoryType.userRecord, {
+    //         const record = Factory.build<StubResourceRecord>(FactoryType.recordRecord, {
     //             id: 10,
     //         });
 
@@ -834,7 +840,7 @@ describe("ServiceHookFactory", () => {
 
     //         const UpdateStubComponent = () => {
     //             const { update } = useBulkUpdate();
-    //             const [users, setUsers] = useState<Array<StubResourceRecord>>(
+    //             const [records, setRecords] = useState<Array<StubResourceRecord>>(
     //                 null as any
     //             );
 
@@ -843,7 +849,7 @@ describe("ServiceHookFactory", () => {
     //                     const result = await update([record], {
     //                         id: record.id!,
     //                     });
-    //                     setUsers(result.resultObjects!);
+    //                     setRecords(result.resultObjects!);
     //                 }
 
     //                 updateUser();
@@ -853,7 +859,7 @@ describe("ServiceHookFactory", () => {
     //                 };
     //             }, []);
 
-    //             return <div>{users != null && users[0].name}</div>;
+    //             return <div>{records != null && records[0].name}</div>;
     //         };
 
     //         // Act
