@@ -10,7 +10,7 @@ import { ServiceUtils } from "../utilities/service-utils";
 /**
  * Type defining the service function for bulk updating the supplied resource type
  */
-export type BulkUpdateService<TRecord, TPathParams> = (
+type BulkUpdateService<TRecord, TPathParams> = (
     records: TRecord[],
     pathParams: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -18,14 +18,14 @@ export type BulkUpdateService<TRecord, TPathParams> = (
 /**
  * Type defining the service function for creating the supplied resource type
  */
-export type CreateService<TRecord> = (
+type CreateService<TRecord> = (
     record?: TRecord
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
  * Type defining the service function for deleting the supplied resource
  */
-export type DeleteService = (
+type DeleteService = (
     id: number,
     pathParams?: any
 ) => Promise<ServiceResponse<Boolean>>;
@@ -33,7 +33,7 @@ export type DeleteService = (
 /**
  * Type defining the service function for getting the supplied resource type
  */
-export type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
+type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
     pathParams: TPathParams,
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -41,14 +41,14 @@ export type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
 /**
  * Type defining the service function for listing resources by supplied type
  */
-export type ListService<TRecord, TQueryParams> = (
+type ListService<TRecord, TQueryParams> = (
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
  * Type defining the service function for creating the supplied resource type when resource is nested
  */
-export type NestedCreateService<TRecord, TPathParams> = (
+type NestedCreateService<TRecord, TPathParams> = (
     record: TRecord,
     pathParams: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -56,7 +56,7 @@ export type NestedCreateService<TRecord, TPathParams> = (
 /**
  * Type defining the service function for listing resources by supplied type when resource is nested
  */
-export type NestedListService<TRecord, TPathParams, TQueryParams> = (
+type NestedListService<TRecord, TPathParams, TQueryParams> = (
     pathParams: TPathParams,
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -64,7 +64,7 @@ export type NestedListService<TRecord, TPathParams, TQueryParams> = (
 /**
  * Type defining the service function for updating the supplied resource type
  */
-export type UpdateService<TRecord, TPathParams> = (
+type UpdateService<TRecord, TPathParams> = (
     record: TRecord,
     pathParams?: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -314,9 +314,19 @@ const _update = async function<TRecord extends any, TPathParams extends any>(
 // #endregion Private Functions
 
 // -----------------------------------------------------------------------------------------
-// #region Export
+// #region Exports
 // -----------------------------------------------------------------------------------------
 
-export { ServiceFactory };
+export {
+    BulkUpdateService,
+    CreateService,
+    DeleteService,
+    GetService,
+    ListService,
+    NestedCreateService,
+    NestedListService,
+    ServiceFactory,
+    UpdateService,
+};
 
-// #endregion Export
+// #endregion Exports

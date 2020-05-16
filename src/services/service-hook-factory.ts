@@ -25,60 +25,56 @@ import { useCancellablePromise } from "../hooks/use-cancellable-promise";
 /**
  * Type defining the return object from calling `useBulkUpdate()`
  */
-export type BulkUpdateServiceHook<TRecord, TPathParams> = () => {
+type BulkUpdateServiceHook<TRecord, TPathParams> = () => {
     update: BulkUpdateService<TRecord, TPathParams>;
 };
 
 /**
  * Type defining the return object from calling `useCreate()`
  */
-export type CreateServiceHook<TRecord> = () => {
+type CreateServiceHook<TRecord> = () => {
     create: CreateService<TRecord>;
 };
 
 /**
  * Type defining the return object from calling `useDelete()`
  */
-export type DeleteServiceHook = () => {
+type DeleteServiceHook = () => {
     delete: DeleteService;
 };
 
 /**
  * Type defining the return object from calling `useGet()`
  */
-export type GetServiceHook<
-    TRecord,
-    TPathParams,
-    TQueryParams = undefined
-> = () => {
+type GetServiceHook<TRecord, TPathParams, TQueryParams = undefined> = () => {
     get: GetService<TRecord, TPathParams, TQueryParams>;
 };
 
 /**
  * Type defining the return object from calling `useList()`
  */
-export type ListServiceHook<TRecord, TQueryParams> = () => {
+type ListServiceHook<TRecord, TQueryParams> = () => {
     list: ListService<TRecord, TQueryParams>;
 };
 
 /**
  * Type defining the return object from calling `useNestedCreate()`
  */
-export type NestedCreateServiceHook<TRecord, TPathParams> = () => {
+type NestedCreateServiceHook<TRecord, TPathParams> = () => {
     create: NestedCreateService<TRecord, TPathParams>;
 };
 
 /**
  * Type defining the return object from calling `useNestedList()`
  */
-export type NestedListServiceHook<TRecord, TPathParams, TQueryParams> = () => {
+type NestedListServiceHook<TRecord, TPathParams, TQueryParams> = () => {
     list: NestedListService<TRecord, TPathParams, TQueryParams>;
 };
 
 /**
  * Type defining the return object from calling `useUpdate()`
  */
-export type UpdateServiceHook<TRecord, TPathParams> = () => {
+type UpdateServiceHook<TRecord, TPathParams> = () => {
     update: UpdateService<TRecord, TPathParams>;
 };
 
@@ -349,6 +345,16 @@ const ServiceHookFactory = {
 // #region Exports
 // ---------------------------------------------------------------------------------------------
 
-export { ServiceHookFactory };
+export {
+    BulkUpdateServiceHook,
+    CreateServiceHook,
+    DeleteServiceHook,
+    GetServiceHook,
+    ListServiceHook,
+    NestedCreateServiceHook,
+    NestedListServiceHook,
+    ServiceHookFactory,
+    UpdateServiceHook,
+};
 
 // #endregion Exports
