@@ -89,6 +89,37 @@ type UpdateServiceHook<TRecord, TPathParams> = () => {
  */
 const ServiceHookFactory = {
     /**
+     * Creates conventional hook for using service update function for an array of the supplied resource type.
+     * Automatically handles cancellation tokens internally.
+     * @param recordType
+     * @param resourceEndpoint
+     */
+    useBulkUpdate<TRecord, TPathParams>(
+        recordType: { new (): TRecord },
+        resourceEndpoint: string
+    ): BulkUpdateServiceHook<TRecord, TPathParams> {
+        return () => {
+            const { cancellablePromise } = useCancellablePromise();
+
+            const serviceUpdate = ServiceFactory.bulkUpdate(
+                recordType,
+                resourceEndpoint
+            );
+
+            function update(
+                records: Array<TRecord>,
+                pathParams: TPathParams
+            ): Promise<ServiceResponse<TRecord>> {
+                return cancellablePromise(
+                    serviceUpdate(records, pathParams)
+                ) as Promise<ServiceResponse<TRecord>>;
+            }
+
+            return { update: useCallback(update, []) };
+        };
+    },
+
+    /**
      * Creates conventional hook for using service create function for the supplied resource type.
      * Automatically handles cancellation tokens internally.
      *
@@ -300,37 +331,6 @@ const ServiceHookFactory = {
             ): Promise<ServiceResponse<TRecord>> {
                 return cancellablePromise(
                     serviceUpdate(record, pathParams)
-                ) as Promise<ServiceResponse<TRecord>>;
-            }
-
-            return { update: useCallback(update, []) };
-        };
-    },
-
-    /**
-     * Creates conventional hook for using service update function for an array of the supplied resource type.
-     * Automatically handles cancellation tokens internally.
-     * @param recordType
-     * @param resourceEndpoint
-     */
-    useBulkUpdate<TRecord, TPathParams>(
-        recordType: { new (): TRecord },
-        resourceEndpoint: string
-    ): BulkUpdateServiceHook<TRecord, TPathParams> {
-        return () => {
-            const { cancellablePromise } = useCancellablePromise();
-
-            const serviceUpdate = ServiceFactory.bulkUpdate(
-                recordType,
-                resourceEndpoint
-            );
-
-            function update(
-                records: Array<TRecord>,
-                pathParams: TPathParams
-            ): Promise<ServiceResponse<TRecord>> {
-                return cancellablePromise(
-                    serviceUpdate(records, pathParams)
                 ) as Promise<ServiceResponse<TRecord>>;
             }
 
