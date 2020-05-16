@@ -3,7 +3,6 @@
  * and thinks we are calling it
  */
 /* eslint-disable react-hooks/rules-of-hooks */
-
 import { useCallback } from "react";
 import {
     GetService,
@@ -17,6 +16,7 @@ import {
     ServiceFactory,
 } from "./service-factory";
 import { ServiceResponse } from "../interfaces/service-response";
+import { useCancellablePromise } from "../hooks/use-cancellable-promise";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -48,12 +48,10 @@ export type DeleteServiceHook = () => {
  */
 export type GetServiceHook<
     TRecord,
-    TPathParams
-    // TQueryParams = undefined
+    TPathParams,
+    TQueryParams = undefined
 > = () => {
-    // get: GetService<TRecord, TPathParams, TQueryParams>;
-    // TODO: Update GetService in service-factory to have optional TQueryParams
-    get: GetService<TRecord, TPathParams>;
+    get: GetService<TRecord, TPathParams, TQueryParams>;
 };
 
 /**
@@ -162,24 +160,23 @@ const ServiceHookFactory = {
     useGet<TRecord, TPathParams, TQueryParams = undefined>(
         recordType: { new (): TRecord },
         resourceEndpoint: string
-        // ): GetServiceHook<TRecord, TPathParams, TQueryParams> {
-    ): GetServiceHook<TRecord, TPathParams> {
+    ): GetServiceHook<TRecord, TPathParams, TQueryParams> {
         return () => {
             const { cancellablePromise } = useCancellablePromise();
 
             const serviceGet = ServiceFactory.get<
                 TRecord,
-                TPathParams
-                // TQueryParams
+                TPathParams,
+                TQueryParams
             >(recordType, resourceEndpoint);
 
             function get(
                 pathParams: TPathParams,
                 queryParams?: TQueryParams
             ): Promise<ServiceResponse<TRecord>> {
-                return cancellablePromise(serviceGet(pathParams)) as Promise<
-                    ServiceResponse<TRecord>
-                >;
+                return cancellablePromise(
+                    serviceGet(pathParams, queryParams)
+                ) as Promise<ServiceResponse<TRecord>>;
             }
 
             return { get: useCallback(get, []) };

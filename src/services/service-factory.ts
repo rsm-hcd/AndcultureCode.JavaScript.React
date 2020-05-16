@@ -33,8 +33,9 @@ export type DeleteService = (
 /**
  * Type defining the service function for getting the supplied resource type
  */
-export type GetService<TRecord, TPathParams> = (
-    pathParams: TPathParams
+export type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
+    pathParams: TPathParams,
+    queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
@@ -83,11 +84,11 @@ const ServiceFactory = {
      * @param recordType
      * @param resourceEndpoint
      */
-    bulkUpdate<TRecord extends any, TPathParams extends { id: number }>(
+    bulkUpdate<TRecord extends any, TPathParams extends any>(
         recordType: { new (): TRecord },
         resourceEndpoint: string
     ): BulkUpdateService<TRecord, TPathParams> {
-        return async (records: TRecord[], pathParams?: any) =>
+        return async (records: Array<TRecord>, pathParams?: any) =>
             await _bulkUpdate<TRecord, TPathParams>(
                 recordType,
                 records,
@@ -128,15 +129,16 @@ const ServiceFactory = {
      * @param recordType
      * @param resourceEndpoint
      */
-    get<TRecord, TPathParams>(
+    get<TRecord, TPathParams, TQueryParams = undefined>(
         recordType: { new (): TRecord },
         resourceEndpoint: string
-    ): GetService<TRecord, TPathParams> {
-        return async (pathParams: TPathParams) =>
-            await _get<TRecord, TPathParams>(
+    ): GetService<TRecord, TPathParams, TQueryParams> {
+        return async (pathParams: TPathParams, queryParams?: TQueryParams) =>
+            await _get<TRecord, TPathParams, TQueryParams>(
                 recordType,
                 resourceEndpoint,
-                pathParams
+                pathParams,
+                queryParams
             );
     },
 
@@ -229,11 +231,11 @@ const _bulkUpdate = async function<
     TPathParams extends any
 >(
     recordType: { new (): TRecord },
-    records: TRecord[],
+    records: Array<TRecord>,
     resourceEndpoint: string,
     pathParams: TPathParams
 ) {
-    const url = _buildUrl(pathParams.id, resourceEndpoint, pathParams);
+    const url = RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
     return await axios
         .put(
             url,
@@ -265,12 +267,17 @@ const _delete = async function(
         .then((r) => ServiceUtils.mapAxiosResponse(Boolean, r));
 };
 
-const _get = async function<TRecord, TPathParams>(
+const _get = async function<TRecord, TPathParams, TQueryParams = undefined>(
     recordType: { new (): TRecord },
     resourceEndpoint: string,
-    pathParams: TPathParams
+    pathParams: TPathParams,
+    queryParams?: TQueryParams
 ) {
-    const url = RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
+    const url = RouteUtils.getUrlFromPath(
+        resourceEndpoint,
+        pathParams,
+        queryParams
+    );
     return await axios
         .get(url)
         .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
