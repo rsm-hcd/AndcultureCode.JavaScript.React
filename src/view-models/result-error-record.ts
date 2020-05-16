@@ -41,6 +41,13 @@ class ResultErrorRecord extends Record(defaultValues) implements ResultError {
         return `${this.key}: ${this.message}`;
     }
 
+    /**
+     * Merges new values into the record and returns a new instance.
+     *
+     * @param {Partial<ResultError>} values
+     * @returns {ResultErrorRecord}
+     * @memberof ResultErrorRecord
+     */
     public with(values: Partial<ResultError>): ResultErrorRecord {
         return new ResultErrorRecord(Object.assign(this.toJS(), values));
     }
