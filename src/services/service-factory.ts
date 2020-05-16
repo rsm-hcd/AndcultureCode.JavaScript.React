@@ -10,7 +10,7 @@ import { ServiceUtils } from "../utilities/service-utils";
 /**
  * Type defining the service function for bulk updating the supplied resource type
  */
-export type BulkUpdateService<TRecord, TPathParams> = (
+type BulkUpdateService<TRecord, TPathParams> = (
     records: TRecord[],
     pathParams: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -18,14 +18,14 @@ export type BulkUpdateService<TRecord, TPathParams> = (
 /**
  * Type defining the service function for creating the supplied resource type
  */
-export type CreateService<TRecord> = (
+type CreateService<TRecord> = (
     record?: TRecord
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
  * Type defining the service function for deleting the supplied resource
  */
-export type DeleteService = (
+type DeleteService = (
     id: number,
     pathParams?: any
 ) => Promise<ServiceResponse<Boolean>>;
@@ -33,21 +33,22 @@ export type DeleteService = (
 /**
  * Type defining the service function for getting the supplied resource type
  */
-export type GetService<TRecord, TPathParams> = (
-    pathParams: TPathParams
+type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
+    pathParams: TPathParams,
+    queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
  * Type defining the service function for listing resources by supplied type
  */
-export type ListService<TRecord, TQueryParams> = (
+type ListService<TRecord, TQueryParams> = (
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
 
 /**
  * Type defining the service function for creating the supplied resource type when resource is nested
  */
-export type NestedCreateService<TRecord, TPathParams> = (
+type NestedCreateService<TRecord, TPathParams> = (
     record: TRecord,
     pathParams: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -55,7 +56,7 @@ export type NestedCreateService<TRecord, TPathParams> = (
 /**
  * Type defining the service function for listing resources by supplied type when resource is nested
  */
-export type NestedListService<TRecord, TPathParams, TQueryParams> = (
+type NestedListService<TRecord, TPathParams, TQueryParams> = (
     pathParams: TPathParams,
     queryParams?: TQueryParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -63,7 +64,7 @@ export type NestedListService<TRecord, TPathParams, TQueryParams> = (
 /**
  * Type defining the service function for updating the supplied resource type
  */
-export type UpdateService<TRecord, TPathParams> = (
+type UpdateService<TRecord, TPathParams> = (
     record: TRecord,
     pathParams?: TPathParams
 ) => Promise<ServiceResponse<TRecord>>;
@@ -83,11 +84,11 @@ const ServiceFactory = {
      * @param recordType
      * @param resourceEndpoint
      */
-    bulkUpdate<TRecord extends any, TPathParams extends { id: number }>(
+    bulkUpdate<TRecord extends any, TPathParams extends any>(
         recordType: { new (): TRecord },
         resourceEndpoint: string
     ): BulkUpdateService<TRecord, TPathParams> {
-        return async (records: TRecord[], pathParams?: any) =>
+        return async (records: Array<TRecord>, pathParams?: any) =>
             await _bulkUpdate<TRecord, TPathParams>(
                 recordType,
                 records,
@@ -128,15 +129,16 @@ const ServiceFactory = {
      * @param recordType
      * @param resourceEndpoint
      */
-    get<TRecord, TPathParams>(
+    get<TRecord, TPathParams, TQueryParams = undefined>(
         recordType: { new (): TRecord },
         resourceEndpoint: string
-    ): GetService<TRecord, TPathParams> {
-        return async (pathParams: TPathParams) =>
-            await _get<TRecord, TPathParams>(
+    ): GetService<TRecord, TPathParams, TQueryParams> {
+        return async (pathParams: TPathParams, queryParams?: TQueryParams) =>
+            await _get<TRecord, TPathParams, TQueryParams>(
                 recordType,
                 resourceEndpoint,
-                pathParams
+                pathParams,
+                queryParams
             );
     },
 
@@ -229,11 +231,11 @@ const _bulkUpdate = async function<
     TPathParams extends any
 >(
     recordType: { new (): TRecord },
-    records: TRecord[],
+    records: Array<TRecord>,
     resourceEndpoint: string,
     pathParams: TPathParams
 ) {
-    const url = _buildUrl(pathParams.id, resourceEndpoint, pathParams);
+    const url = RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
     return await axios
         .put(
             url,
@@ -265,12 +267,17 @@ const _delete = async function(
         .then((r) => ServiceUtils.mapAxiosResponse(Boolean, r));
 };
 
-const _get = async function<TRecord, TPathParams>(
+const _get = async function<TRecord, TPathParams, TQueryParams = undefined>(
     recordType: { new (): TRecord },
     resourceEndpoint: string,
-    pathParams: TPathParams
+    pathParams: TPathParams,
+    queryParams?: TQueryParams
 ) {
-    const url = RouteUtils.getUrlFromPath(resourceEndpoint, pathParams);
+    const url = RouteUtils.getUrlFromPath(
+        resourceEndpoint,
+        pathParams,
+        queryParams
+    );
     return await axios
         .get(url)
         .then((r) => ServiceUtils.mapAxiosResponse(recordType, r));
@@ -307,9 +314,19 @@ const _update = async function<TRecord extends any, TPathParams extends any>(
 // #endregion Private Functions
 
 // -----------------------------------------------------------------------------------------
-// #region Export
+// #region Exports
 // -----------------------------------------------------------------------------------------
 
-export { ServiceFactory };
+export {
+    BulkUpdateService,
+    CreateService,
+    DeleteService,
+    GetService,
+    ListService,
+    NestedCreateService,
+    NestedListService,
+    ServiceFactory,
+    UpdateService,
+};
 
-// #endregion Export
+// #endregion Exports

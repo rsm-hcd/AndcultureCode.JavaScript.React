@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Record } from "immutable";
 
 // ---------------------------------------------------------
 // #region Interfaces & Types
@@ -117,7 +118,11 @@ const _resultObjectToJS = (resultObject: any | any[]): any | any[] => {
         return resultObject.map((r) => r.toJS());
     }
 
-    return resultObject.toJS();
+    if (Record.isRecord(resultObject)) {
+        return resultObject.toJS();
+    }
+
+    return resultObject;
 };
 
 // #endregion Private Functions

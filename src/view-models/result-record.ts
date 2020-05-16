@@ -114,6 +114,13 @@ class ResultRecord<T> extends Record(defaultValues) implements Result<T> {
             .filter((e) => e !== "");
     }
 
+    /**
+     * Merges new values into the record and returns a new instance.
+     *
+     * @param {Partial<Result<T>>} values
+     * @returns {ResultRecord}
+     * @memberof ResultRecord
+     */
     public with(values: Partial<Result<T>>): ResultRecord<T> {
         return new ResultRecord<T>(Object.assign(this.toJS(), values));
     }

@@ -1,11 +1,9 @@
 import { ResultErrorRecord } from "./result-error-record";
 
 describe("ResultErrorRecord", () => {
-    /*
-    ---------------------------------------------------------------------------------------------
-    fullError
-    ---------------------------------------------------------------------------------------------
-    */
+    // -----------------------------------------------------------------------------------------
+    // #region fullError()
+    // -----------------------------------------------------------------------------------------
 
     describe("fullError", () => {
         test("returns message", () => {
@@ -20,4 +18,6 @@ describe("ResultErrorRecord", () => {
             ).toContain("test1");
         });
     }); // end fullError
+
+    // #endregion fullError()
 }); // end ResultErrorRecord
