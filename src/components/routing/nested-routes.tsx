@@ -1,4 +1,4 @@
-import { CollectionUtils } from "../../utilities/collection-utils";
+import { CollectionUtils } from "andculturecode-javascript-core";
 import { NestedRoute } from "./nested-route";
 import { Redirect } from "react-router-dom";
 import React from "react";

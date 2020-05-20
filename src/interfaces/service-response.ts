@@ -1,4 +1,4 @@
-import { ResultRecord } from "../view-models/result-record";
+import { ResultRecord } from "andculturecode-javascript-core";
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces

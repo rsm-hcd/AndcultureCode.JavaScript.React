@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { act, render } from "@testing-library/react";
 import { ServiceFactory } from "./service-factory";
-import { TestUtils } from "../tests/test-utils";
+import { CoreUtils } from "andculturecode-javascript-core";
 import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
 import { FactoryType } from "../tests/factories/factory-type";
 import mockAxios from "../tests/mocks/mock-axios";
@@ -115,7 +115,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<BulkUpdateStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API
                 // promise resolves
             });
 
@@ -221,7 +221,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<CreateStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -301,7 +301,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<DeleteStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -381,7 +381,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<GetStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -475,7 +475,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<ListStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -585,7 +585,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<NestedCreateStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -677,7 +677,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<NestedListStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert
@@ -776,7 +776,7 @@ describe("ServiceFactory", () => {
             await act(async () => {
                 const { unmount } = render(<UpdateStubComponent />);
                 unmount();
-                await TestUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
+                await CoreUtils.sleep(cancellationTestsAssertionDelay); // Force a sleep longer than when API promise resolves
             });
 
             // Assert

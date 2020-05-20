@@ -6,7 +6,7 @@ import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
 import { ServiceHookFactory } from "./service-hook-factory";
 import mockAxios from "../tests/mocks/mock-axios";
 import { FactoryType } from "../tests/factories/factory-type";
-import { TestUtils } from "../tests/test-utils";
+import { CoreUtils } from "andculturecode-javascript-core";
 
 // ---------------------------------------------------------------------------------------------
 // #region Variables
@@ -151,7 +151,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<UpdateStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -256,7 +256,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<CreateStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -358,7 +358,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<DeleteStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -464,7 +464,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<GetStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -575,7 +575,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<ListStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -684,7 +684,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<NestedCreateStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -803,7 +803,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<NestedListStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
@@ -909,7 +909,7 @@ describe("ServiceHookFactory", () => {
                 const { unmount } = render(<UpdateStubComponent />);
                 unmount();
                 // Force a sleep longer than when API promise resolves
-                await TestUtils.sleep(cancellationTestsAssertionDelay);
+                await CoreUtils.sleep(cancellationTestsAssertionDelay);
             });
 
             // Assert
