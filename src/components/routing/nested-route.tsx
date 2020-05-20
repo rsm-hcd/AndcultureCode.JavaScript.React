@@ -1,6 +1,6 @@
 import React from "react";
 import { RouteDefinition } from "../../interfaces/route-definition";
-import { CoreUtils } from "../../utilities/core-utils";
+import { CoreUtils } from "andculturecode-javascript-core";
 import { Route } from "react-router-dom";
 import { AuthenticatedRoute as AuthenticatedRouteComponent } from "./authenticated-route";
 import { AuthenticatedRoute } from "../../interfaces/authenticated-route";

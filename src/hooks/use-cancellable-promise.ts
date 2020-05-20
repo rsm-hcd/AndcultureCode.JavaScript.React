@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { PromiseFactory } from "../utilities/promise-factory";
+import { PromiseFactory } from "andculturecode-javascript-core";
 
 const useCancellablePromise = () => {
     // -----------------------------------------------------------------------------------------

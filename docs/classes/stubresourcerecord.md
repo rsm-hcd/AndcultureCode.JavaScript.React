@@ -8,7 +8,7 @@
 
 ## Hierarchy
 
-* [Record](resulterrorrecord.md#static-record)‹object, this› & object
+* [Record](stubresourcerecord.md#static-record)‹object, this› & object
 
   ↳ **StubResourceRecord**
 
@@ -63,7 +63,7 @@
 
 ###  Factory
 
-▸ (`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+▸ (`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2444
 
@@ -120,11 +120,11 @@ Name | Type |
 ------ | ------ |
 `values?` | Partial‹TProps› &#124; Iterable‹[string, any]› |
 
-**Returns:** *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+**Returns:** *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 ###  constructor
 
-\+ **new Factory**(`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+\+ **new Factory**(`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2445
 
@@ -134,7 +134,7 @@ Name | Type |
 ------ | ------ |
 `values?` | Partial‹TProps› &#124; Iterable‹[string, any]› |
 
-**Returns:** *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+**Returns:** *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 ###  displayName
 
@@ -151,7 +151,7 @@ The name provided to `Record(values, name)` can be accessed with
 
 ▸ **[Symbol.iterator]**(): *IterableIterator‹[keyof TProps, TProps[keyof TProps]]›*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[[Symbol.iterator]](resulterrorrecord.md#[symbol.iterator])*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[[Symbol.iterator]](stubresourcerecord.md#[symbol.iterator])*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2589
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **asImmutable**(): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[asImmutable](resulterrorrecord.md#asimmutable)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[asImmutable](stubresourcerecord.md#asimmutable)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2583
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **asMutable**(): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[asMutable](resulterrorrecord.md#asmutable)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[asMutable](stubresourcerecord.md#asmutable)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2573
 
@@ -191,7 +191,7 @@ ___
 
 ▸ **clear**(): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[clear](resulterrorrecord.md#clear)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[clear](stubresourcerecord.md#clear)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2525
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **delete**<**K**>(`key`: K): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[delete](resulterrorrecord.md#delete)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[delete](stubresourcerecord.md#delete)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2518
 
@@ -233,7 +233,7 @@ ___
 
 ▸ **deleteIn**(`keyPath`: Iterable‹any›): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[deleteIn](resulterrorrecord.md#deletein)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[deleteIn](stubresourcerecord.md#deletein)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2537
 
@@ -253,7 +253,7 @@ ___
 
 ▸ **equals**(`other`: any): *boolean*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[equals](resulterrorrecord.md#equals)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[equals](stubresourcerecord.md#equals)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2493
 
@@ -271,7 +271,7 @@ ___
 
 ▸ **get**<**K**>(`key`: K, `notSetValue?`: any): *TProps[K]*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[get](resulterrorrecord.md#get)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[get](stubresourcerecord.md#get)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2483
 
@@ -297,7 +297,7 @@ Name | Type |
 
 ▸ **get**<**T**>(`key`: string, `notSetValue`: T): *T*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[get](resulterrorrecord.md#get)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[get](stubresourcerecord.md#get)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2484
 
@@ -320,7 +320,7 @@ ___
 
 ▸ **getIn**(`keyPath`: Iterable‹any›): *any*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[getIn](resulterrorrecord.md#getin)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[getIn](stubresourcerecord.md#getin)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2489
 
@@ -338,7 +338,7 @@ ___
 
 ▸ **has**(`key`: string): *key is keyof TProps & string*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[has](resulterrorrecord.md#has)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[has](stubresourcerecord.md#has)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2473
 
@@ -356,7 +356,7 @@ ___
 
 ▸ **hasIn**(`keyPath`: Iterable‹any›): *boolean*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[hasIn](resulterrorrecord.md#hasin)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[hasIn](stubresourcerecord.md#hasin)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2488
 
@@ -374,7 +374,7 @@ ___
 
 ▸ **hashCode**(): *number*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[hashCode](resulterrorrecord.md#hashcode)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[hashCode](stubresourcerecord.md#hashcode)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2494
 
@@ -386,7 +386,7 @@ ___
 
 ▸ **merge**(...`collections`: Array‹Partial‹TProps› | Iterable‹[string, any]››): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[merge](resulterrorrecord.md#merge)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[merge](stubresourcerecord.md#merge)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2500
 
@@ -404,7 +404,7 @@ ___
 
 ▸ **mergeDeep**(...`collections`: Array‹Partial‹TProps› | Iterable‹[string, any]››): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[mergeDeep](resulterrorrecord.md#mergedeep)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[mergeDeep](stubresourcerecord.md#mergedeep)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2501
 
@@ -422,7 +422,7 @@ ___
 
 ▸ **mergeDeepIn**(`keyPath`: Iterable‹any›, ...`collections`: Array‹any›): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[mergeDeepIn](resulterrorrecord.md#mergedeepin)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[mergeDeepIn](stubresourcerecord.md#mergedeepin)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2532
 
@@ -441,7 +441,7 @@ ___
 
 ▸ **mergeDeepWith**(`merger`: function, ...`collections`: Array‹Partial‹TProps› | Iterable‹[string, any]››): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[mergeDeepWith](resulterrorrecord.md#mergedeepwith)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[mergeDeepWith](stubresourcerecord.md#mergedeepwith)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2507
 
@@ -469,7 +469,7 @@ ___
 
 ▸ **mergeIn**(`keyPath`: Iterable‹any›, ...`collections`: Array‹any›): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[mergeIn](resulterrorrecord.md#mergein)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[mergeIn](stubresourcerecord.md#mergein)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2531
 
@@ -488,7 +488,7 @@ ___
 
 ▸ **mergeWith**(`merger`: function, ...`collections`: Array‹Partial‹TProps› | Iterable‹[string, any]››): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[mergeWith](resulterrorrecord.md#mergewith)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[mergeWith](stubresourcerecord.md#mergewith)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2503
 
@@ -516,7 +516,7 @@ ___
 
 ▸ **remove**<**K**>(`key`: K): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[remove](resulterrorrecord.md#remove)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[remove](stubresourcerecord.md#remove)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2519
 
@@ -538,7 +538,7 @@ ___
 
 ▸ **removeIn**(`keyPath`: Iterable‹any›): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[removeIn](resulterrorrecord.md#removein)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[removeIn](stubresourcerecord.md#removein)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2538
 
@@ -556,7 +556,7 @@ ___
 
 ▸ **set**<**K**>(`key`: K, `value`: TProps[K]): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[set](resulterrorrecord.md#set)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[set](stubresourcerecord.md#set)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2498
 
@@ -579,7 +579,7 @@ ___
 
 ▸ **setIn**(`keyPath`: Iterable‹any›, `value`: any): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[setIn](resulterrorrecord.md#setin)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[setIn](stubresourcerecord.md#setin)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2529
 
@@ -598,7 +598,7 @@ ___
 
 ▸ **toJS**(): *object*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[toJS](resulterrorrecord.md#tojs)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[toJS](stubresourcerecord.md#tojs)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2548
 
@@ -615,7 +615,7 @@ ___
 
 ▸ **toJSON**(): *TProps*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[toJSON](resulterrorrecord.md#tojson)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[toJSON](stubresourcerecord.md#tojson)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2553
 
@@ -629,7 +629,7 @@ ___
 
 ▸ **toObject**(): *TProps*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[toObject](resulterrorrecord.md#toobject)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[toObject](stubresourcerecord.md#toobject)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2558
 
@@ -643,7 +643,7 @@ ___
 
 ▸ **toSeq**(): *Keyed‹keyof TProps, TProps[keyof TProps]›*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[toSeq](resulterrorrecord.md#toseq)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[toSeq](stubresourcerecord.md#toseq)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2587
 
@@ -655,7 +655,7 @@ ___
 
 ▸ **update**<**K**>(`key`: K, `updater`: function): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[update](resulterrorrecord.md#update)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[update](stubresourcerecord.md#update)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2499
 
@@ -685,7 +685,7 @@ ___
 
 ▸ **updateIn**(`keyPath`: Iterable‹any›, `updater`: function): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[updateIn](resulterrorrecord.md#updatein)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[updateIn](stubresourcerecord.md#updatein)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2530
 
@@ -711,7 +711,7 @@ ___
 
 ▸ **wasAltered**(): *boolean*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[wasAltered](resulterrorrecord.md#wasaltered)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[wasAltered](stubresourcerecord.md#wasaltered)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2578
 
@@ -725,7 +725,7 @@ ___
 
 ▸ **withMutations**(`mutator`: function): *this*
 
-*Inherited from [ResultErrorRecord](resulterrorrecord.md).[withMutations](resulterrorrecord.md#withmutations)*
+*Inherited from [StubResourceRecord](stubresourcerecord.md).[withMutations](stubresourcerecord.md#withmutations)*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2568
 
@@ -752,7 +752,7 @@ ___
 
 ### `Static` Factory
 
-▸ **Factory**<**TProps**>(`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+▸ **Factory**<**TProps**>(`values?`: Partial‹TProps› | Iterable‹[string, any]›): *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2455
 
@@ -766,13 +766,13 @@ Name | Type |
 ------ | ------ |
 `values?` | Partial‹TProps› &#124; Iterable‹[string, any]› |
 
-**Returns:** *[Record](resulterrorrecord.md#static-record)‹TProps› & Readonly‹TProps›*
+**Returns:** *[Record](stubresourcerecord.md#static-record)‹TProps› & Readonly‹TProps›*
 
 ___
 
 ### `Static` Record
 
-▸ **Record**<**TProps**>(`defaultValues`: TProps, `name?`: undefined | string): *[Factory](resulterrorrecord.md#factory)‹TProps›*
+▸ **Record**<**TProps**>(`defaultValues`: TProps, `name?`: undefined | string): *[Factory](stubresourcerecord.md#factory)‹TProps›*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2467
 
@@ -795,13 +795,13 @@ Name | Type |
 `defaultValues` | TProps |
 `name?` | undefined &#124; string |
 
-**Returns:** *[Factory](resulterrorrecord.md#factory)‹TProps›*
+**Returns:** *[Factory](stubresourcerecord.md#factory)‹TProps›*
 
 ___
 
 ### `Static` getDescriptiveName
 
-▸ **getDescriptiveName**(`record`: [Record](resulterrorrecord.md#static-record)‹any›): *string*
+▸ **getDescriptiveName**(`record`: [Record](stubresourcerecord.md#static-record)‹any›): *string*
 
 Defined in node_modules/immutable/dist/immutable-nonambient.d.ts:2392
 
@@ -825,7 +825,7 @@ Record.getDescriptiveName(me) // "Person"
 
 Name | Type |
 ------ | ------ |
-`record` | [Record](resulterrorrecord.md#static-record)‹any› |
+`record` | [Record](stubresourcerecord.md#static-record)‹any› |
 
 **Returns:** *string*
 

@@ -3,7 +3,7 @@ import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
 import { Factory } from "rosie";
 import { AxiosResponse } from "axios";
 import { FactoryType } from "../tests/factories/factory-type";
-import { ResultRecord } from "../view-models/result-record";
+import { ResultRecord } from "andculturecode-javascript-core";
 import "jest-extended";
 
 describe("ServiceUtils", () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { CollectionUtils } from "../../utilities/collection-utils";
+import { CollectionUtils } from "andculturecode-javascript-core";
 import { RouteDefinition } from "../../interfaces/route-definition";
 import { Route } from "react-router-dom";
 

@@ -11,21 +11,10 @@ export * from "./components/routing/redirects";
 //#endregion Components
 
 // -----------------------------------------------------------------------------------------
-// #region Enumeratinos
-// -----------------------------------------------------------------------------------------
-
-export * from "./enumerations/error-type";
-
-//#endregion Enumerations
-
-// -----------------------------------------------------------------------------------------
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-export * from "./interfaces/paged-result";
 export * from "./interfaces/redirect-definition";
-export * from "./interfaces/result-error";
-export * from "./interfaces/result";
 export * from "./interfaces/route-definition";
 export * from "./interfaces/route-map";
 export * from "./interfaces/service-response";
@@ -44,8 +33,6 @@ export * from "./services/service-factory";
 // #region Utilities
 // -----------------------------------------------------------------------------------------
 
-export * from "./utilities/collection-utils";
-export * from "./utilities/core-utils";
 export * from "./utilities/route-utils";
 
 //#endregion Utilities
@@ -57,12 +44,3 @@ export * from "./utilities/route-utils";
 export * from "react-router-dom";
 
 //#endregion Vendor
-
-// -----------------------------------------------------------------------------------------
-// #region ViewModels
-// -----------------------------------------------------------------------------------------
-
-export * from "./view-models/result-error-record";
-export * from "./view-models/result-record";
-
-//#endregion ViewModels

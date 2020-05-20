@@ -1,4 +1,4 @@
-import { CoreUtils } from "./core-utils";
+import { CoreUtils } from "andculturecode-javascript-core";
 import { RouteDefinition } from "../interfaces/route-definition";
 import { RouteMap } from "../interfaces/route-map";
 
