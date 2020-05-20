@@ -1,8 +1,10 @@
 import { AxiosResponse } from "axios";
 import { ServiceResponse } from "../interfaces/service-response";
-import { PagedResult } from "andculturecode-javascript-core";
-import { ResultRecord } from "andculturecode-javascript-core";
-import { Result } from "andculturecode-javascript-core";
+import {
+    PagedResult,
+    Result,
+    ResultRecord,
+} from "andculturecode-javascript-core";
 
 // -----------------------------------------------------------------------------------------
 // #region Functions
