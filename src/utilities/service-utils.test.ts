@@ -1,5 +1,5 @@
 import { ServiceUtils } from "./service-utils";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
+import { StubResourceRecord } from "andculturecode-javascript-core";
 import { Factory } from "rosie";
 import { AxiosResponse } from "axios";
 import { FactoryType } from "../tests/factories/factory-type";
