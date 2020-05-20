@@ -17,7 +17,6 @@ export * from "./components/routing/redirects";
 export * from "./interfaces/redirect-definition";
 export * from "./interfaces/route-definition";
 export * from "./interfaces/route-map";
-export * from "./interfaces/service-response";
 
 //#endregion Interfaces
 

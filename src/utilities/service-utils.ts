@@ -1,9 +1,9 @@
 import { AxiosResponse } from "axios";
-import { ServiceResponse } from "../interfaces/service-response";
 import {
     PagedResult,
     Result,
     ResultRecord,
+    ServiceResponse,
 } from "andculturecode-javascript-core";
 
 // -----------------------------------------------------------------------------------------

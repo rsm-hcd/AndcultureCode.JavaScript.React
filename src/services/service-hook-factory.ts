@@ -5,17 +5,17 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useCallback } from "react";
 import {
+    BulkUpdateService,
+    CreateService,
+    DeleteService,
     GetService,
     ListService,
     NestedCreateService,
     NestedListService,
-    UpdateService,
-    BulkUpdateService,
-    CreateService,
-    DeleteService,
     ServiceFactory,
+    UpdateService,
 } from "./service-factory";
-import { ServiceResponse } from "../interfaces/service-response";
+import { ServiceResponse } from "andculturecode-javascript-core";
 import { useCancellablePromise } from "../hooks/use-cancellable-promise";
 
 // -----------------------------------------------------------------------------------------
