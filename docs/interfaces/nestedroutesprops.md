@@ -27,7 +27,7 @@
 
 *Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)*
 
-*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/wintondeshong/AndcultureCode.JavaScript.React-1/blob/0356f1a/src/interfaces/authenticated-route.ts#L12)*
+*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/c77fe64/src/interfaces/authenticated-route.ts#L12)*
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -41,7 +41,7 @@ ___
 
 *Inherited from [UnmatchedRoute](unmatchedroute.md).[redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)*
 
-*Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/wintondeshong/AndcultureCode.JavaScript.React-1/blob/0356f1a/src/interfaces/unmatched-route.ts#L12)*
+*Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/c77fe64/src/interfaces/unmatched-route.ts#L12)*
 
 Route to redirect to if the specified route cannot be matched.
 
@@ -55,7 +55,7 @@ ___
 
 *Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)*
 
-*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/wintondeshong/AndcultureCode.JavaScript.React-1/blob/0356f1a/src/interfaces/authenticated-route.ts#L20)*
+*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/c77fe64/src/interfaces/authenticated-route.ts#L20)*
 
 Route to redirect to if the current user is not authenticated.
 
@@ -67,4 +67,4 @@ ___
 
 • **routes**: *[RouteDefinition](routedefinition.md)[]*
 
-*Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/wintondeshong/AndcultureCode.JavaScript.React-1/blob/0356f1a/src/components/routing/nested-routes.tsx#L14)*
+*Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/c77fe64/src/components/routing/nested-routes.tsx#L14)*
