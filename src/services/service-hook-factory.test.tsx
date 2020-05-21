@@ -4,7 +4,7 @@ import { render, wait, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { StubResourceRecord } from "andculturecode-javascript-core";
 import { ServiceHookFactory } from "./service-hook-factory";
-import mockAxios from "andculturecode-javascript-core/dist/tests/mocks/mock-axios";
+import { MockAxios } from "andculturecode-javascript-core";
 import { FactoryType } from "../tests/factories/factory-type";
 import { CoreUtils } from "andculturecode-javascript-core";
 
@@ -67,7 +67,7 @@ describe("ServiceHookFactory", () => {
                 { id: 10 }
             );
 
-            mockAxios.putSuccess([expectedStubRecord]);
+            MockAxios.putSuccess([expectedStubRecord]);
 
             const UpdateStubComponent = () => {
                 const { update } = useBulkUpdate();
@@ -118,7 +118,7 @@ describe("ServiceHookFactory", () => {
                 }
             );
 
-            mockAxios.putSuccess(record, cancellationTestsApiDelay);
+            MockAxios.putSuccess(record, cancellationTestsApiDelay);
 
             let isUnmounted = false;
 
@@ -178,7 +178,7 @@ describe("ServiceHookFactory", () => {
             const expectedStubRecord = Factory.build<StubResourceRecord>(
                 FactoryType.StubResourceRecord
             );
-            mockAxios.postSuccess(expectedStubRecord);
+            MockAxios.postSuccess(expectedStubRecord);
 
             const CreateStubComponent = () => {
                 const { create } = useCreate();
@@ -225,7 +225,7 @@ describe("ServiceHookFactory", () => {
             const record = Factory.build<StubResourceRecord>(
                 FactoryType.StubResourceRecord
             );
-            mockAxios.postSuccess(record, cancellationTestsApiDelay);
+            MockAxios.postSuccess(record, cancellationTestsApiDelay);
 
             let isUnmounted = false;
 
@@ -279,7 +279,7 @@ describe("ServiceHookFactory", () => {
             const useDelete = sut.useDelete(resourceEndpoint);
             const recordIdToDelete = 10;
 
-            mockAxios.deleteSuccess(new Boolean(true));
+            MockAxios.deleteSuccess(new Boolean(true));
 
             const DeleteStubComponent = () => {
                 const { delete: deleteRecord } = useDelete();
@@ -328,7 +328,7 @@ describe("ServiceHookFactory", () => {
                     id: 10,
                 }
             );
-            mockAxios.deleteSuccess(record, cancellationTestsApiDelay);
+            MockAxios.deleteSuccess(record, cancellationTestsApiDelay);
             let isUnmounted = false;
 
             const DeleteStubComponent = () => {
@@ -384,7 +384,7 @@ describe("ServiceHookFactory", () => {
                 { id: 10 }
             );
 
-            mockAxios.getSuccess(expectedStubRecord);
+            MockAxios.getSuccess(expectedStubRecord);
 
             const GetStubComponent = () => {
                 const { get } = useGet();
@@ -434,7 +434,7 @@ describe("ServiceHookFactory", () => {
                     id: 10,
                 }
             );
-            mockAxios.getSuccess(record, cancellationTestsApiDelay);
+            MockAxios.getSuccess(record, cancellationTestsApiDelay);
             let isUnmounted = false;
 
             const GetStubComponent = () => {
@@ -490,7 +490,7 @@ describe("ServiceHookFactory", () => {
                 2
             );
 
-            mockAxios.listSuccess(expectedStubRecords);
+            MockAxios.listSuccess(expectedStubRecords);
 
             const ListStubComponent = () => {
                 const { list } = useList();
@@ -543,7 +543,7 @@ describe("ServiceHookFactory", () => {
                     id: 10,
                 }
             );
-            mockAxios.getSuccess(record, cancellationTestsApiDelay);
+            MockAxios.getSuccess(record, cancellationTestsApiDelay);
             let isUnmounted = false;
 
             const ListStubComponent = () => {
@@ -603,7 +603,7 @@ describe("ServiceHookFactory", () => {
                 FactoryType.StubResourceRecord
             );
 
-            mockAxios.postSuccess(expectedStubRecord);
+            MockAxios.postSuccess(expectedStubRecord);
 
             const NestedCreateStubComponent = () => {
                 const { create } = useCreate();
@@ -651,7 +651,7 @@ describe("ServiceHookFactory", () => {
                 FactoryType.StubResourceRecord
             );
 
-            mockAxios.postSuccess(record, cancellationTestsApiDelay);
+            MockAxios.postSuccess(record, cancellationTestsApiDelay);
 
             let isUnmounted = false;
 
@@ -714,7 +714,7 @@ describe("ServiceHookFactory", () => {
                 2
             );
 
-            mockAxios.listSuccess(expectedStubRecords);
+            MockAxios.listSuccess(expectedStubRecords);
 
             const NestedListStubComponent = () => {
                 const { list } = useList();
@@ -770,7 +770,7 @@ describe("ServiceHookFactory", () => {
                 2
             );
 
-            mockAxios.getSuccess(records, cancellationTestsApiDelay);
+            MockAxios.getSuccess(records, cancellationTestsApiDelay);
 
             let isUnmounted = false;
 
@@ -832,7 +832,7 @@ describe("ServiceHookFactory", () => {
                 { id: 10 }
             );
 
-            mockAxios.putSuccess(expectedStubRecord);
+            MockAxios.putSuccess(expectedStubRecord);
 
             const UpdateStubComponent = () => {
                 const { update } = useUpdate();
@@ -878,7 +878,7 @@ describe("ServiceHookFactory", () => {
                 }
             );
 
-            mockAxios.putSuccess(record, cancellationTestsApiDelay);
+            MockAxios.putSuccess(record, cancellationTestsApiDelay);
 
             let isUnmounted = false;
 
