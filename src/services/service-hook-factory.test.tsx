@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Factory } from "rosie";
 import { render, wait, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
+import { StubResourceRecord } from "andculturecode-javascript-core";
 import { ServiceHookFactory } from "./service-hook-factory";
-import mockAxios from "../tests/mocks/mock-axios";
+import mockAxios from "andculturecode-javascript-core/dist/tests/mocks/mock-axios";
 import { FactoryType } from "../tests/factories/factory-type";
 import { CoreUtils } from "andculturecode-javascript-core";
 

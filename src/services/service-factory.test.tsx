@@ -4,9 +4,9 @@ import React from "react";
 import { act, render } from "@testing-library/react";
 import { ServiceFactory } from "./service-factory";
 import { CoreUtils } from "andculturecode-javascript-core";
-import { StubResourceRecord } from "../tests/stubs/stub-resource-record";
+import { StubResourceRecord } from "andculturecode-javascript-core";
 import { FactoryType } from "../tests/factories/factory-type";
-import mockAxios from "../tests/mocks/mock-axios";
+import mockAxios from "andculturecode-javascript-core/dist/tests/mocks/mock-axios";
 
 // -----------------------------------------------------------------------------------------
 // #region Variables
