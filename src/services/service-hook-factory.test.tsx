@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Factory } from "rosie";
 import { render, wait, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
-import { StubResourceRecord } from "andculturecode-javascript-core";
+import {
+    MockAxios,
+    StubResourceRecord,
+} from "andculturecode-javascript-testing";
 import { ServiceHookFactory } from "./service-hook-factory";
-import { MockAxios } from "andculturecode-javascript-core";
-import { FactoryType } from "../tests/factories/factory-type";
+import { FactoryType as AndcultureCodeFactoryType } from "andculturecode-javascript-testing";
 import { CoreUtils } from "andculturecode-javascript-core";
 
 // ---------------------------------------------------------------------------------------------
@@ -63,7 +65,7 @@ describe("ServiceHookFactory", () => {
                 resourceEndpoint
             );
             const expectedStubRecord = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 { id: 10 }
             );
 
@@ -112,7 +114,7 @@ describe("ServiceHookFactory", () => {
                 baseEndpoint
             );
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 {
                     id: 10,
                 }
@@ -176,7 +178,7 @@ describe("ServiceHookFactory", () => {
                 baseEndpoint
             );
             const expectedStubRecord = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord
+                AndcultureCodeFactoryType.StubResourceRecord
             );
             MockAxios.postSuccess(expectedStubRecord);
 
@@ -223,7 +225,7 @@ describe("ServiceHookFactory", () => {
             );
 
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord
+                AndcultureCodeFactoryType.StubResourceRecord
             );
             MockAxios.postSuccess(record, cancellationTestsApiDelay);
 
@@ -323,7 +325,7 @@ describe("ServiceHookFactory", () => {
 
             const useDelete = sut.useDelete(baseEndpoint);
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 {
                     id: 10,
                 }
@@ -380,7 +382,7 @@ describe("ServiceHookFactory", () => {
             // Arrange
             const useGet = sut.useGet(StubResourceRecord, resourceEndpoint);
             const expectedStubRecord = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 { id: 10 }
             );
 
@@ -429,7 +431,7 @@ describe("ServiceHookFactory", () => {
 
             const useGet = sut.useGet(StubResourceRecord, baseEndpoint);
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 {
                     id: 10,
                 }
@@ -486,7 +488,7 @@ describe("ServiceHookFactory", () => {
             // Arrange
             const useList = sut.useList(StubResourceRecord, baseEndpoint);
             const expectedStubRecords: StubResourceRecord[] = Factory.buildList(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 2
             );
 
@@ -538,7 +540,7 @@ describe("ServiceHookFactory", () => {
 
             const useList = sut.useList(StubResourceRecord, baseEndpoint);
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 {
                     id: 10,
                 }
@@ -600,7 +602,7 @@ describe("ServiceHookFactory", () => {
                 StubNestedParams
             >(StubResourceRecord, nestedBaseEndpoint);
             const expectedStubRecord = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord
+                AndcultureCodeFactoryType.StubResourceRecord
             );
 
             MockAxios.postSuccess(expectedStubRecord);
@@ -648,7 +650,7 @@ describe("ServiceHookFactory", () => {
                 StubNestedParams
             >(StubResourceRecord, nestedBaseEndpoint);
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord
+                AndcultureCodeFactoryType.StubResourceRecord
             );
 
             MockAxios.postSuccess(record, cancellationTestsApiDelay);
@@ -710,7 +712,7 @@ describe("ServiceHookFactory", () => {
                 {}
             >(StubResourceRecord, nestedBaseEndpoint);
             const expectedStubRecords: StubResourceRecord[] = Factory.buildList(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 2
             );
 
@@ -766,7 +768,7 @@ describe("ServiceHookFactory", () => {
                 {}
             >(StubResourceRecord, nestedBaseEndpoint);
             const records: StubResourceRecord[] = Factory.buildList(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 2
             );
 
@@ -828,7 +830,7 @@ describe("ServiceHookFactory", () => {
                 resourceEndpoint
             );
             const expectedStubRecord = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 { id: 10 }
             );
 
@@ -872,7 +874,7 @@ describe("ServiceHookFactory", () => {
 
             const useUpdate = sut.useUpdate(StubResourceRecord, baseEndpoint);
             const record = Factory.build<StubResourceRecord>(
-                FactoryType.StubResourceRecord,
+                AndcultureCodeFactoryType.StubResourceRecord,
                 {
                     id: 10,
                 }
