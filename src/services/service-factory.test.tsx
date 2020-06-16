@@ -8,7 +8,6 @@ import {
     MockAxios,
     StubResourceRecord,
 } from "andculturecode-javascript-testing";
-import { FactoryType } from "../tests/factories/factory-type";
 import { FactoryType as AndcultureCodeFactoryType } from "andculturecode-javascript-testing";
 
 // -----------------------------------------------------------------------------------------
