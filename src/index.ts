@@ -2,11 +2,23 @@
 // #region Components
 // -----------------------------------------------------------------------------------------
 
-export * from "./components/routing/authenticated-route";
-export * from "./components/routing/nested-route";
-export * from "./components/routing/nested-routes";
-export * from "./components/routing/nested-routes-by-property";
-export * from "./components/routing/redirects";
+export {
+    AuthenticatedRoute,
+    AuthenticatedRouteProps,
+} from "./components/routing/authenticated-route";
+export {
+    NestedRoute,
+    NestedRouteProps,
+} from "./components/routing/nested-route";
+export {
+    NestedRoutes,
+    NestedRoutesProps,
+} from "./components/routing/nested-routes";
+export {
+    NestedRoutesByProperty,
+    NestedRoutesByPropertyProps,
+} from "./components/routing/nested-routes-by-property";
+export { Redirects, RedirectsProps } from "./components/routing/redirects";
 
 //#endregion Components
 
@@ -14,9 +26,9 @@ export * from "./components/routing/redirects";
 // #region Interfaces
 // -----------------------------------------------------------------------------------------
 
-export * from "./interfaces/redirect-definition";
-export * from "./interfaces/route-definition";
-export * from "./interfaces/route-map";
+export { RedirectDefinition } from "./interfaces/redirect-definition";
+export { RouteDefinition } from "./interfaces/route-definition";
+export { RouteMap } from "./interfaces/route-map";
 
 //#endregion Interfaces
 
@@ -24,7 +36,7 @@ export * from "./interfaces/route-map";
 // #region Services
 // -----------------------------------------------------------------------------------------
 
-export * from "./services/service-factory";
+export { ServiceFactory } from "./services/service-factory";
 
 //#endregion Services
 
@@ -32,7 +44,7 @@ export * from "./services/service-factory";
 // #region Utilities
 // -----------------------------------------------------------------------------------------
 
-export * from "./utilities/route-utils";
+export { RouteUtils } from "./utilities/route-utils";
 
 //#endregion Utilities
 
@@ -40,6 +52,30 @@ export * from "./utilities/route-utils";
 // #region Vendor
 // -----------------------------------------------------------------------------------------
 
-export * from "react-router-dom";
+// Forwarding everything from react-router-dom as-is, just incase a consumer wants to use some
+// specific component or function for their own implemention alongside our library.
+export {
+    generatePath,
+    Prompt,
+    MemoryRouter,
+    RedirectProps,
+    Redirect,
+    RouteChildrenProps,
+    RouteComponentProps,
+    RouteProps,
+    Route,
+    Router,
+    StaticRouter,
+    SwitchProps,
+    Switch,
+    match,
+    matchPath,
+    withRouter,
+    RouterChildContext,
+    useHistory,
+    useLocation,
+    useParams,
+    useRouteMatch,
+} from "react-router-dom";
 
 //#endregion Vendor

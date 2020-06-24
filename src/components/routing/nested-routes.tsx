@@ -24,7 +24,9 @@ interface NestedRoutesProps extends UnmatchedRoute, AuthenticatedRoute {
  * Component to easily render nested sub-route components from a list of routes.
  * Commonly used when setting up a layout
  */
-const NestedRoutes = (props: NestedRoutesProps) => {
+const NestedRoutes: React.FC<NestedRoutesProps> = (
+    props: NestedRoutesProps
+) => {
     const {
         isAuthenticated,
         redirectToIfNotFound,

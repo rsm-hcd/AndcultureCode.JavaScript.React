@@ -23,7 +23,7 @@ interface NestedRouteProps extends AuthenticatedRoute {
  * Dynamically renders a route and its subroutes, accounting
  * for additional custom properties on RouteDefinition
  */
-export const NestedRoute = (props: NestedRouteProps) => {
+const NestedRoute: React.FC<NestedRouteProps> = (props: NestedRouteProps) => {
     const { isAuthenticated, redirectToIfUnauthenticated, route } = props;
     const RouteComponent: any = route.authRequired
         ? AuthenticatedRouteComponent
@@ -46,3 +46,11 @@ export const NestedRoute = (props: NestedRouteProps) => {
 };
 
 // #endregion Component
+
+// -----------------------------------------------------------------------------------------
+// #region Exports
+// -----------------------------------------------------------------------------------------
+
+export { NestedRoute, NestedRouteProps };
+
+// #endregion Exports

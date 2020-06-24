@@ -16,6 +16,10 @@ interface AuthenticatedRouteProps
 
 // #endregion Interfaces
 
+/**
+ * Locks a route behind authentication. Can optionally redirect a user to another location if
+ * attempting to access the route while unauthenticated.
+ */
 const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = (
     props: AuthenticatedRouteProps
 ) => {

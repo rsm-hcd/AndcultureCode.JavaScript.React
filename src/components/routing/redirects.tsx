@@ -19,7 +19,7 @@ interface RedirectsProps {
 /**
  * Simple way to redirect a flat array of RedirectDefinitions
  */
-const Redirects = (props: RedirectsProps) => {
+const Redirects: React.FC<RedirectsProps> = (props: RedirectsProps) => {
     const { redirects } = props;
 
     // TODO: Remove Fragment when issue fixed https://github.com/microsoft/TypeScript/issues/21699
