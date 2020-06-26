@@ -24,7 +24,9 @@ interface NestedRoutesByPropertyProps {
 /**
  * Renders Route components mapped to a custom property
  */
-const NestedRoutesByProperty = (props: NestedRoutesByPropertyProps) => {
+const NestedRoutesByProperty: React.FC<NestedRoutesByPropertyProps> = (
+    props: NestedRoutesByPropertyProps
+) => {
     if (CollectionUtils.isEmpty(props.routes)) {
         return null;
     }
