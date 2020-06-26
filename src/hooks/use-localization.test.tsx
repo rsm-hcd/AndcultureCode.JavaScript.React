@@ -11,7 +11,7 @@ import { render, wait, waitFor } from "@testing-library/react";
 import { initReactI18next } from "react-i18next";
 
 describe("useLocalization", () => {
-    test("given translations are configured, when invalid key, returns key", async () => {
+    test("when invalid key, returns key", async () => {
         // Arrange
         const expectedKey = faker.random.word();
         const culture: Partial<Culture<any>> = { resources: {} };
@@ -43,7 +43,7 @@ describe("useLocalization", () => {
         });
     });
 
-    test("given translations are configured, when valid key, returns translation", async () => {
+    test("when valid key, returns translation", async () => {
         // Arrange
         const key = "testkey";
         const expectedValue = faker.random.words();
