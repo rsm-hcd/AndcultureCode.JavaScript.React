@@ -20,7 +20,16 @@ export {
 } from "./components/routing/nested-routes-by-property";
 export { Redirects, RedirectsProps } from "./components/routing/redirects";
 
-//#endregion Components
+// #endregion Components
+
+// -----------------------------------------------------------------------------------------
+// #region Hooks
+// -----------------------------------------------------------------------------------------
+
+export { useCancellablePromise } from "./hooks/use-cancellable-promise";
+export { useLocalization } from "./hooks/use-localization";
+
+// #endregion
 
 // -----------------------------------------------------------------------------------------
 // #region Interfaces
@@ -30,7 +39,7 @@ export { RedirectDefinition } from "./interfaces/redirect-definition";
 export { RouteDefinition } from "./interfaces/route-definition";
 export { RouteMap } from "./interfaces/route-map";
 
-//#endregion Interfaces
+// #endregion Interfaces
 
 // -----------------------------------------------------------------------------------------
 // #region Services
@@ -38,7 +47,7 @@ export { RouteMap } from "./interfaces/route-map";
 
 export { ServiceFactory } from "./services/service-factory";
 
-//#endregion Services
+// #endregion Services
 
 // -----------------------------------------------------------------------------------------
 // #region Utilities
@@ -46,7 +55,7 @@ export { ServiceFactory } from "./services/service-factory";
 
 export { RouteUtils } from "./utilities/route-utils";
 
-//#endregion Utilities
+// #endregion Utilities
 
 // -----------------------------------------------------------------------------------------
 // #region Vendor
@@ -56,8 +65,10 @@ export { RouteUtils } from "./utilities/route-utils";
 // specific component or function for their own implemention alongside our library.
 export {
     generatePath,
-    Prompt,
+    match,
+    matchPath,
     MemoryRouter,
+    Prompt,
     RedirectProps,
     Redirect,
     RouteChildrenProps,
@@ -65,17 +76,15 @@ export {
     RouteProps,
     Route,
     Router,
-    StaticRouter,
-    SwitchProps,
-    Switch,
-    match,
-    matchPath,
-    withRouter,
     RouterChildContext,
+    StaticRouter,
+    Switch,
+    SwitchProps,
     useHistory,
     useLocation,
     useParams,
     useRouteMatch,
+    withRouter,
 } from "react-router-dom";
 
-//#endregion Vendor
+// #endregion Vendor
