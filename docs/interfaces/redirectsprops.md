@@ -18,4 +18,4 @@
 
 • **redirects**: *[RedirectDefinition](redirectdefinition.md)[]*
 
-*Defined in [src/components/routing/redirects.tsx:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/528d171/src/components/routing/redirects.tsx#L10)*
+*Defined in [src/components/routing/redirects.tsx:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/d477a7a/src/components/routing/redirects.tsx#L10)*
