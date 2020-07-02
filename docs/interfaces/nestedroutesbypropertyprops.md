@@ -19,7 +19,7 @@
 
 • **propertyName**: *keyof RouteDefinition*
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/a1d0cf0/src/components/routing/nested-routes-by-property.tsx#L14)*
+*Defined in [src/components/routing/nested-routes-by-property.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/components/routing/nested-routes-by-property.tsx#L14)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **routes**: *[RouteDefinition](routedefinition.md)[]*
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/a1d0cf0/src/components/routing/nested-routes-by-property.tsx#L15)*
+*Defined in [src/components/routing/nested-routes-by-property.tsx:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/components/routing/nested-routes-by-property.tsx#L15)*
