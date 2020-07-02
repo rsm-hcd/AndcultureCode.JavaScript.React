@@ -46,6 +46,7 @@ export { RouteMap } from "./interfaces/route-map";
 // -----------------------------------------------------------------------------------------
 
 export { ServiceFactory } from "./services/service-factory";
+export { ServiceHookFactory } from "./services/service-hook-factory";
 
 // #endregion Services
 
