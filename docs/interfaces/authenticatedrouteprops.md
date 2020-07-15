@@ -47,7 +47,7 @@ ___
 
 *Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)*
 
-*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/interfaces/authenticated-route.ts#L12)*
+*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/authenticated-route.ts#L12)*
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)*
 
-*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/interfaces/authenticated-route.ts#L20)*
+*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/authenticated-route.ts#L20)*
 
 Route to redirect to if the current user is not authenticated.
 
@@ -93,7 +93,7 @@ ___
 
 • **render**: *function*
 
-*Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/components/routing/authenticated-route.tsx#L14)*
+*Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/components/routing/authenticated-route.tsx#L14)*
 
 #### Type declaration:
 
@@ -111,7 +111,7 @@ ___
 
 • **route**: *[RouteDefinition](routedefinition.md)*
 
-*Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b81c1eb/src/components/routing/authenticated-route.tsx#L13)*
+*Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/components/routing/authenticated-route.tsx#L13)*
 
 ___
 
