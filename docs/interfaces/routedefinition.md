@@ -24,7 +24,7 @@
 
 • **authRequired**: *boolean*
 
-*Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L9)*
+*Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L9)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **component**: *React.ComponentType*
 
-*Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L10)*
+*Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L10)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **exact**? : *undefined | false | true*
 
-*Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L11)*
+*Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L11)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **getComponent**? : *undefined | function*
 
-*Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L12)*
+*Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L12)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L13)*
+*Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L13)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **routes**: *[RouteMap](routemap.md)*
 
-*Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L14)*
+*Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L14)*
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 • **sidebar**? : *React.ComponentType*
 
-*Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/cb25f09/src/interfaces/route-definition.ts#L16)*
+*Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/76bb638/src/interfaces/route-definition.ts#L16)*
