@@ -13,7 +13,7 @@ const RouteDefinitionFactory = Factory.define<RouteDefinition>(
     .sequence("authRequired", () => false)
     .sequence("component", () => React.Fragment)
     .sequence("exact", () => true)
-    .sequence("path", (i: number) => `path${i}/`)
+    .sequence("path", (i: number) => `/path${i}`)
     .sequence("routes", () => {});
 
 const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
@@ -22,7 +22,7 @@ const RouteDefinitionNestedFactory = Factory.define<RouteDefinition>(
     .sequence("authRequired", () => false)
     .sequence("component", () => React.Fragment)
     .sequence("exact", () => true)
-    .sequence("path", (i: number) => `path${i}/`)
+    .sequence("path", (i: number) => `/path${i}`)
     .sequence("routes", () => {
         return {
             nestedRoute: Factory.build<RouteDefinition>(

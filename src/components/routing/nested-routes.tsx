@@ -1,6 +1,6 @@
-import { CollectionUtils } from "andculturecode-javascript-core";
+import { CollectionUtils, StringUtils } from "andculturecode-javascript-core";
 import { NestedRoute } from "./nested-route";
-import { Redirect } from "react-router-dom";
+import { Redirect, Switch } from "react-router-dom";
 import React from "react";
 import { RouteDefinition } from "../../interfaces/route-definition";
 import { UnmatchedRoute } from "../../interfaces/unmatched-route";
@@ -27,12 +27,7 @@ interface NestedRoutesProps extends UnmatchedRoute, AuthenticatedRoute {
 const NestedRoutes: React.FC<NestedRoutesProps> = (
     props: NestedRoutesProps
 ) => {
-    const {
-        isAuthenticated,
-        redirectToIfNotFound,
-        redirectToIfUnauthenticated,
-        routes,
-    } = props;
+    const { redirectToIfNotFound, routes } = props;
 
     if (CollectionUtils.isEmpty(routes)) {
         return null;
@@ -41,17 +36,14 @@ const NestedRoutes: React.FC<NestedRoutesProps> = (
     // TODO: Remove Fragment when issue fixed https://github.com/microsoft/TypeScript/issues/21699
     return (
         <React.Fragment>
-            {props.routes.map((route: RouteDefinition, i: number) => (
-                <NestedRoute
-                    isAuthenticated={isAuthenticated}
-                    key={i}
-                    redirectToIfUnauthenticated={redirectToIfUnauthenticated}
-                    route={route}
-                />
-            ))}
-            {redirectToIfNotFound != null && (
-                <Redirect to={redirectToIfNotFound} />
-            )}
+            <Switch>
+                {routes.map((route: RouteDefinition, i: number) => (
+                    <NestedRoute {...props} {...route} key={i} route={route} />
+                ))}
+                {StringUtils.hasValue(redirectToIfNotFound) && (
+                    <Redirect to={redirectToIfNotFound!} />
+                )}
+            </Switch>
         </React.Fragment>
     );
 };
