@@ -44,6 +44,7 @@ export { useWindow } from "./hooks/use-window";
 export { RedirectDefinition } from "./interfaces/redirect-definition";
 export { RouteDefinition } from "./interfaces/route-definition";
 export { RouteMap } from "./interfaces/route-map";
+export { UnmatchedRoute } from "./interfaces/unmatched-route";
 
 // #endregion Interfaces
 
