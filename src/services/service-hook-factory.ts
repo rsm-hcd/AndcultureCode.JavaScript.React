@@ -4,81 +4,17 @@
  */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useCallback } from "react";
-import {
-    BulkUpdateService,
-    CreateService,
-    DeleteService,
-    GetService,
-    ListService,
-    NestedCreateService,
-    NestedListService,
-    ServiceFactory,
-    UpdateService,
-} from "./service-factory";
+import { ServiceFactory } from "./service-factory";
 import { ServiceResponse } from "andculturecode-javascript-core";
 import { useCancellablePromise } from "../hooks/use-cancellable-promise";
-
-// -----------------------------------------------------------------------------------------
-// #region Types
-// -----------------------------------------------------------------------------------------
-
-/**
- * Type defining the return object from calling `useBulkUpdate()`
- */
-type BulkUpdateServiceHook<TRecord, TPathParams> = () => {
-    update: BulkUpdateService<TRecord, TPathParams>;
-};
-
-/**
- * Type defining the return object from calling `useCreate()`
- */
-type CreateServiceHook<TRecord> = () => {
-    create: CreateService<TRecord>;
-};
-
-/**
- * Type defining the return object from calling `useDelete()`
- */
-type DeleteServiceHook = () => {
-    delete: DeleteService;
-};
-
-/**
- * Type defining the return object from calling `useGet()`
- */
-type GetServiceHook<TRecord, TPathParams, TQueryParams = undefined> = () => {
-    get: GetService<TRecord, TPathParams, TQueryParams>;
-};
-
-/**
- * Type defining the return object from calling `useList()`
- */
-type ListServiceHook<TRecord, TQueryParams> = () => {
-    list: ListService<TRecord, TQueryParams>;
-};
-
-/**
- * Type defining the return object from calling `useNestedCreate()`
- */
-type NestedCreateServiceHook<TRecord, TPathParams> = () => {
-    create: NestedCreateService<TRecord, TPathParams>;
-};
-
-/**
- * Type defining the return object from calling `useNestedList()`
- */
-type NestedListServiceHook<TRecord, TPathParams, TQueryParams> = () => {
-    list: NestedListService<TRecord, TPathParams, TQueryParams>;
-};
-
-/**
- * Type defining the return object from calling `useUpdate()`
- */
-type UpdateServiceHook<TRecord, TPathParams> = () => {
-    update: UpdateService<TRecord, TPathParams>;
-};
-
-// #endregion Types
+import { BulkUpdateServiceHook } from "../types/bulk-update-service-hook-type";
+import { CreateServiceHook } from "../types/create-service-hook-type";
+import { DeleteServiceHook } from "../types/delete-service-hook-type";
+import { GetServiceHook } from "../types/get-service-hook-type";
+import { ListServiceHook } from "../types/list-service-hook-type";
+import { NestedCreateServiceHook } from "../types/nested-create-service-hook-type";
+import { NestedListServiceHook } from "../types/nested-list-service-hook-type";
+import { UpdateServiceHook } from "../types/update-service-hook-type";
 
 // ---------------------------------------------------------------------------------------------
 // #region Functions
@@ -345,16 +281,6 @@ const ServiceHookFactory = {
 // #region Exports
 // ---------------------------------------------------------------------------------------------
 
-export {
-    BulkUpdateServiceHook,
-    CreateServiceHook,
-    DeleteServiceHook,
-    GetServiceHook,
-    ListServiceHook,
-    NestedCreateServiceHook,
-    NestedListServiceHook,
-    ServiceHookFactory,
-    UpdateServiceHook,
-};
+export { ServiceHookFactory };
 
 // #endregion Exports
