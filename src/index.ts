@@ -58,6 +58,29 @@ export { ServiceHookFactory } from "./services/service-hook-factory";
 // #endregion Services
 
 // -----------------------------------------------------------------------------------------
+// #region Types
+// -----------------------------------------------------------------------------------------
+
+export { BulkUpdateService } from "./types/bulk-update-service-type";
+export { BulkUpdateServiceHook } from "./types/bulk-update-service-hook-type";
+export { CreateService } from "./types/create-service-type";
+export { CreateServiceHook } from "./types/create-service-hook-type";
+export { DeleteService } from "./types/delete-service-type";
+export { DeleteServiceHook } from "./types/delete-service-hook-type";
+export { GetService } from "./types/get-service-type";
+export { GetServiceHook } from "./types/get-service-hook-type";
+export { ListService } from "./types/list-service-type";
+export { ListServiceHook } from "./types/list-service-hook-type";
+export { NestedCreateService } from "./types/nested-create-service-type";
+export { NestedCreateServiceHook } from "./types/nested-create-service-hook-type";
+export { NestedListService } from "./types/nested-list-service-type";
+export { NestedListServiceHook } from "./types/nested-list-service-hook-type";
+export { UpdateService } from "./types/update-service-type";
+export { UpdateServiceHook } from "./types/update-service-hook-type";
+
+// #endregion Types
+
+// -----------------------------------------------------------------------------------------
 // #region Utilities
 // -----------------------------------------------------------------------------------------
 
@@ -70,7 +93,7 @@ export { RouteUtils } from "./utilities/route-utils";
 // -----------------------------------------------------------------------------------------
 
 // Forwarding everything from react-router-dom as-is, just incase a consumer wants to use some
-// specific component or function for their own implemention alongside our library.
+// specific component or function for their own implementation alongside our library.
 export {
     BrowserRouter,
     BrowserRouterProps,

@@ -1,77 +1,13 @@
-import {
-    RouteUtils,
-    ServiceResponse,
-    ServiceUtils,
-} from "andculturecode-javascript-core";
+import { RouteUtils, ServiceUtils } from "andculturecode-javascript-core";
+import { BulkUpdateService } from "../types/bulk-update-service-type";
+import { DeleteService } from "../types/delete-service-type";
+import { CreateService } from "../types/create-service-type";
+import { ListService } from "../types/list-service-type";
+import { GetService } from "../types/get-service-type";
+import { NestedCreateService } from "../types/nested-create-service-type";
+import { NestedListService } from "../types/nested-list-service-type";
+import { UpdateService } from "../types/update-service-type";
 import axios from "axios";
-
-// -----------------------------------------------------------------------------------------
-// #region Types
-// -----------------------------------------------------------------------------------------
-
-/**
- * Type defining the service function for bulk updating the supplied resource type
- */
-type BulkUpdateService<TRecord, TPathParams> = (
-    records: TRecord[],
-    pathParams: TPathParams
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for creating the supplied resource type
- */
-type CreateService<TRecord> = (
-    record?: TRecord
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for deleting the supplied resource
- */
-type DeleteService = (
-    id: number,
-    pathParams?: any
-) => Promise<ServiceResponse<Boolean>>;
-
-/**
- * Type defining the service function for getting the supplied resource type
- */
-type GetService<TRecord, TPathParams, TQueryParams = undefined> = (
-    pathParams: TPathParams,
-    queryParams?: TQueryParams
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for listing resources by supplied type
- */
-type ListService<TRecord, TQueryParams> = (
-    queryParams?: TQueryParams
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for creating the supplied resource type when resource is nested
- */
-type NestedCreateService<TRecord, TPathParams> = (
-    record: TRecord,
-    pathParams: TPathParams
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for listing resources by supplied type when resource is nested
- */
-type NestedListService<TRecord, TPathParams, TQueryParams> = (
-    pathParams: TPathParams,
-    queryParams?: TQueryParams
-) => Promise<ServiceResponse<TRecord>>;
-
-/**
- * Type defining the service function for updating the supplied resource type
- */
-type UpdateService<TRecord, TPathParams> = (
-    record: TRecord,
-    pathParams?: TPathParams
-) => Promise<ServiceResponse<TRecord>>;
-
-// #endregion Types
 
 // ---------------------------------------------------------------------------------------------
 // #region Public Functions
@@ -319,16 +255,6 @@ const _update = async function<TRecord extends any, TPathParams extends any>(
 // #region Exports
 // -----------------------------------------------------------------------------------------
 
-export {
-    BulkUpdateService,
-    CreateService,
-    DeleteService,
-    GetService,
-    ListService,
-    NestedCreateService,
-    NestedListService,
-    ServiceFactory,
-    UpdateService,
-};
+export { ServiceFactory };
 
 // #endregion Exports
