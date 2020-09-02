@@ -1,10 +1,4 @@
-import {
-    useEffect,
-    DependencyList,
-    EffectCallback,
-    useRef,
-    useCallback,
-} from "react";
+import { useEffect, DependencyList, EffectCallback, useCallback } from "react";
 
 export type AsyncEffectCallback = (
     isMounted: () => boolean
@@ -14,23 +8,27 @@ export const useAsyncEffect = (
     asyncEffect: AsyncEffectCallback,
     deps: DependencyList
 ) => {
-    const mounted = useRef(true);
-
     const asyncCallback = useCallback<AsyncEffectCallback>(asyncEffect, deps);
 
     useEffect(() => {
         let cleanupMethod = () => {};
-        Promise.resolve(asyncCallback(() => mounted.current)).then(
-            (r: ReturnType<EffectCallback>) => {
-                if (typeof r === "function") {
-                    cleanupMethod = r;
-                }
+        let mounted = true;
+
+        async function runAsyncCallback() {
+            const result: ReturnType<EffectCallback> = await asyncCallback(
+                () => mounted
+            );
+
+            if (typeof result === "function") {
+                cleanupMethod = result;
             }
-        );
+        }
+
+        runAsyncCallback();
 
         return () => {
-            mounted.current = false;
             cleanupMethod();
+            mounted = false;
         };
     }, [asyncCallback]);
 };
