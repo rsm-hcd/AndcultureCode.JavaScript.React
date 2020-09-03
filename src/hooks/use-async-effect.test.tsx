@@ -51,4 +51,39 @@ describe("useAsyncEffect", () => {
         await cleanup();
         await waitFor(() => expect(mockedCleanupMethod).toBeCalledTimes(1));
     });
+
+    test("isMounted initially equals true", async () => {
+        // Arrange
+        let actualIsMountedValue: boolean = false;
+        const expectedIsMountedValue: boolean = true;
+
+        // Act
+        setupUseAsyncEffect(async (isMounted) => {
+            actualIsMountedValue = isMounted();
+            await sleep(1);
+        });
+
+        // Assert
+        expect(actualIsMountedValue).toBe(expectedIsMountedValue);
+        await cleanup();
+    });
+
+    test("isMounted equals false after cleanup", async () => {
+        // Arrange
+        let actualIsMountedValue: boolean;
+        const expectedIsMountedValue: boolean = false;
+        const mockedMethod = jest.fn();
+
+        // Act
+        setupUseAsyncEffect(async (isMounted) => {
+            await sleep(100);
+            actualIsMountedValue = isMounted();
+            mockedMethod();
+        });
+
+        // Assert
+        await cleanup();
+        await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
+        expect(actualIsMountedValue).toBe(expectedIsMountedValue);
+    });
 });

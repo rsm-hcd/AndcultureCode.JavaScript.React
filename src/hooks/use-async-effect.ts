@@ -12,11 +12,11 @@ export const useAsyncEffect = (
 
     useEffect(() => {
         let cleanupMethod = () => {};
-        let mounted = true;
+        let isMounted = true;
 
         async function runAsyncCallback() {
             const result: ReturnType<EffectCallback> = await asyncCallback(
-                () => mounted
+                () => isMounted
             );
 
             if (typeof result === "function") {
@@ -28,7 +28,7 @@ export const useAsyncEffect = (
 
         return () => {
             cleanupMethod();
-            mounted = false;
+            isMounted = false;
         };
     }, [asyncCallback]);
 };
