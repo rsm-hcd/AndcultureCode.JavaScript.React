@@ -1,13 +1,8 @@
 import React from "react";
-import "jest-extended";
 import { cleanup, render, waitFor } from "@testing-library/react";
-import { useAsyncEffect, AsyncEffectCallback } from "./use-async-effect";
-
-const sleep = async (milliseconds: number): Promise<void> => {
-    await new Promise((resolve) => {
-        setTimeout(() => resolve(), milliseconds);
-    });
-};
+import { useAsyncEffect } from "./use-async-effect";
+import { CoreUtils } from "andculturecode-javascript-core";
+import { AsyncEffectCallback } from "../types/async-effect-callback-type";
 
 describe("useAsyncEffect", () => {
     const setupUseAsyncEffect = (asyncEffect: AsyncEffectCallback) => {
@@ -25,7 +20,7 @@ describe("useAsyncEffect", () => {
 
         // Act
         setupUseAsyncEffect(async () => {
-            await sleep(1);
+            await CoreUtils.sleep(1);
             mockedMethod();
         });
 
@@ -41,7 +36,7 @@ describe("useAsyncEffect", () => {
 
         // Act
         setupUseAsyncEffect(async () => {
-            await sleep(1);
+            await CoreUtils.sleep(1);
             mockedMethod();
             return mockedCleanupMethod;
         });
@@ -60,7 +55,7 @@ describe("useAsyncEffect", () => {
         // Act
         setupUseAsyncEffect(async (isMounted) => {
             actualIsMountedValue = isMounted();
-            await sleep(1);
+            await CoreUtils.sleep(1);
         });
 
         // Assert
@@ -76,7 +71,7 @@ describe("useAsyncEffect", () => {
 
         // Act
         setupUseAsyncEffect(async (isMounted) => {
-            await sleep(100);
+            await CoreUtils.sleep(1);
             actualIsMountedValue = isMounted();
             mockedMethod();
         });
