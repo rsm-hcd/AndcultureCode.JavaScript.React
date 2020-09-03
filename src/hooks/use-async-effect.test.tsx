@@ -1,75 +1,54 @@
 import React from "react";
 import "jest-extended";
-import faker from "faker";
-import { cleanup, render } from "@testing-library/react";
-import { useAsyncEffect } from "./use-async-effect";
+import { cleanup, render, waitFor } from "@testing-library/react";
+import { useAsyncEffect, AsyncEffectCallback } from "./use-async-effect";
+
+const sleep = async (milliseconds: number): Promise<void> => {
+    await new Promise((resolve) => {
+        setTimeout(() => resolve(), milliseconds);
+    });
+};
 
 describe("useAsyncEffect", () => {
-    function setup({
-        effect,
-        cleanup,
-    }: {
-        effect?: (mounted: () => boolean) => void;
-        cleanup?: () => void;
-    }) {
-        let promise: Promise<void | (() => void)>;
-        const asyncFunc = (mounted: () => boolean) => {
-            promise = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    if (effect != null) {
-                        effect(mounted);
-                    }
-
-                    if (cleanup == null) {
-                        resolve();
-                        return;
-                    }
-
-                    resolve(cleanup);
-                }, 100);
-            });
-
-            return promise;
-        };
-
+    const setupUseAsyncEffect = (asyncEffect: AsyncEffectCallback) => {
         const TestComponent = () => {
-            useAsyncEffect(async (mounted) => await asyncFunc(mounted), []);
-
+            useAsyncEffect(asyncEffect, []);
             return null;
         };
 
         render(<TestComponent />);
+    };
 
-        return { promise };
-    }
+    test("executes async method", async () => {
+        // Arrange
+        const mockedMethod = jest.fn();
 
-    test("runs async method", async () => {
-        const expectedValue = faker.lorem.word();
-        let testValue = "";
-
-        const { promise } = setup({
-            effect: () => (testValue = expectedValue),
+        // Act
+        setupUseAsyncEffect(async () => {
+            await sleep(1);
+            mockedMethod();
         });
 
-        await promise;
-
-        expect(testValue).toBe(expectedValue);
-
+        // Assert
+        await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
         await cleanup();
     });
 
-    test("runs cleanup method", async () => {
-        const expectedValue = faker.lorem.word();
-        let testValue = "";
+    test("executes cleanup method", async () => {
+        // Arrange
+        const mockedMethod = jest.fn();
+        const mockedCleanupMethod = jest.fn();
 
-        const { promise } = setup({
-            cleanup: () => (testValue = expectedValue),
+        // Act
+        setupUseAsyncEffect(async () => {
+            await sleep(1);
+            mockedMethod();
+            return mockedCleanupMethod;
         });
 
-        await promise;
-
+        // Assert
+        await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
         await cleanup();
-
-        expect(testValue).toBe(expectedValue);
+        await waitFor(() => expect(mockedCleanupMethod).toBeCalledTimes(1));
     });
 });
