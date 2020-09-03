@@ -27,6 +27,7 @@ export { Redirects, RedirectsProps } from "./components/routing/redirects";
 // -----------------------------------------------------------------------------------------
 
 export { makeCancellable } from "./hooks/make-cancellable";
+export { useAsyncEffect } from "./hooks/use-async-effect";
 export { useCancellablePromise } from "./hooks/use-cancellable-promise";
 export { useDebounce } from "./hooks/use-debounce";
 export { useLocalization } from "./hooks/use-localization";
@@ -61,6 +62,7 @@ export { ServiceHookFactory } from "./services/service-hook-factory";
 // #region Types
 // -----------------------------------------------------------------------------------------
 
+export { AsyncEffectCallback } from "./types/async-effect-callback-type";
 export { BulkUpdateService } from "./types/bulk-update-service-type";
 export { BulkUpdateServiceHook } from "./types/bulk-update-service-hook-type";
 export { CreateService } from "./types/create-service-type";
