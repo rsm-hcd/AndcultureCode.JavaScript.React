@@ -4,10 +4,16 @@ export type AsyncEffectCallback = (
     isMounted: () => boolean
 ) => Promise<ReturnType<EffectCallback>>;
 
-export const useAsyncEffect = (
+/**
+ * Version of the useEffect hook that accepts an async function
+ * @export
+ * @param {AsyncEffectCallback} asyncEffect
+ * @param {DependencyList} deps
+ */
+export function useAsyncEffect(
     asyncEffect: AsyncEffectCallback,
     deps: DependencyList
-) => {
+) {
     const asyncCallback = useCallback<AsyncEffectCallback>(asyncEffect, deps);
 
     useEffect(() => {
@@ -31,4 +37,4 @@ export const useAsyncEffect = (
             isMounted = false;
         };
     }, [asyncCallback]);
-};
+}
