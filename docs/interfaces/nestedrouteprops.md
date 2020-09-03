@@ -4,50 +4,50 @@
 
 ## Hierarchy
 
-* [AuthenticatedRoute](authenticatedroute.md)
+-   [AuthenticatedRoute](authenticatedroute.md)
 
-  ↳ **NestedRouteProps**
+    ↳ **NestedRouteProps**
 
 ## Index
 
 ### Properties
 
-* [isAuthenticated](nestedrouteprops.md#isauthenticated)
-* [redirectToIfUnauthenticated](nestedrouteprops.md#optional-redirecttoifunauthenticated)
-* [route](nestedrouteprops.md#route)
+-   [isAuthenticated](nestedrouteprops.md#isauthenticated)
+-   [redirectToIfUnauthenticated](nestedrouteprops.md#optional-redirecttoifunauthenticated)
+-   [route](nestedrouteprops.md#route)
 
 ## Properties
 
-###  isAuthenticated
+### isAuthenticated
 
-• **isAuthenticated**: *boolean*
+• **isAuthenticated**: _boolean_
 
-*Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)*
+_Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
 
-*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/interfaces/authenticated-route.ts#L12)*
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
 **`memberof`** AuthenticatedRouteProps
 
-___
+---
 
 ### `Optional` redirectToIfUnauthenticated
 
-• **redirectToIfUnauthenticated**? : *undefined | string*
+• **redirectToIfUnauthenticated**? : _undefined | string_
 
-*Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)*
+_Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
 
-*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/interfaces/authenticated-route.ts#L20)*
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
 **`memberof`** UnauthenticatedRedirectProps
 
-___
+---
 
-###  route
+### route
 
-• **route**: *[RouteDefinition](routedefinition.md)*
+• **route**: _[RouteDefinition](routedefinition.md)_
 
-*Defined in [src/components/routing/nested-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/components/routing/nested-route.tsx#L13)*
+_Defined in [src/components/routing/nested-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/components/routing/nested-route.tsx#L13)_

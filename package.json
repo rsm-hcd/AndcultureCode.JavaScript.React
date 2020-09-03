@@ -66,7 +66,7 @@
     "scripts": {
         "build": "tsc --pretty",
         "clean": "rimraf dist && rimraf coverage",
-        "configure:git": "echo Ensuring git hooksPath is set to .githooks directory && git config core.hooksPath .githooks",
+        "configure:git": "echo Ensuring git hooksPath is set to .githooks directory; git config core.hooksPath .githooks; chmod +x .githooks/*",
         "coverage": "jest ./src --coverage",
         "docs": "typedoc --mode file --excludeExternals --plugin typedoc-plugin-markdown --readme none",
         "format": "prettier --write \"src/**/*.ts\" --trailing-comma es5",
@@ -81,5 +81,5 @@
         "watch:test": "jest ./src --watch"
     },
     "types": "dist/index",
-    "version": "0.1.3"
+    "version": "0.1.4"
 }

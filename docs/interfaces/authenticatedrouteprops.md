@@ -4,121 +4,121 @@
 
 ## Type parameters
 
-▪ **C**: *StaticContext*
+▪ **C**: _StaticContext_
 
 ▪ **S**
 
 ## Hierarchy
 
-* RouteComponentProps‹any›
+-   RouteComponentProps‹any›
 
-* [AuthenticatedRoute](authenticatedroute.md)
+-   [AuthenticatedRoute](authenticatedroute.md)
 
-  ↳ **AuthenticatedRouteProps**
+    ↳ **AuthenticatedRouteProps**
 
 ## Index
 
 ### Properties
 
-* [history](authenticatedrouteprops.md#history)
-* [isAuthenticated](authenticatedrouteprops.md#isauthenticated)
-* [location](authenticatedrouteprops.md#location)
-* [match](authenticatedrouteprops.md#match)
-* [redirectToIfUnauthenticated](authenticatedrouteprops.md#optional-redirecttoifunauthenticated)
-* [render](authenticatedrouteprops.md#render)
-* [route](authenticatedrouteprops.md#route)
-* [staticContext](authenticatedrouteprops.md#optional-staticcontext)
+-   [history](authenticatedrouteprops.md#history)
+-   [isAuthenticated](authenticatedrouteprops.md#isauthenticated)
+-   [location](authenticatedrouteprops.md#location)
+-   [match](authenticatedrouteprops.md#match)
+-   [redirectToIfUnauthenticated](authenticatedrouteprops.md#optional-redirecttoifunauthenticated)
+-   [render](authenticatedrouteprops.md#render)
+-   [route](authenticatedrouteprops.md#route)
+-   [staticContext](authenticatedrouteprops.md#optional-staticcontext)
 
 ## Properties
 
-###  history
+### history
 
-• **history**: *History‹S›*
+• **history**: _History‹S›_
 
-*Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[history](authenticatedrouteprops.md#history)*
+_Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[history](authenticatedrouteprops.md#history)_
 
 Defined in node_modules/@types/react-router/index.d.ts:75
 
-___
+---
 
-###  isAuthenticated
+### isAuthenticated
 
-• **isAuthenticated**: *boolean*
+• **isAuthenticated**: _boolean_
 
-*Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)*
+_Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
 
-*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/interfaces/authenticated-route.ts#L12)*
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
 **`memberof`** AuthenticatedRouteProps
 
-___
+---
 
-###  location
+### location
 
-• **location**: *Location‹S›*
+• **location**: _Location‹S›_
 
-*Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[location](authenticatedrouteprops.md#location)*
+_Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[location](authenticatedrouteprops.md#location)_
 
 Defined in node_modules/@types/react-router/index.d.ts:76
 
-___
+---
 
-###  match
+### match
 
-• **match**: *match‹any›*
+• **match**: _match‹any›_
 
-*Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[match](authenticatedrouteprops.md#match)*
+_Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[match](authenticatedrouteprops.md#match)_
 
 Defined in node_modules/@types/react-router/index.d.ts:77
 
-___
+---
 
 ### `Optional` redirectToIfUnauthenticated
 
-• **redirectToIfUnauthenticated**? : *undefined | string*
+• **redirectToIfUnauthenticated**? : _undefined | string_
 
-*Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)*
+_Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
 
-*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/interfaces/authenticated-route.ts#L20)*
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
 **`memberof`** UnauthenticatedRedirectProps
 
-___
+---
 
-###  render
+### render
 
-• **render**: *function*
+• **render**: _function_
 
-*Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/components/routing/authenticated-route.tsx#L14)*
+_Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/components/routing/authenticated-route.tsx#L14)_
 
 #### Type declaration:
 
-▸ (`props`: any): *any*
+▸ (`props`: any): _any_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | any |
+| Name    | Type |
+| ------- | ---- |
+| `props` | any  |
 
-___
+---
 
-###  route
+### route
 
-• **route**: *[RouteDefinition](routedefinition.md)*
+• **route**: _[RouteDefinition](routedefinition.md)_
 
-*Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0725a3f/src/components/routing/authenticated-route.tsx#L13)*
+_Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/components/routing/authenticated-route.tsx#L13)_
 
-___
+---
 
 ### `Optional` staticContext
 
-• **staticContext**? : *C*
+• **staticContext**? : _C_
 
-*Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[staticContext](authenticatedrouteprops.md#optional-staticcontext)*
+_Inherited from [AuthenticatedRouteProps](authenticatedrouteprops.md).[staticContext](authenticatedrouteprops.md#optional-staticcontext)_
 
 Defined in node_modules/@types/react-router/index.d.ts:78
