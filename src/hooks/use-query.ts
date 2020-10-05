@@ -81,6 +81,8 @@ export function useQuery<TRecord, TQueryParams, TPathParams = undefined>(
         loading,
         query,
         setQuery,
+        pathParams,
+        setPathParams,
         values,
         setValues,
     };
