@@ -5,7 +5,6 @@ import {
 } from "andculturecode-javascript-core";
 import { useCallback, useEffect, useState } from "react";
 import { UseQueryOptions } from "../interfaces/use-query-options";
-import { ListServiceHook } from "../types/list-service-hook-type";
 import { ListService } from "../types/list-service-type";
 import { NestedListService } from "../types/nested-list-service-type";
 
