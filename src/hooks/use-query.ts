@@ -1,18 +1,25 @@
 import {
-    CatchResultHandler,
     Do,
     EnvironmentUtils,
     ResultRecord,
 } from "andculturecode-javascript-core";
 import { useCallback, useEffect, useState } from "react";
+import { UseQueryOptions } from "../interfaces/use-query-options";
 import { ListServiceHook } from "../types/list-service-hook-type";
+import { ListService } from "../types/list-service-type";
+import { NestedListService } from "../types/nested-list-service-type";
 
-export function useQuery<TRecord, TQueryParams>(
-    service: ListServiceHook<TRecord, TQueryParams>,
-    initialQuery: TQueryParams,
-    onSuccess?: (records: Array<TRecord>) => void,
-    onError?: CatchResultHandler<TRecord>
+export function useQuery<TRecord, TQueryParams, TPathParams = undefined>(
+    options: UseQueryOptions<TRecord, TQueryParams, TPathParams>
 ) {
+    const {
+        service,
+        initialQuery,
+        initialPathParams,
+        onSuccess,
+        onError,
+    } = options;
+
     const { list: listApi } = service();
 
     const handleSuccess = useCallback(
@@ -42,11 +49,27 @@ export function useQuery<TRecord, TQueryParams>(
 
     const [loading, setLoading] = useState(false);
     const [query, setQuery] = useState(initialQuery);
+    const [pathParams, setPathParams] = useState(initialPathParams);
     const [values, setValues] = useState<Array<TRecord>>([]);
 
     useEffect(() => {
         Do.try(async () => {
-            const result = await listApi(query);
+            // if regular list, not nested list
+            if (pathParams == null) {
+                const api = listApi as ListService<TRecord, TQueryParams>;
+                const result = await api(query);
+                setValues(result.resultObjects!);
+                handleSuccess(result.resultObjects!);
+                return;
+            }
+
+            // otherwise, nested list
+            const api = listApi as NestedListService<
+                TRecord,
+                TPathParams,
+                TQueryParams
+            >;
+            const result = await api(pathParams, query);
             setValues(result.resultObjects!);
             handleSuccess(result.resultObjects!);
         })
