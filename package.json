@@ -76,7 +76,6 @@
         "postbuild": "npm run docs",
         "postpublish": "cross-env-shell \"git add -A && git commit -m \"$npm_package_version\" && git push origin master",
         "prebuild": "npm run clean && npm run format && echo Using TypeScript && tsc --version",
-        "preinstall": "npm run configure:git",
         "prepublishOnly": "npm run build",
         "test": "jest ./src",
         "watch": "npm run build -- --watch",
