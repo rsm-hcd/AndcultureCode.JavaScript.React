@@ -12,14 +12,14 @@ export function useQuery<TRecord, TQueryParams, TPathParams = undefined>(
     options: UseQueryOptions<TRecord, TQueryParams, TPathParams>
 ) {
     const {
-        service,
-        initialQuery,
         initialPathParams,
-        onSuccess,
+        initialQuery,
         onError,
+        onSuccess,
+        serviceHook,
     } = options;
 
-    const { list: listApi } = service();
+    const { list: listApi } = serviceHook();
 
     const handleSuccess = useCallback(
         (records: Array<TRecord>) => {

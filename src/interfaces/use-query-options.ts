@@ -7,7 +7,7 @@ export interface UseQueryOptions<
     TQueryParams,
     TPathParams = undefined
 > {
-    service:
+    serviceHook:
         | ListServiceHook<TRecord, TQueryParams>
         | NestedListServiceHook<TRecord, TPathParams, TQueryParams>;
     initialQuery: TQueryParams;
