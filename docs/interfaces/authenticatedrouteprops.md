@@ -47,7 +47,7 @@ Defined in node_modules/@types/react-router/index.d.ts:75
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L12)_
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -81,7 +81,7 @@ Defined in node_modules/@types/react-router/index.d.ts:77
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/interfaces/authenticated-route.ts#L20)_
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
@@ -93,7 +93,7 @@ Route to redirect to if the current user is not authenticated.
 
 • **render**: _function_
 
-_Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/components/routing/authenticated-route.tsx#L14)_
+_Defined in [src/components/routing/authenticated-route.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/components/routing/authenticated-route.tsx#L14)_
 
 #### Type declaration:
 
@@ -111,7 +111,7 @@ _Defined in [src/components/routing/authenticated-route.tsx:14](https://github.c
 
 • **route**: _[RouteDefinition](routedefinition.md)_
 
-_Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/93d00e6/src/components/routing/authenticated-route.tsx#L13)_
+_Defined in [src/components/routing/authenticated-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/components/routing/authenticated-route.tsx#L13)_
 
 ---
 

@@ -24,6 +24,7 @@
     "devDependencies": {
         "@testing-library/jest-dom": "5.5.0",
         "@testing-library/react": "10.0.4",
+        "@testing-library/react-hooks": "3.4.2",
         "@types/faker": "4.1.12",
         "@types/jest": "25.1.5",
         "@types/node": "13.11.0",
@@ -35,6 +36,7 @@
         "jest-extended": "0.11.5",
         "jest-fetch-mock": "3.0.3",
         "prettier": "1.19.1",
+        "react-test-renderer": "16.9.0",
         "rimraf": "2.6.2",
         "rosie": "2.0.1",
         "ts-jest": "25.5.1",
@@ -42,7 +44,8 @@
         "tslint-config-prettier": "1.18.0",
         "typedoc": "0.17.6",
         "typedoc-plugin-markdown": "2.2.17",
-        "typescript": "3.8.3"
+        "typescript": "3.8.3",
+        "window-resizeto": "0.0.2"
     },
     "files": [
         "dist"
@@ -71,9 +74,8 @@
         "docs": "typedoc --mode file --excludeExternals --plugin typedoc-plugin-markdown --readme none",
         "format": "prettier --write \"src/**/*.ts\" --trailing-comma es5",
         "postbuild": "npm run docs",
-        "postpublish": "cross-env-shell \"git add -A && git commit -m \"$npm_package_version\" && git push origin master",
+        "postpublish": "cross-env-shell \"git add -A && git commit -m \"$npm_package_version\" && git push origin main\"",
         "prebuild": "npm run clean && npm run format && echo Using TypeScript && tsc --version",
-        "preinstall": "npm run configure:git",
         "prepublishOnly": "npm run build",
         "test": "jest ./src",
         "watch": "npm run build -- --watch",
@@ -81,5 +83,5 @@
         "watch:test": "jest ./src --watch"
     },
     "types": "dist/index",
-    "version": "0.1.4"
+    "version": "0.1.5"
 }
