@@ -25,7 +25,7 @@
 
 • **isAuthenticated**: _boolean_
 
-_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/interfaces/authenticated-route.ts#L12)_
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/1eccb7a/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -37,7 +37,7 @@ Flag to determine whether the current user is authenticated or not.
 
 • **redirectToIfUnauthenticated**? : _undefined | string_
 
-_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/interfaces/authenticated-route.ts#L20)_
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/1eccb7a/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
