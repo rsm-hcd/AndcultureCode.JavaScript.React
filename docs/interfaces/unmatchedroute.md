@@ -4,23 +4,23 @@
 
 ## Hierarchy
 
--   **UnmatchedRoute**
+* **UnmatchedRoute**
 
-    ↳ [NestedRoutesProps](nestedroutesprops.md)
+  ↳ [NestedRoutesProps](nestedroutesprops.md)
 
 ## Index
 
 ### Properties
 
--   [redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)
+* [redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)
 
 ## Properties
 
 ### `Optional` redirectToIfNotFound
 
-• **redirectToIfNotFound**? : _undefined | string_
+• **redirectToIfNotFound**? : *undefined | string*
 
-_Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0bc294c/src/interfaces/unmatched-route.ts#L12)_
+*Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b944115/src/interfaces/unmatched-route.ts#L12)*
 
 Route to redirect to if the specified route cannot be matched.
 
