@@ -33,6 +33,7 @@ export { useDebounce } from "./hooks/use-debounce";
 export { useLocalization } from "./hooks/use-localization";
 export { useOnClickOutside } from "./hooks/use-onclick-outside";
 export { usePageErrors } from "./hooks/use-page-errors";
+export { useSortedAlphabetically } from "./hooks/use-sorted-alphabetically";
 export { useTextOverflow } from "./hooks/use-text-overflow";
 export { useWindow } from "./hooks/use-window";
 
@@ -48,14 +49,6 @@ export { RouteMap } from "./interfaces/route-map";
 export { UnmatchedRoute } from "./interfaces/unmatched-route";
 
 // #endregion Interfaces
-
-// -----------------------------------------------------------------------------------------
-// #region Reducers
-// -----------------------------------------------------------------------------------------
-
-export { useSortedAlphabetically } from "./reducers/use-sorted-alphabetically";
-
-// #endregion Reducers
 
 // -----------------------------------------------------------------------------------------
 // #region Services
