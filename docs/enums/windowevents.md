@@ -6,12 +6,12 @@
 
 ### Enumeration members
 
-* [Resize](windowevents.md#resize)
+-   [Resize](windowevents.md#resize)
 
 ## Enumeration members
 
-###  Resize
+### Resize
 
 • **Resize**: = "resize"
 
-*Defined in [src/enumerations/window-events.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b944115/src/enumerations/window-events.ts#L2)*
+_Defined in [src/enumerations/window-events.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/enumerations/window-events.ts#L2)_

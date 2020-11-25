@@ -4,27 +4,27 @@
 
 ## Hierarchy
 
-* **NestedRoutesByPropertyProps**
+-   **NestedRoutesByPropertyProps**
 
 ## Index
 
 ### Properties
 
-* [propertyName](nestedroutesbypropertyprops.md#propertyname)
-* [routes](nestedroutesbypropertyprops.md#routes)
+-   [propertyName](nestedroutesbypropertyprops.md#propertyname)
+-   [routes](nestedroutesbypropertyprops.md#routes)
 
 ## Properties
 
-###  propertyName
+### propertyName
 
-• **propertyName**: *keyof RouteDefinition*
+• **propertyName**: _keyof RouteDefinition_
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b944115/src/components/routing/nested-routes-by-property.tsx#L14)*
+_Defined in [src/components/routing/nested-routes-by-property.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/components/routing/nested-routes-by-property.tsx#L14)_
 
-___
+---
 
-###  routes
+### routes
 
-• **routes**: *[RouteDefinition](routedefinition.md)[]*
+• **routes**: _[RouteDefinition](routedefinition.md)[]_
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/b944115/src/components/routing/nested-routes-by-property.tsx#L15)*
+_Defined in [src/components/routing/nested-routes-by-property.tsx:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/components/routing/nested-routes-by-property.tsx#L15)_
