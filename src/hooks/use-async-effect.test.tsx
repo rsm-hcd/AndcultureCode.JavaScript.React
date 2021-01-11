@@ -1,5 +1,5 @@
 import React from "react";
-import { cleanup, render, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { useAsyncEffect } from "./use-async-effect";
 import { CoreUtils } from "andculturecode-javascript-core";
 import { AsyncEffectCallback } from "../types/async-effect-callback-type";
@@ -11,7 +11,7 @@ describe("useAsyncEffect", () => {
             return null;
         };
 
-        render(<TestComponent />);
+        return render(<TestComponent />);
     };
 
     test("executes async method", async () => {
@@ -26,7 +26,6 @@ describe("useAsyncEffect", () => {
 
         // Assert
         await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
-        await cleanup();
     });
 
     test("executes cleanup method", async () => {
@@ -35,7 +34,7 @@ describe("useAsyncEffect", () => {
         const mockedCleanupMethod = jest.fn();
 
         // Act
-        setupUseAsyncEffect(async () => {
+        const { unmount } = setupUseAsyncEffect(async () => {
             await CoreUtils.sleep(1);
             mockedMethod();
             return mockedCleanupMethod;
@@ -43,7 +42,7 @@ describe("useAsyncEffect", () => {
 
         // Assert
         await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
-        await cleanup();
+        unmount();
         await waitFor(() => expect(mockedCleanupMethod).toBeCalledTimes(1));
     });
 
@@ -53,14 +52,14 @@ describe("useAsyncEffect", () => {
         const expectedIsMountedValue: boolean = true;
 
         // Act
-        setupUseAsyncEffect(async (isMounted) => {
+        const { unmount } = setupUseAsyncEffect(async (isMounted) => {
             actualIsMountedValue = isMounted();
             await CoreUtils.sleep(1);
         });
 
         // Assert
         expect(actualIsMountedValue).toBe(expectedIsMountedValue);
-        await cleanup();
+        unmount();
     });
 
     test("isMounted equals false after cleanup", async () => {
@@ -70,14 +69,14 @@ describe("useAsyncEffect", () => {
         const mockedMethod = jest.fn();
 
         // Act
-        setupUseAsyncEffect(async (isMounted) => {
+        const { unmount } = setupUseAsyncEffect(async (isMounted) => {
             await CoreUtils.sleep(1);
             actualIsMountedValue = isMounted();
             mockedMethod();
         });
 
         // Assert
-        await cleanup();
+        unmount();
         await waitFor(() => expect(mockedMethod).toBeCalledTimes(1));
         expect(actualIsMountedValue).toBe(expectedIsMountedValue);
     });
