@@ -24,7 +24,7 @@
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/interfaces/authenticated-route.ts#L12)_
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -38,7 +38,7 @@ Flag to determine whether the current user is authenticated or not.
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/interfaces/authenticated-route.ts#L20)_
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
@@ -50,4 +50,4 @@ Route to redirect to if the current user is not authenticated.
 
 • **route**: _[RouteDefinition](routedefinition.md)_
 
-_Defined in [src/components/routing/nested-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/045a6f6/src/components/routing/nested-route.tsx#L13)_
+_Defined in [src/components/routing/nested-route.tsx:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/components/routing/nested-route.tsx#L13)_
