@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react-hooks";
 import { useWindow } from "./use-window";
 
 const DEFAULT_WIDTH: number = 1024;
@@ -6,7 +6,9 @@ const DEFAULT_HEIGHT: number = 768;
 
 describe("useWindow", () => {
     beforeEach(() => {
-        window.resizeTo(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        act(() => {
+            window.resizeTo(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        });
     });
 
     test("returns width and height of window", async () => {
@@ -25,7 +27,9 @@ describe("useWindow", () => {
         const windowHeight = DEFAULT_HEIGHT + 1;
 
         // Act
-        window.resizeTo(windowWidth, windowHeight);
+        act(() => {
+            window.resizeTo(windowWidth, windowHeight);
+        });
 
         // Assert
         expect(result.current.width).toBe(windowWidth);
