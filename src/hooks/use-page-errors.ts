@@ -7,14 +7,17 @@ import { ResultRecord } from "andculturecode-javascript-core";
 export function usePageErrors() {
     const [pageErrors, setPageErrors] = useState<Array<string>>([]);
 
-    const handlePageLoadError = useCallback((result: any) => {
-        if (result instanceof ResultRecord) {
-            setPageErrors((e) => [...e, ...result.listErrorMessages()]);
-            return;
-        }
+    const handlePageLoadError = useCallback(
+        (result: string | ResultRecord<any>) => {
+            if (typeof result === "string") {
+                setPageErrors((e) => [...e, result]);
+                return;
+            }
 
-        setPageErrors((e) => [...e, result]);
-    }, []);
+            setPageErrors((e) => [...e, ...result.listErrorMessages()]);
+        },
+        []
+    );
 
     const resetPageErrors = useCallback(() => {
         setPageErrors([]);
