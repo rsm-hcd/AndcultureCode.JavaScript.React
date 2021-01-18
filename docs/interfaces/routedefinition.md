@@ -24,7 +24,7 @@
 
 • **authRequired**: _boolean_
 
-_Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L9)_
+_Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L9)_
 
 ---
 
@@ -32,7 +32,7 @@ _Defined in [src/interfaces/route-definition.ts:9](https://github.com/Andculture
 
 • **component**: _React.ComponentType_
 
-_Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L10)_
+_Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L10)_
 
 ---
 
@@ -40,7 +40,7 @@ _Defined in [src/interfaces/route-definition.ts:10](https://github.com/Andcultur
 
 • **exact**? : _undefined | false | true_
 
-_Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L11)_
+_Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L11)_
 
 ---
 
@@ -48,7 +48,7 @@ _Defined in [src/interfaces/route-definition.ts:11](https://github.com/Andcultur
 
 • **getComponent**? : _undefined | function_
 
-_Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L12)_
+_Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L12)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [src/interfaces/route-definition.ts:12](https://github.com/Andcultur
 
 • **path**: _string_
 
-_Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L13)_
+_Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L13)_
 
 ---
 
@@ -64,7 +64,7 @@ _Defined in [src/interfaces/route-definition.ts:13](https://github.com/Andcultur
 
 • **routes**: _[RouteMap](routemap.md)_
 
-_Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L14)_
+_Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L14)_
 
 ---
 
@@ -72,4 +72,4 @@ _Defined in [src/interfaces/route-definition.ts:14](https://github.com/Andcultur
 
 • **sidebar**? : _React.ComponentType_
 
-_Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/route-definition.ts#L16)_
+_Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/route-definition.ts#L16)_

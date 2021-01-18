@@ -14,4 +14,4 @@
 
 • **Resize**: = "resize"
 
-_Defined in [src/enumerations/window-events.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/enumerations/window-events.ts#L2)_
+_Defined in [src/enumerations/window-events.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/enumerations/window-events.ts#L2)_

@@ -30,7 +30,7 @@
 
 • **initialPathParams**? : _TPathParams_
 
-_Defined in [src/interfaces/use-query-options.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/use-query-options.ts#L14)_
+_Defined in [src/interfaces/use-query-options.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/use-query-options.ts#L14)_
 
 ---
 
@@ -38,7 +38,7 @@ _Defined in [src/interfaces/use-query-options.ts:14](https://github.com/Andcultu
 
 • **initialQuery**: _TQueryParams_
 
-_Defined in [src/interfaces/use-query-options.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/use-query-options.ts#L13)_
+_Defined in [src/interfaces/use-query-options.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/use-query-options.ts#L13)_
 
 ---
 
@@ -46,7 +46,7 @@ _Defined in [src/interfaces/use-query-options.ts:13](https://github.com/Andcultu
 
 • **onError**? : _CatchResultHandler‹TRecord›_
 
-_Defined in [src/interfaces/use-query-options.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/use-query-options.ts#L16)_
+_Defined in [src/interfaces/use-query-options.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/use-query-options.ts#L16)_
 
 ---
 
@@ -54,7 +54,7 @@ _Defined in [src/interfaces/use-query-options.ts:16](https://github.com/Andcultu
 
 • **onSuccess**? : _undefined | function_
 
-_Defined in [src/interfaces/use-query-options.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/use-query-options.ts#L15)_
+_Defined in [src/interfaces/use-query-options.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/use-query-options.ts#L15)_
 
 ---
 
@@ -62,4 +62,4 @@ _Defined in [src/interfaces/use-query-options.ts:15](https://github.com/Andcultu
 
 • **serviceHook**: _[ListServiceHook](../README.md#listservicehook)‹TRecord, TQueryParams› | [NestedListServiceHook](../README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-_Defined in [src/interfaces/use-query-options.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/use-query-options.ts#L10)_
+_Defined in [src/interfaces/use-query-options.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/use-query-options.ts#L10)_

@@ -27,7 +27,7 @@
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/authenticated-route.ts#L12)_
+_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/authenticated-route.ts#L12)_
 
 Flag to determine whether the current user is authenticated or not.
 
@@ -41,7 +41,7 @@ Flag to determine whether the current user is authenticated or not.
 
 _Inherited from [UnmatchedRoute](unmatchedroute.md).[redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)_
 
-_Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/unmatched-route.ts#L12)_
+_Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/unmatched-route.ts#L12)_
 
 Route to redirect to if the specified route cannot be matched.
 
@@ -55,7 +55,7 @@ Route to redirect to if the specified route cannot be matched.
 
 _Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
 
-_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/authenticated-route.ts#L20)_
+_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/authenticated-route.ts#L20)_
 
 Route to redirect to if the current user is not authenticated.
 
@@ -67,4 +67,4 @@ Route to redirect to if the current user is not authenticated.
 
 • **routes**: _[RouteDefinition](routedefinition.md)[]_
 
-_Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/components/routing/nested-routes.tsx#L14)_
+_Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/components/routing/nested-routes.tsx#L14)_

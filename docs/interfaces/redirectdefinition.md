@@ -19,7 +19,7 @@
 
 • **from**: _string_
 
-_Defined in [src/interfaces/redirect-definition.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/redirect-definition.ts#L6)_
+_Defined in [src/interfaces/redirect-definition.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/redirect-definition.ts#L6)_
 
 ---
 
@@ -27,4 +27,4 @@ _Defined in [src/interfaces/redirect-definition.ts:6](https://github.com/Andcult
 
 • **to**: _string_
 
-_Defined in [src/interfaces/redirect-definition.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/0523074/src/interfaces/redirect-definition.ts#L7)_
+_Defined in [src/interfaces/redirect-definition.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/redirect-definition.ts#L7)_
