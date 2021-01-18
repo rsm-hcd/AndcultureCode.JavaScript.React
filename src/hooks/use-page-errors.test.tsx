@@ -3,12 +3,31 @@ import { usePageErrors } from "./use-page-errors";
 import { ResultRecord } from "andculturecode-javascript-core";
 
 describe("usePageErrors", () => {
-    test("returns empty array", async () => {
-        // Arrange & Act
-        const { result } = renderHook(() => usePageErrors());
+    describe("initialized", () => {
+        test("returns empty array", async () => {
+            // Arrange & Act
+            const { result } = renderHook(() => usePageErrors());
 
-        // Assert
-        expect(result.current.pageErrors).toBeEmpty();
+            // Assert
+            expect(result.current.pageErrors).toBeEmpty();
+        });
+    });
+
+    describe("setPageErrors", () => {
+        test("when set with string array, pageErrors returns array", async () => {
+            // Arrange
+            const errorMessage = "Error Message";
+            const { result } = renderHook(() => usePageErrors());
+
+            // Act
+            act(() => {
+                result.current.setPageErrors([errorMessage]);
+            });
+
+            // Assert
+            expect(result.current.pageErrors.length).toBe(1);
+            expect(result.current.pageErrors[0]).toBe(errorMessage);
+        });
     });
 
     describe("handlePageLoadError", () => {
