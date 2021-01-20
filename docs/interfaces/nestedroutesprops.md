@@ -4,67 +4,67 @@
 
 ## Hierarchy
 
--   [UnmatchedRoute](unmatchedroute.md)
+* [UnmatchedRoute](unmatchedroute.md)
 
--   [AuthenticatedRoute](authenticatedroute.md)
+* [AuthenticatedRoute](authenticatedroute.md)
 
-    ↳ **NestedRoutesProps**
+  ↳ **NestedRoutesProps**
 
 ## Index
 
 ### Properties
 
--   [isAuthenticated](nestedroutesprops.md#isauthenticated)
--   [redirectToIfNotFound](nestedroutesprops.md#optional-redirecttoifnotfound)
--   [redirectToIfUnauthenticated](nestedroutesprops.md#optional-redirecttoifunauthenticated)
--   [routes](nestedroutesprops.md#routes)
+* [isAuthenticated](nestedroutesprops.md#isauthenticated)
+* [redirectToIfNotFound](nestedroutesprops.md#optional-redirecttoifnotfound)
+* [redirectToIfUnauthenticated](nestedroutesprops.md#optional-redirecttoifunauthenticated)
+* [routes](nestedroutesprops.md#routes)
 
 ## Properties
 
-### isAuthenticated
+###  isAuthenticated
 
-• **isAuthenticated**: _boolean_
+• **isAuthenticated**: *boolean*
 
-_Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)_
+*Inherited from [AuthenticatedRoute](authenticatedroute.md).[isAuthenticated](authenticatedroute.md#isauthenticated)*
 
-_Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/authenticated-route.ts#L12)_
+*Defined in [src/interfaces/authenticated-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/authenticated-route.ts#L12)*
 
 Flag to determine whether the current user is authenticated or not.
 
 **`memberof`** AuthenticatedRouteProps
 
----
+___
 
 ### `Optional` redirectToIfNotFound
 
-• **redirectToIfNotFound**? : _undefined | string_
+• **redirectToIfNotFound**? : *undefined | string*
 
-_Inherited from [UnmatchedRoute](unmatchedroute.md).[redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)_
+*Inherited from [UnmatchedRoute](unmatchedroute.md).[redirectToIfNotFound](unmatchedroute.md#optional-redirecttoifnotfound)*
 
-_Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/unmatched-route.ts#L12)_
+*Defined in [src/interfaces/unmatched-route.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/unmatched-route.ts#L12)*
 
 Route to redirect to if the specified route cannot be matched.
 
 **`memberof`** RouteNotFoundProps
 
----
+___
 
 ### `Optional` redirectToIfUnauthenticated
 
-• **redirectToIfUnauthenticated**? : _undefined | string_
+• **redirectToIfUnauthenticated**? : *undefined | string*
 
-_Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)_
+*Inherited from [AuthenticatedRoute](authenticatedroute.md).[redirectToIfUnauthenticated](authenticatedroute.md#optional-redirecttoifunauthenticated)*
 
-_Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/interfaces/authenticated-route.ts#L20)_
+*Defined in [src/interfaces/authenticated-route.ts:20](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/authenticated-route.ts#L20)*
 
 Route to redirect to if the current user is not authenticated.
 
 **`memberof`** UnauthenticatedRedirectProps
 
----
+___
 
-### routes
+###  routes
 
-• **routes**: _[RouteDefinition](routedefinition.md)[]_
+• **routes**: *[RouteDefinition](routedefinition.md)[]*
 
-_Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/4f6fc98/src/components/routing/nested-routes.tsx#L14)_
+*Defined in [src/components/routing/nested-routes.tsx:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/nested-routes.tsx#L14)*
