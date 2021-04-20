@@ -31,6 +31,10 @@ import {
 
 [Full API documentation](docs/README.md)
 
+## Peer dependencies
+
+This package wraps several external packages for our own configuration and ease of use, such as `axios`, `i18next`, `react-router-dom`, etc. These will need to be installed alongside this package, even if you do not plan on leveraging features that rely on them.
+
 # Contributing
 
 Information on contributing to this repo is in the [Contributing Guide](CONTRIBUTING.md)
