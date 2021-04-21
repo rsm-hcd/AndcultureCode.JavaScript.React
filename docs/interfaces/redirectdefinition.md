@@ -4,27 +4,27 @@
 
 ## Hierarchy
 
-* **RedirectDefinition**
+-   **RedirectDefinition**
 
 ## Index
 
 ### Properties
 
-* [from](redirectdefinition.md#from)
-* [to](redirectdefinition.md#to)
+-   [from](redirectdefinition.md#from)
+-   [to](redirectdefinition.md#to)
 
 ## Properties
 
-###  from
+### from
 
-• **from**: *string*
+• **from**: _string_
 
-*Defined in [src/interfaces/redirect-definition.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/redirect-definition.ts#L6)*
+_Defined in [src/interfaces/redirect-definition.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/redirect-definition.ts#L6)_
 
-___
+---
 
-###  to
+### to
 
-• **to**: *string*
+• **to**: _string_
 
-*Defined in [src/interfaces/redirect-definition.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/redirect-definition.ts#L7)*
+_Defined in [src/interfaces/redirect-definition.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/redirect-definition.ts#L7)_

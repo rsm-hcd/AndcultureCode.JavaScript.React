@@ -6,110 +6,110 @@
 
 ### Enumerations
 
-* [WindowEvents](enums/windowevents.md)
+-   [WindowEvents](enums/windowevents.md)
 
 ### Interfaces
 
-* [AuthenticatedRoute](interfaces/authenticatedroute.md)
-* [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md)
-* [NestedRouteProps](interfaces/nestedrouteprops.md)
-* [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md)
-* [NestedRoutesProps](interfaces/nestedroutesprops.md)
-* [RedirectDefinition](interfaces/redirectdefinition.md)
-* [RedirectsProps](interfaces/redirectsprops.md)
-* [RouteDefinition](interfaces/routedefinition.md)
-* [RouteMap](interfaces/routemap.md)
-* [UnmatchedRoute](interfaces/unmatchedroute.md)
-* [UseQueryOptions](interfaces/usequeryoptions.md)
+-   [AuthenticatedRoute](interfaces/authenticatedroute.md)
+-   [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md)
+-   [NestedRouteProps](interfaces/nestedrouteprops.md)
+-   [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md)
+-   [NestedRoutesProps](interfaces/nestedroutesprops.md)
+-   [RedirectDefinition](interfaces/redirectdefinition.md)
+-   [RedirectsProps](interfaces/redirectsprops.md)
+-   [RouteDefinition](interfaces/routedefinition.md)
+-   [RouteMap](interfaces/routemap.md)
+-   [UnmatchedRoute](interfaces/unmatchedroute.md)
+-   [UseQueryOptions](interfaces/usequeryoptions.md)
 
 ### Type aliases
 
-* [AsyncEffectCallback](README.md#asynceffectcallback)
-* [BulkUpdateService](README.md#bulkupdateservice)
-* [BulkUpdateServiceHook](README.md#bulkupdateservicehook)
-* [CreateService](README.md#createservice)
-* [CreateServiceHook](README.md#createservicehook)
-* [DeleteService](README.md#deleteservice)
-* [DeleteServiceHook](README.md#deleteservicehook)
-* [GetService](README.md#getservice)
-* [GetServiceHook](README.md#getservicehook)
-* [ListService](README.md#listservice)
-* [ListServiceHook](README.md#listservicehook)
-* [NestedCreateService](README.md#nestedcreateservice)
-* [NestedCreateServiceHook](README.md#nestedcreateservicehook)
-* [NestedListService](README.md#nestedlistservice)
-* [NestedListServiceHook](README.md#nestedlistservicehook)
-* [UpdateService](README.md#updateservice)
-* [UpdateServiceHook](README.md#updateservicehook)
+-   [AsyncEffectCallback](README.md#asynceffectcallback)
+-   [BulkUpdateService](README.md#bulkupdateservice)
+-   [BulkUpdateServiceHook](README.md#bulkupdateservicehook)
+-   [CreateService](README.md#createservice)
+-   [CreateServiceHook](README.md#createservicehook)
+-   [DeleteService](README.md#deleteservice)
+-   [DeleteServiceHook](README.md#deleteservicehook)
+-   [GetService](README.md#getservice)
+-   [GetServiceHook](README.md#getservicehook)
+-   [ListService](README.md#listservice)
+-   [ListServiceHook](README.md#listservicehook)
+-   [NestedCreateService](README.md#nestedcreateservice)
+-   [NestedCreateServiceHook](README.md#nestedcreateservicehook)
+-   [NestedListService](README.md#nestedlistservice)
+-   [NestedListServiceHook](README.md#nestedlistservicehook)
+-   [UpdateService](README.md#updateservice)
+-   [UpdateServiceHook](README.md#updateservicehook)
 
 ### Variables
 
-* [RouteDefinitionFactory](README.md#const-routedefinitionfactory)
-* [RouteDefinitionNestedFactory](README.md#const-routedefinitionnestedfactory)
-* [RouteMapFactory](README.md#const-routemapfactory)
+-   [RouteDefinitionFactory](README.md#const-routedefinitionfactory)
+-   [RouteDefinitionNestedFactory](README.md#const-routedefinitionnestedfactory)
+-   [RouteMapFactory](README.md#const-routemapfactory)
 
 ### Functions
 
-* [AuthenticatedRoute](README.md#const-authenticatedroute)
-* [NestedRoute](README.md#const-nestedroute)
-* [NestedRoutes](README.md#const-nestedroutes)
-* [NestedRoutesByProperty](README.md#const-nestedroutesbyproperty)
-* [Redirects](README.md#const-redirects)
-* [_buildUrl](README.md#const-_buildurl)
-* [_bulkUpdate](README.md#const-_bulkupdate)
-* [_create](README.md#const-_create)
-* [_delete](README.md#const-_delete)
-* [_get](README.md#const-_get)
-* [_list](README.md#const-_list)
-* [_update](README.md#const-_update)
-* [debugRoutes](README.md#const-debugroutes)
-* [getFlattenedRoutes](README.md#const-getflattenedroutes)
-* [makeCancellable](README.md#const-makecancellable)
-* [useAsyncEffect](README.md#useasynceffect)
-* [useCancellablePromise](README.md#const-usecancellablepromise)
-* [useDebounce](README.md#usedebounce)
-* [useLocalization](README.md#const-uselocalization)
-* [useOnClickOutside](README.md#useonclickoutside)
-* [usePageErrors](README.md#usepageerrors)
-* [useQuery](README.md#usequery)
-* [useSortedAlphabetically](README.md#usesortedalphabetically)
-* [useTextOverflow](README.md#usetextoverflow)
-* [useWindow](README.md#usewindow)
+-   [AuthenticatedRoute](README.md#const-authenticatedroute)
+-   [NestedRoute](README.md#const-nestedroute)
+-   [NestedRoutes](README.md#const-nestedroutes)
+-   [NestedRoutesByProperty](README.md#const-nestedroutesbyproperty)
+-   [Redirects](README.md#const-redirects)
+-   [\_buildUrl](README.md#const-_buildurl)
+-   [\_bulkUpdate](README.md#const-_bulkupdate)
+-   [\_create](README.md#const-_create)
+-   [\_delete](README.md#const-_delete)
+-   [\_get](README.md#const-_get)
+-   [\_list](README.md#const-_list)
+-   [\_update](README.md#const-_update)
+-   [debugRoutes](README.md#const-debugroutes)
+-   [getFlattenedRoutes](README.md#const-getflattenedroutes)
+-   [makeCancellable](README.md#const-makecancellable)
+-   [useAsyncEffect](README.md#useasynceffect)
+-   [useCancellablePromise](README.md#const-usecancellablepromise)
+-   [useDebounce](README.md#usedebounce)
+-   [useLocalization](README.md#const-uselocalization)
+-   [useOnClickOutside](README.md#useonclickoutside)
+-   [usePageErrors](README.md#usepageerrors)
+-   [useQuery](README.md#usequery)
+-   [useSortedAlphabetically](README.md#usesortedalphabetically)
+-   [useTextOverflow](README.md#usetextoverflow)
+-   [useWindow](README.md#usewindow)
 
 ### Object literals
 
-* [FactoryType](README.md#const-factorytype)
-* [RouteUtils](README.md#const-routeutils)
-* [ServiceFactory](README.md#const-servicefactory)
-* [ServiceHookFactory](README.md#const-servicehookfactory)
+-   [FactoryType](README.md#const-factorytype)
+-   [RouteUtils](README.md#const-routeutils)
+-   [ServiceFactory](README.md#const-servicefactory)
+-   [ServiceHookFactory](README.md#const-servicehookfactory)
 
 ## Type aliases
 
-###  AsyncEffectCallback
+### AsyncEffectCallback
 
-Ƭ **AsyncEffectCallback**: *function*
+Ƭ **AsyncEffectCallback**: _function_
 
-*Defined in [src/types/async-effect-callback-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/async-effect-callback-type.ts#L6)*
+_Defined in [src/types/async-effect-callback-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/async-effect-callback-type.ts#L6)_
 
 Type defining the asyncEffect parameter from calling `useAsyncEffect()`
 
 #### Type declaration:
 
-▸ (`isMounted`: function): *Promise‹ReturnType‹EffectCallback››*
+▸ (`isMounted`: function): _Promise‹ReturnType‹EffectCallback››_
 
 **Parameters:**
 
-▪ **isMounted**: *function*
+▪ **isMounted**: _function_
 
-▸ (): *boolean*
+▸ (): _boolean_
 
-___
+---
 
-###  BulkUpdateService
+### BulkUpdateService
 
-Ƭ **BulkUpdateService**: *function*
+Ƭ **BulkUpdateService**: _function_
 
-*Defined in [src/types/bulk-update-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/bulk-update-service-type.ts#L9)*
+_Defined in [src/types/bulk-update-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/bulk-update-service-type.ts#L9)_
 
 Type defining the service function for bulk updating the supplied resource type
 
@@ -119,38 +119,38 @@ Type defining the service function for bulk updating the supplied resource type
 
 #### Type declaration:
 
-▸ (`records`: TRecord[], `pathParams`: TPathParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`records`: TRecord[], `pathParams`: TPathParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`records` | TRecord[] |
-`pathParams` | TPathParams |
+| Name         | Type        |
+| ------------ | ----------- |
+| `records`    | TRecord[]   |
+| `pathParams` | TPathParams |
 
-___
+---
 
-###  BulkUpdateServiceHook
+### BulkUpdateServiceHook
 
-Ƭ **BulkUpdateServiceHook**: *function*
+Ƭ **BulkUpdateServiceHook**: _function_
 
-*Defined in [src/types/bulk-update-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/bulk-update-service-hook-type.ts#L6)*
+_Defined in [src/types/bulk-update-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/bulk-update-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useBulkUpdate()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **update**: *[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›*
+-   **update**: _[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›_
 
-___
+---
 
-###  CreateService
+### CreateService
 
-Ƭ **CreateService**: *function*
+Ƭ **CreateService**: _function_
 
-*Defined in [src/types/create-service-type.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/create-service-type.ts#L8)*
+_Defined in [src/types/create-service-type.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/create-service-type.ts#L8)_
 
 Type defining the service function for creating the supplied resource type
 
@@ -158,37 +158,37 @@ Type defining the service function for creating the supplied resource type
 
 #### Type declaration:
 
-▸ (`record?`: TRecord): *Promise‹ServiceResponse‹TRecord››*
+▸ (`record?`: TRecord): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`record?` | TRecord |
+| Name      | Type    |
+| --------- | ------- |
+| `record?` | TRecord |
 
-___
+---
 
-###  CreateServiceHook
+### CreateServiceHook
 
-Ƭ **CreateServiceHook**: *function*
+Ƭ **CreateServiceHook**: _function_
 
-*Defined in [src/types/create-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/create-service-hook-type.ts#L6)*
+_Defined in [src/types/create-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/create-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useCreate()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **create**: *[CreateService](README.md#createservice)‹TRecord›*
+-   **create**: _[CreateService](README.md#createservice)‹TRecord›_
 
-___
+---
 
-###  DeleteService
+### DeleteService
 
-Ƭ **DeleteService**: *function*
+Ƭ **DeleteService**: _function_
 
-*Defined in [src/types/delete-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/delete-service-type.ts#L9)*
+_Defined in [src/types/delete-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/delete-service-type.ts#L9)_
 
 Type defining the service function for deleting the supplied resource
 
@@ -198,38 +198,38 @@ Type defining the service function for deleting the supplied resource
 
 #### Type declaration:
 
-▸ (`id`: number, `pathParams?`: any): *Promise‹ServiceResponse‹Boolean››*
+▸ (`id`: number, `pathParams?`: any): _Promise‹ServiceResponse‹Boolean››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`id` | number |
-`pathParams?` | any |
+| Name          | Type   |
+| ------------- | ------ |
+| `id`          | number |
+| `pathParams?` | any    |
 
-___
+---
 
-###  DeleteServiceHook
+### DeleteServiceHook
 
-Ƭ **DeleteServiceHook**: *function*
+Ƭ **DeleteServiceHook**: _function_
 
-*Defined in [src/types/delete-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/delete-service-hook-type.ts#L6)*
+_Defined in [src/types/delete-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/delete-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useDelete()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **delete**: *[DeleteService](README.md#deleteservice)*
+-   **delete**: _[DeleteService](README.md#deleteservice)_
 
-___
+---
 
-###  GetService
+### GetService
 
-Ƭ **GetService**: *function*
+Ƭ **GetService**: _function_
 
-*Defined in [src/types/get-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/get-service-type.ts#L9)*
+_Defined in [src/types/get-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/get-service-type.ts#L9)_
 
 Type defining the service function for getting the supplied resource type
 
@@ -239,38 +239,38 @@ Type defining the service function for getting the supplied resource type
 
 #### Type declaration:
 
-▸ (`pathParams`: TPathParams, `queryParams?`: TQueryParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`pathParams`: TPathParams, `queryParams?`: TQueryParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`pathParams` | TPathParams |
-`queryParams?` | TQueryParams |
+| Name           | Type         |
+| -------------- | ------------ |
+| `pathParams`   | TPathParams  |
+| `queryParams?` | TQueryParams |
 
-___
+---
 
-###  GetServiceHook
+### GetServiceHook
 
-Ƭ **GetServiceHook**: *function*
+Ƭ **GetServiceHook**: _function_
 
-*Defined in [src/types/get-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/get-service-hook-type.ts#L6)*
+_Defined in [src/types/get-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/get-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useGet()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **get**: *[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›*
+-   **get**: _[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›_
 
-___
+---
 
-###  ListService
+### ListService
 
-Ƭ **ListService**: *function*
+Ƭ **ListService**: _function_
 
-*Defined in [src/types/list-service-type.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/list-service-type.ts#L8)*
+_Defined in [src/types/list-service-type.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/list-service-type.ts#L8)_
 
 Type defining the service function for listing resources by supplied type
 
@@ -278,37 +278,37 @@ Type defining the service function for listing resources by supplied type
 
 #### Type declaration:
 
-▸ (`queryParams?`: TQueryParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`queryParams?`: TQueryParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`queryParams?` | TQueryParams |
+| Name           | Type         |
+| -------------- | ------------ |
+| `queryParams?` | TQueryParams |
 
-___
+---
 
-###  ListServiceHook
+### ListServiceHook
 
-Ƭ **ListServiceHook**: *function*
+Ƭ **ListServiceHook**: _function_
 
-*Defined in [src/types/list-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/list-service-hook-type.ts#L6)*
+_Defined in [src/types/list-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/list-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useList()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **list**: *[ListService](README.md#listservice)‹TRecord, TQueryParams›*
+-   **list**: _[ListService](README.md#listservice)‹TRecord, TQueryParams›_
 
-___
+---
 
-###  NestedCreateService
+### NestedCreateService
 
-Ƭ **NestedCreateService**: *function*
+Ƭ **NestedCreateService**: _function_
 
-*Defined in [src/types/nested-create-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/nested-create-service-type.ts#L9)*
+_Defined in [src/types/nested-create-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/nested-create-service-type.ts#L9)_
 
 Type defining the service function for creating the supplied resource type when resource is nested
 
@@ -318,38 +318,38 @@ Type defining the service function for creating the supplied resource type when 
 
 #### Type declaration:
 
-▸ (`record`: TRecord, `pathParams`: TPathParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`record`: TRecord, `pathParams`: TPathParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`record` | TRecord |
-`pathParams` | TPathParams |
+| Name         | Type        |
+| ------------ | ----------- |
+| `record`     | TRecord     |
+| `pathParams` | TPathParams |
 
-___
+---
 
-###  NestedCreateServiceHook
+### NestedCreateServiceHook
 
-Ƭ **NestedCreateServiceHook**: *function*
+Ƭ **NestedCreateServiceHook**: _function_
 
-*Defined in [src/types/nested-create-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/nested-create-service-hook-type.ts#L6)*
+_Defined in [src/types/nested-create-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/nested-create-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useNestedCreate()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **create**: *[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›*
+-   **create**: _[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›_
 
-___
+---
 
-###  NestedListService
+### NestedListService
 
-Ƭ **NestedListService**: *function*
+Ƭ **NestedListService**: _function_
 
-*Defined in [src/types/nested-list-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/nested-list-service-type.ts#L9)*
+_Defined in [src/types/nested-list-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/nested-list-service-type.ts#L9)_
 
 Type defining the service function for listing resources by supplied type when resource is nested
 
@@ -359,38 +359,38 @@ Type defining the service function for listing resources by supplied type when r
 
 #### Type declaration:
 
-▸ (`pathParams`: TPathParams, `queryParams?`: TQueryParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`pathParams`: TPathParams, `queryParams?`: TQueryParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`pathParams` | TPathParams |
-`queryParams?` | TQueryParams |
+| Name           | Type         |
+| -------------- | ------------ |
+| `pathParams`   | TPathParams  |
+| `queryParams?` | TQueryParams |
 
-___
+---
 
-###  NestedListServiceHook
+### NestedListServiceHook
 
-Ƭ **NestedListServiceHook**: *function*
+Ƭ **NestedListServiceHook**: _function_
 
-*Defined in [src/types/nested-list-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/nested-list-service-hook-type.ts#L6)*
+_Defined in [src/types/nested-list-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/nested-list-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useNestedList()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **list**: *[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›*
+-   **list**: _[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›_
 
-___
+---
 
-###  UpdateService
+### UpdateService
 
-Ƭ **UpdateService**: *function*
+Ƭ **UpdateService**: _function_
 
-*Defined in [src/types/update-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/update-service-type.ts#L9)*
+_Defined in [src/types/update-service-type.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/update-service-type.ts#L9)_
 
 Type defining the service function for updating the supplied resource type
 
@@ -400,271 +400,271 @@ Type defining the service function for updating the supplied resource type
 
 #### Type declaration:
 
-▸ (`record`: TRecord, `pathParams?`: TPathParams): *Promise‹ServiceResponse‹TRecord››*
+▸ (`record`: TRecord, `pathParams?`: TPathParams): _Promise‹ServiceResponse‹TRecord››_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`record` | TRecord |
-`pathParams?` | TPathParams |
+| Name          | Type        |
+| ------------- | ----------- |
+| `record`      | TRecord     |
+| `pathParams?` | TPathParams |
 
-___
+---
 
-###  UpdateServiceHook
+### UpdateServiceHook
 
-Ƭ **UpdateServiceHook**: *function*
+Ƭ **UpdateServiceHook**: _function_
 
-*Defined in [src/types/update-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/types/update-service-hook-type.ts#L6)*
+_Defined in [src/types/update-service-hook-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/types/update-service-hook-type.ts#L6)_
 
 Type defining the return object from calling `useUpdate()`
 
 #### Type declaration:
 
-▸ (): *object*
+▸ (): _object_
 
-* **update**: *[UpdateService](README.md#updateservice)‹TRecord, TPathParams›*
+-   **update**: _[UpdateService](README.md#updateservice)‹TRecord, TPathParams›_
 
 ## Variables
 
 ### `Const` RouteDefinitionFactory
 
-• **RouteDefinitionFactory**: *IFactory‹[RouteDefinition](interfaces/routedefinition.md)›* = Factory.define<RouteDefinition>(
-    FactoryType.RouteDefinition.Default
+• **RouteDefinitionFactory**: _IFactory‹[RouteDefinition](interfaces/routedefinition.md)›_ = Factory.define<RouteDefinition>(
+FactoryType.RouteDefinition.Default
 )
-    .sequence("authRequired", () => false)
-    .sequence("component", () => React.Fragment)
-    .sequence("exact", () => true)
-    .sequence("path", (i: number) => `/path${i}`)
-    .sequence("routes", () => {})
+.sequence("authRequired", () => false)
+.sequence("component", () => React.Fragment)
+.sequence("exact", () => true)
+.sequence("path", (i: number) => `/path${i}`)
+.sequence("routes", () => {})
 
-*Defined in [src/tests/factories/route-definition-factory.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/route-definition-factory.ts#L10)*
+_Defined in [src/tests/factories/route-definition-factory.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/route-definition-factory.ts#L10)_
 
-___
+---
 
 ### `Const` RouteDefinitionNestedFactory
 
-• **RouteDefinitionNestedFactory**: *IFactory‹[RouteDefinition](interfaces/routedefinition.md)›* = Factory.define<RouteDefinition>(
-    FactoryType.RouteDefinition.Nested
+• **RouteDefinitionNestedFactory**: _IFactory‹[RouteDefinition](interfaces/routedefinition.md)›_ = Factory.define<RouteDefinition>(
+FactoryType.RouteDefinition.Nested
 )
-    .sequence("authRequired", () => false)
-    .sequence("component", () => React.Fragment)
-    .sequence("exact", () => true)
-    .sequence("path", (i: number) => `/path${i}`)
-    .sequence("routes", () => {
-        return {
-            nestedRoute: Factory.build<RouteDefinition>(
-                FactoryType.RouteDefinition.Default
-            ),
-        };
-    })
+.sequence("authRequired", () => false)
+.sequence("component", () => React.Fragment)
+.sequence("exact", () => true)
+.sequence("path", (i: number) => `/path${i}`)
+.sequence("routes", () => {
+return {
+nestedRoute: Factory.build<RouteDefinition>(
+FactoryType.RouteDefinition.Default
+),
+};
+})
 
-*Defined in [src/tests/factories/route-definition-factory.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/route-definition-factory.ts#L19)*
+_Defined in [src/tests/factories/route-definition-factory.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/route-definition-factory.ts#L19)_
 
-___
+---
 
 ### `Const` RouteMapFactory
 
-• **RouteMapFactory**: *IFactory‹[RouteMap](interfaces/routemap.md)›* = Factory.define<RouteMap>(
-    FactoryType.RouteMap
+• **RouteMapFactory**: _IFactory‹[RouteMap](interfaces/routemap.md)›_ = Factory.define<RouteMap>(
+FactoryType.RouteMap
 ).sequence("/", () =>
-    Factory.build<RouteDefinition>(FactoryType.RouteDefinition.Default)
+Factory.build<RouteDefinition>(FactoryType.RouteDefinition.Default)
 )
 
-*Defined in [src/tests/factories/route-map-factory.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/route-map-factory.ts#L10)*
+_Defined in [src/tests/factories/route-map-factory.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/route-map-factory.ts#L10)_
 
 ## Functions
 
 ### `Const` AuthenticatedRoute
 
-▸ **AuthenticatedRoute**(`props`: [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md)): *Element‹›*
+▸ **AuthenticatedRoute**(`props`: [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md)): _Element‹›_
 
-*Defined in [src/components/routing/authenticated-route.tsx:23](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/authenticated-route.tsx#L23)*
+_Defined in [src/components/routing/authenticated-route.tsx:23](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/authenticated-route.tsx#L23)_
 
 Locks a route behind authentication. Can optionally redirect a user to another location if
 attempting to access the route while unauthenticated.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md) |
+| Name    | Type                                                             |
+| ------- | ---------------------------------------------------------------- |
+| `props` | [AuthenticatedRouteProps](interfaces/authenticatedrouteprops.md) |
 
-**Returns:** *Element‹›*
+**Returns:** _Element‹›_
 
-___
+---
 
 ### `Const` NestedRoute
 
-▸ **NestedRoute**(`props`: [NestedRouteProps](interfaces/nestedrouteprops.md)): *Element‹›*
+▸ **NestedRoute**(`props`: [NestedRouteProps](interfaces/nestedrouteprops.md)): _Element‹›_
 
-*Defined in [src/components/routing/nested-route.tsx:26](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/nested-route.tsx#L26)*
+_Defined in [src/components/routing/nested-route.tsx:26](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/nested-route.tsx#L26)_
 
 Dynamically renders a route and its subroutes, accounting
 for additional custom properties on RouteDefinition
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | [NestedRouteProps](interfaces/nestedrouteprops.md) |
+| Name    | Type                                               |
+| ------- | -------------------------------------------------- |
+| `props` | [NestedRouteProps](interfaces/nestedrouteprops.md) |
 
-**Returns:** *Element‹›*
+**Returns:** _Element‹›_
 
-___
+---
 
 ### `Const` NestedRoutes
 
-▸ **NestedRoutes**(`props`: [NestedRoutesProps](interfaces/nestedroutesprops.md)): *null | Element‹›*
+▸ **NestedRoutes**(`props`: [NestedRoutesProps](interfaces/nestedroutesprops.md)): _null | Element‹›_
 
-*Defined in [src/components/routing/nested-routes.tsx:27](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/nested-routes.tsx#L27)*
+_Defined in [src/components/routing/nested-routes.tsx:27](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/nested-routes.tsx#L27)_
 
 Component to easily render nested sub-route components from a list of routes.
 Commonly used when setting up a layout
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | [NestedRoutesProps](interfaces/nestedroutesprops.md) |
+| Name    | Type                                                 |
+| ------- | ---------------------------------------------------- |
+| `props` | [NestedRoutesProps](interfaces/nestedroutesprops.md) |
 
-**Returns:** *null | Element‹›*
+**Returns:** _null | Element‹›_
 
-___
+---
 
 ### `Const` NestedRoutesByProperty
 
-▸ **NestedRoutesByProperty**(`props`: [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md)): *null | Element‹›*
+▸ **NestedRoutesByProperty**(`props`: [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md)): _null | Element‹›_
 
-*Defined in [src/components/routing/nested-routes-by-property.tsx:27](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/nested-routes-by-property.tsx#L27)*
+_Defined in [src/components/routing/nested-routes-by-property.tsx:27](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/nested-routes-by-property.tsx#L27)_
 
 Renders Route components mapped to a custom property
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md) |
+| Name    | Type                                                                     |
+| ------- | ------------------------------------------------------------------------ |
+| `props` | [NestedRoutesByPropertyProps](interfaces/nestedroutesbypropertyprops.md) |
 
-**Returns:** *null | Element‹›*
+**Returns:** _null | Element‹›_
 
-___
+---
 
 ### `Const` Redirects
 
-▸ **Redirects**(`props`: [RedirectsProps](interfaces/redirectsprops.md)): *Element‹›*
+▸ **Redirects**(`props`: [RedirectsProps](interfaces/redirectsprops.md)): _Element‹›_
 
-*Defined in [src/components/routing/redirects.tsx:22](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/components/routing/redirects.tsx#L22)*
+_Defined in [src/components/routing/redirects.tsx:22](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/redirects.tsx#L22)_
 
 Simple way to redirect a flat array of RedirectDefinitions
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`props` | [RedirectsProps](interfaces/redirectsprops.md) |
+| Name    | Type                                           |
+| ------- | ---------------------------------------------- |
+| `props` | [RedirectsProps](interfaces/redirectsprops.md) |
 
-**Returns:** *Element‹›*
+**Returns:** _Element‹›_
 
-___
+---
 
-### `Const` _buildUrl
+### `Const` \_buildUrl
 
-▸ **_buildUrl**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): *string*
+▸ **\_buildUrl**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): _string_
 
-*Defined in [src/services/service-factory.ts:159](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L159)*
+_Defined in [src/services/service-factory.ts:159](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L159)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`id` | number |
-`resourceEndpoint` | string |
-`pathParams?` | any |
+| Name               | Type   |
+| ------------------ | ------ |
+| `id`               | number |
+| `resourceEndpoint` | string |
+| `pathParams?`      | any    |
 
-**Returns:** *string*
+**Returns:** _string_
 
-___
+---
 
-### `Const` _bulkUpdate
+### `Const` \_bulkUpdate
 
-▸ **_bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `records`: Array‹TRecord›, `resourceEndpoint`: string, `pathParams`: TPathParams): *Promise‹ServiceResponse‹TRecord››*
+▸ **\_bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `records`: Array‹TRecord›, `resourceEndpoint`: string, `pathParams`: TPathParams): _Promise‹ServiceResponse‹TRecord››_
 
-*Defined in [src/services/service-factory.ts:167](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L167)*
+_Defined in [src/services/service-factory.ts:167](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L167)_
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
-▪ **TPathParams**: *any*
+▪ **TPathParams**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **records**: *Array‹TRecord›*
+▪ **records**: _Array‹TRecord›_
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-▪ **pathParams**: *TPathParams*
+▪ **pathParams**: _TPathParams_
 
-**Returns:** *Promise‹ServiceResponse‹TRecord››*
+**Returns:** _Promise‹ServiceResponse‹TRecord››_
 
-___
+---
 
-### `Const` _create
+### `Const` \_create
 
-▸ **_create**<**TRecord**>(`recordType`: object, `url`: string, `record?`: TRecord): *Promise‹ServiceResponse‹TRecord››*
+▸ **\_create**<**TRecord**>(`recordType`: object, `url`: string, `record?`: TRecord): _Promise‹ServiceResponse‹TRecord››_
 
-*Defined in [src/services/service-factory.ts:185](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L185)*
+_Defined in [src/services/service-factory.ts:185](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L185)_
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **url**: *string*
+▪ **url**: _string_
 
-▪`Optional`  **record**: *TRecord*
+▪`Optional` **record**: _TRecord_
 
-**Returns:** *Promise‹ServiceResponse‹TRecord››*
+**Returns:** _Promise‹ServiceResponse‹TRecord››_
 
-___
+---
 
-### `Const` _delete
+### `Const` \_delete
 
-▸ **_delete**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): *Promise‹ServiceResponse‹Boolean››*
+▸ **\_delete**(`id`: number, `resourceEndpoint`: string, `pathParams?`: any): _Promise‹ServiceResponse‹Boolean››_
 
-*Defined in [src/services/service-factory.ts:197](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L197)*
+_Defined in [src/services/service-factory.ts:197](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L197)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`id` | number |
-`resourceEndpoint` | string |
-`pathParams?` | any |
+| Name               | Type   |
+| ------------------ | ------ |
+| `id`               | number |
+| `resourceEndpoint` | string |
+| `pathParams?`      | any    |
 
-**Returns:** *Promise‹ServiceResponse‹Boolean››*
+**Returns:** _Promise‹ServiceResponse‹Boolean››_
 
-___
+---
 
-### `Const` _get
+### `Const` \_get
 
-▸ **_get**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string, `pathParams`: TPathParams, `queryParams?`: TQueryParams): *Promise‹ServiceResponse‹TRecord››*
+▸ **\_get**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string, `pathParams`: TPathParams, `queryParams?`: TQueryParams): _Promise‹ServiceResponse‹TRecord››_
 
-*Defined in [src/services/service-factory.ts:208](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L208)*
+_Defined in [src/services/service-factory.ts:208](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L208)_
 
 **Type parameters:**
 
@@ -676,174 +676,174 @@ ___
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-▪ **pathParams**: *TPathParams*
+▪ **pathParams**: _TPathParams_
 
-▪`Optional`  **queryParams**: *TQueryParams*
+▪`Optional` **queryParams**: _TQueryParams_
 
-**Returns:** *Promise‹ServiceResponse‹TRecord››*
+**Returns:** _Promise‹ServiceResponse‹TRecord››_
 
-___
+---
 
-### `Const` _list
+### `Const` \_list
 
-▸ **_list**<**TRecord**>(`recordType`: object, `baseEndpoint`: string, `pathParams?`: any, `queryParams?`: any): *Promise‹ServiceResponse‹TRecord››*
+▸ **\_list**<**TRecord**>(`recordType`: object, `baseEndpoint`: string, `pathParams?`: any, `queryParams?`: any): _Promise‹ServiceResponse‹TRecord››_
 
-*Defined in [src/services/service-factory.ts:224](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L224)*
-
-**Type parameters:**
-
-▪ **TRecord**: *any*
-
-**Parameters:**
-
-▪ **recordType**: *object*
-
-Name | Type |
------- | ------ |
-`constructor` |  |
-
-▪ **baseEndpoint**: *string*
-
-▪`Optional`  **pathParams**: *any*
-
-▪`Optional`  **queryParams**: *any*
-
-**Returns:** *Promise‹ServiceResponse‹TRecord››*
-
-___
-
-### `Const` _update
-
-▸ **_update**<**TRecord**, **TPathParams**>(`recordType`: object, `record`: TRecord, `resourceEndpoint`: string, `pathParams?`: TPathParams): *Promise‹ServiceResponse‹TRecord››*
-
-*Defined in [src/services/service-factory.ts:240](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L240)*
+_Defined in [src/services/service-factory.ts:224](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L224)_
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
-
-▪ **TPathParams**: *any*
+▪ **TRecord**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **record**: *TRecord*
+▪ **baseEndpoint**: _string_
 
-▪ **resourceEndpoint**: *string*
+▪`Optional` **pathParams**: _any_
 
-▪`Optional`  **pathParams**: *TPathParams*
+▪`Optional` **queryParams**: _any_
 
-**Returns:** *Promise‹ServiceResponse‹TRecord››*
+**Returns:** _Promise‹ServiceResponse‹TRecord››_
 
-___
+---
+
+### `Const` \_update
+
+▸ **\_update**<**TRecord**, **TPathParams**>(`recordType`: object, `record`: TRecord, `resourceEndpoint`: string, `pathParams?`: TPathParams): _Promise‹ServiceResponse‹TRecord››_
+
+_Defined in [src/services/service-factory.ts:240](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L240)_
+
+**Type parameters:**
+
+▪ **TRecord**: _any_
+
+▪ **TPathParams**: _any_
+
+**Parameters:**
+
+▪ **recordType**: _object_
+
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
+
+▪ **record**: _TRecord_
+
+▪ **resourceEndpoint**: _string_
+
+▪`Optional` **pathParams**: _TPathParams_
+
+**Returns:** _Promise‹ServiceResponse‹TRecord››_
+
+---
 
 ### `Const` debugRoutes
 
-▸ **debugRoutes**(`routes`: [RouteMap](interfaces/routemap.md)): *void*
+▸ **debugRoutes**(`routes`: [RouteMap](interfaces/routemap.md)): _void_
 
-*Defined in [src/utilities/route-utils.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L15)*
+_Defined in [src/utilities/route-utils.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L15)_
 
 Outputs flattened routing table for debugging purposes
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`routes` | [RouteMap](interfaces/routemap.md) |
+| Name     | Type                               |
+| -------- | ---------------------------------- |
+| `routes` | [RouteMap](interfaces/routemap.md) |
 
-**Returns:** *void*
+**Returns:** _void_
 
-___
+---
 
 ### `Const` getFlattenedRoutes
 
-▸ **getFlattenedRoutes**(`routeArray`: [RouteDefinition](interfaces/routedefinition.md)[]): *[RouteDefinition](interfaces/routedefinition.md)[]*
+▸ **getFlattenedRoutes**(`routeArray`: [RouteDefinition](interfaces/routedefinition.md)[]): _[RouteDefinition](interfaces/routedefinition.md)[]_
 
-*Defined in [src/utilities/route-utils.ts:23](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L23)*
+_Defined in [src/utilities/route-utils.ts:23](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L23)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`routeArray` | [RouteDefinition](interfaces/routedefinition.md)[] |
+| Name         | Type                                               |
+| ------------ | -------------------------------------------------- |
+| `routeArray` | [RouteDefinition](interfaces/routedefinition.md)[] |
 
-**Returns:** *[RouteDefinition](interfaces/routedefinition.md)[]*
+**Returns:** _[RouteDefinition](interfaces/routedefinition.md)[]_
 
-___
+---
 
 ### `Const` makeCancellable
 
-▸ **makeCancellable**(`promise`: Promise‹any›): *object*
+▸ **makeCancellable**(`promise`: Promise‹any›): _object_
 
-*Defined in [src/hooks/make-cancellable.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/make-cancellable.ts#L10)*
+_Defined in [src/hooks/make-cancellable.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/make-cancellable.ts#L10)_
 
 Wrap the provided promise in a promise that intercepts cancellation requests
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`promise` | Promise‹any› |
+| Name      | Type         |
+| --------- | ------------ |
+| `promise` | Promise‹any› |
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **promise**: *Promise‹unknown›* = wrappedPromise
+-   **promise**: _Promise‹unknown›_ = wrappedPromise
 
-* **cancel**(): *void*
+-   **cancel**(): _void_
 
-___
+---
 
-###  useAsyncEffect
+### useAsyncEffect
 
-▸ **useAsyncEffect**(`asyncEffect`: [AsyncEffectCallback](README.md#asynceffectcallback), `deps`: DependencyList): *void*
+▸ **useAsyncEffect**(`asyncEffect`: [AsyncEffectCallback](README.md#asynceffectcallback), `deps`: DependencyList): _void_
 
-*Defined in [src/hooks/use-async-effect.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-async-effect.ts#L10)*
+_Defined in [src/hooks/use-async-effect.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-async-effect.ts#L10)_
 
 Version of the useEffect hook that accepts an async function
 
-**`export`** 
+**`export`**
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`asyncEffect` | [AsyncEffectCallback](README.md#asynceffectcallback) | - |
-`deps` | DependencyList |   |
+| Name          | Type                                                 | Description |
+| ------------- | ---------------------------------------------------- | ----------- |
+| `asyncEffect` | [AsyncEffectCallback](README.md#asynceffectcallback) | -           |
+| `deps`        | DependencyList                                       |             |
 
-**Returns:** *void*
+**Returns:** _void_
 
-___
+---
 
 ### `Const` useCancellablePromise
 
-▸ **useCancellablePromise**(): *object*
+▸ **useCancellablePromise**(): _object_
 
-*Defined in [src/hooks/use-cancellable-promise.ts:4](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-cancellable-promise.ts#L4)*
+_Defined in [src/hooks/use-cancellable-promise.ts:4](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-cancellable-promise.ts#L4)_
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **cancellablePromise**: *cancellablePromise*
+-   **cancellablePromise**: _cancellablePromise_
 
-___
+---
 
-###  useDebounce
+### useDebounce
 
-▸ **useDebounce**<**T**>(`value`: T, `delay`: number): *T*
+▸ **useDebounce**<**T**>(`value`: T, `delay`: number): _T_
 
-*Defined in [src/hooks/use-debounce.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-debounce.ts#L8)*
+_Defined in [src/hooks/use-debounce.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-debounce.ts#L8)_
 
 Throttles the supplied value for a set amount of milliseconds
 
@@ -853,20 +853,20 @@ Throttles the supplied value for a set amount of milliseconds
 
 **Parameters:**
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`value` | T | - | - |
-`delay` | number | 200 | number of milliseconds to delay  |
+| Name    | Type   | Default | Description                     |
+| ------- | ------ | ------- | ------------------------------- |
+| `value` | T      | -       | -                               |
+| `delay` | number | 200     | number of milliseconds to delay |
 
-**Returns:** *T*
+**Returns:** _T_
 
-___
+---
 
 ### `Const` useLocalization
 
-▸ **useLocalization**<**TKeys**>(): *object*
+▸ **useLocalization**<**TKeys**>(): _object_
 
-*Defined in [src/hooks/use-localization.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-localization.ts#L7)*
+_Defined in [src/hooks/use-localization.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-localization.ts#L7)_
 
 Typed wrapper of i18n `useTranslation` hook
 
@@ -874,61 +874,61 @@ Typed wrapper of i18n `useTranslation` hook
 
 ▪ **TKeys**
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **t**: *translate* = useCallback(translate, [t])
+-   **t**: _translate_ = useCallback(translate, [t])
 
-___
+---
 
-###  useOnClickOutside
+### useOnClickOutside
 
-▸ **useOnClickOutside**(`ref`: RefObject‹HTMLElement›, `handler`: function, `deps?`: React.DependencyList | undefined): *void*
+▸ **useOnClickOutside**(`ref`: RefObject‹HTMLElement›, `handler`: function, `deps?`: React.DependencyList | undefined): _void_
 
-*Defined in [src/hooks/use-onclick-outside.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-onclick-outside.ts#L9)*
+_Defined in [src/hooks/use-onclick-outside.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-onclick-outside.ts#L9)_
 
 Custom hook providing utility to take some action when a mouse event is fired outside of an element.
 
 **Parameters:**
 
-▪ **ref**: *RefObject‹HTMLElement›*
+▪ **ref**: _RefObject‹HTMLElement›_
 
-▪ **handler**: *function*
+▪ **handler**: _function_
 
-▸ (): *void*
+▸ (): _void_
 
-▪`Optional`  **deps**: *React.DependencyList | undefined*
+▪`Optional` **deps**: _React.DependencyList | undefined_
 
-**Returns:** *void*
+**Returns:** _void_
 
-___
+---
 
-###  usePageErrors
+### usePageErrors
 
-▸ **usePageErrors**(): *object*
+▸ **usePageErrors**(): _object_
 
-*Defined in [src/hooks/use-page-errors.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-page-errors.ts#L7)*
+_Defined in [src/hooks/use-page-errors.ts:7](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-page-errors.ts#L7)_
 
 Hook to bundle common page error handling functionality
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **handlePageLoadError**: *(Anonymous function)*
+-   **handlePageLoadError**: _(Anonymous function)_
 
-* **pageErrors**: *string[]*
+-   **pageErrors**: _string[]_
 
-* **resetPageErrors**: *(Anonymous function)*
+-   **resetPageErrors**: _(Anonymous function)_
 
-* **setPageErrors**(): *function*
+-   **setPageErrors**(): _function_
 
-  * (`value`: A): *void*
+    -   (`value`: A): _void_
 
-___
+---
 
-###  useQuery
+### useQuery
 
-▸ **useQuery**<**TRecord**, **TQueryParams**, **TPathParams**>(`options`: [UseQueryOptions](interfaces/usequeryoptions.md)‹TRecord, TQueryParams, TPathParams›): *object*
+▸ **useQuery**<**TRecord**, **TQueryParams**, **TPathParams**>(`options`: [UseQueryOptions](interfaces/usequeryoptions.md)‹TRecord, TQueryParams, TPathParams›): _object_
 
-*Defined in [src/hooks/use-query.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-query.ts#L11)*
+_Defined in [src/hooks/use-query.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-query.ts#L11)_
 
 **Type parameters:**
 
@@ -940,39 +940,39 @@ ___
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`options` | [UseQueryOptions](interfaces/usequeryoptions.md)‹TRecord, TQueryParams, TPathParams› |
+| Name      | Type                                                                                 |
+| --------- | ------------------------------------------------------------------------------------ |
+| `options` | [UseQueryOptions](interfaces/usequeryoptions.md)‹TRecord, TQueryParams, TPathParams› |
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **loading**: *boolean*
+-   **loading**: _boolean_
 
-* **pathParams**: *undefined | TPathParams*
+-   **pathParams**: _undefined | TPathParams_
 
-* **query**: *TQueryParams*
+-   **query**: _TQueryParams_
 
-* **setPathParams**(): *function*
+-   **setPathParams**(): _function_
 
-  * (`value`: A): *void*
+    -   (`value`: A): _void_
 
-* **setQuery**(): *function*
+-   **setQuery**(): _function_
 
-  * (`value`: A): *void*
+    -   (`value`: A): _void_
 
-* **setValues**(): *function*
+-   **setValues**(): _function_
 
-  * (`value`: A): *void*
+    -   (`value`: A): _void_
 
-* **values**: *TRecord[]*
+-   **values**: _TRecord[]_
 
-___
+---
 
-###  useSortedAlphabetically
+### useSortedAlphabetically
 
-▸ **useSortedAlphabetically**<**T**>(`initialValue`: Array‹T›, `sortBySelector`: function): *[ReducerState‹Reducer‹Array‹T›, Array‹T›››, Dispatch‹ReducerAction‹Reducer‹Array‹T›, Array‹T››››]*
+▸ **useSortedAlphabetically**<**T**>(`initialValue`: Array‹T›, `sortBySelector`: function): _[ReducerState‹Reducer‹Array‹T›, Array‹T›››, Dispatch‹ReducerAction‹Reducer‹Array‹T›, Array‹T››››]_
 
-*Defined in [src/hooks/use-sorted-alphabetically.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-sorted-alphabetically.ts#L19)*
+_Defined in [src/hooks/use-sorted-alphabetically.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-sorted-alphabetically.ts#L19)_
 
 Create a stateful array value which is always sorted alphabetically.
 
@@ -982,31 +982,31 @@ Create a stateful array value which is always sorted alphabetically.
 
 **Parameters:**
 
-▪ **initialValue**: *Array‹T›*
+▪ **initialValue**: _Array‹T›_
 
 the initial value of the array. Does not need to be sorted, the hook will sort it before setting the value.
 
-▪ **sortBySelector**: *function*
+▪ **sortBySelector**: _function_
 
 a function which takes an array element, and returns a string property by which to sort alphabetically.
 
-▸ (`value`: T): *string*
+▸ (`value`: T): _string_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`value` | T |
+| Name    | Type |
+| ------- | ---- |
+| `value` | T    |
 
-**Returns:** *[ReducerState‹Reducer‹Array‹T›, Array‹T›››, Dispatch‹ReducerAction‹Reducer‹Array‹T›, Array‹T››››]*
+**Returns:** _[ReducerState‹Reducer‹Array‹T›, Array‹T›››, Dispatch‹ReducerAction‹Reducer‹Array‹T›, Array‹T››››]_
 
-___
+---
 
-###  useTextOverflow
+### useTextOverflow
 
-▸ **useTextOverflow**<**T**>(`ref`: RefObject‹T›): *boolean*
+▸ **useTextOverflow**<**T**>(`ref`: RefObject‹T›): _boolean_
 
-*Defined in [src/hooks/use-text-overflow.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-text-overflow.ts#L11)*
+_Defined in [src/hooks/use-text-overflow.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-text-overflow.ts#L11)_
 
 A custom hook for determining if elements overflow their containers.
 Useful for when you have text-overflow: ellipsis; and you want to
@@ -1015,230 +1015,231 @@ to appear.
 
 **Type parameters:**
 
-▪ **T**: *HTMLElement*
+▪ **T**: _HTMLElement_
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`ref` | RefObject‹T› |   |
+| Name  | Type         | Description |
+| ----- | ------------ | ----------- |
+| `ref` | RefObject‹T› |             |
 
-**Returns:** *boolean*
+**Returns:** _boolean_
 
-___
+---
 
-###  useWindow
+### useWindow
 
-▸ **useWindow**(): *object*
+▸ **useWindow**(): _object_
 
-*Defined in [src/hooks/use-window.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/hooks/use-window.ts#L8)*
+_Defined in [src/hooks/use-window.ts:8](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/hooks/use-window.ts#L8)_
 
 Get window properties.
 Hook into window events and make properties more easily accessible to components.
 
-**Returns:** *object*
+**Returns:** _object_
 
-* **height**: *number*
+-   **height**: _number_
 
-* **width**: *number*
+-   **width**: _number_
 
 ## Object literals
 
 ### `Const` FactoryType
 
-### ▪ **FactoryType**: *object*
+### ▪ **FactoryType**: _object_
 
-*Defined in [src/tests/factories/factory-type.ts:1](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/factory-type.ts#L1)*
+_Defined in [src/tests/factories/factory-type.ts:1](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/factory-type.ts#L1)_
 
-###  RouteMap
+### RouteMap
 
-• **RouteMap**: *string* = "RouteMap"
+• **RouteMap**: _string_ = "RouteMap"
 
-*Defined in [src/tests/factories/factory-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/factory-type.ts#L6)*
+_Defined in [src/tests/factories/factory-type.ts:6](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/factory-type.ts#L6)_
 
-▪ **RouteDefinition**: *object*
+▪ **RouteDefinition**: _object_
 
-*Defined in [src/tests/factories/factory-type.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/tests/factories/factory-type.ts#L2)*
+_Defined in [src/tests/factories/factory-type.ts:2](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/tests/factories/factory-type.ts#L2)_
 
-* **Default**: *string* = "RouteDefinition"
+-   **Default**: _string_ = "RouteDefinition"
 
-* **Nested**: *string* = "RouteDefinition.Nested"
+-   **Nested**: _string_ = "RouteDefinition.Nested"
 
-___
+---
 
 ### `Const` RouteUtils
 
-### ▪ **RouteUtils**: *object*
+### ▪ **RouteUtils**: _object_
 
-*Defined in [src/utilities/route-utils.ts:45](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L45)*
+_Defined in [src/utilities/route-utils.ts:45](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L45)_
 
-###  appendQueryParams
+### appendQueryParams
 
-• **appendQueryParams**: *function* = CoreRouteUtils.appendQueryParams
+• **appendQueryParams**: _function_ = CoreRouteUtils.appendQueryParams
 
-*Defined in [src/utilities/route-utils.ts:46](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L46)*
-
-#### Type declaration:
-
-▸ (`path`: string, `queryParams`: any, `arrayFormat?`: QueryStringArrayFormat, `arrayFormatSeparator?`: string | undefined): *string*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`path` | string |
-`queryParams` | any |
-`arrayFormat?` | QueryStringArrayFormat |
-`arrayFormatSeparator?` | string &#124; undefined |
-
-###  debugRoutes
-
-• **debugRoutes**: *[debugRoutes](README.md#const-debugroutes)*
-
-*Defined in [src/utilities/route-utils.ts:47](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L47)*
-
-###  getFlattenedRoutes
-
-• **getFlattenedRoutes**: *[getFlattenedRoutes](README.md#const-getflattenedroutes)*
-
-*Defined in [src/utilities/route-utils.ts:48](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L48)*
-
-###  getUrl
-
-• **getUrl**: *function* = CoreRouteUtils.getUrl
-
-*Defined in [src/utilities/route-utils.ts:49](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L49)*
+_Defined in [src/utilities/route-utils.ts:46](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L46)_
 
 #### Type declaration:
 
-▸ (`path`: string, `pathParams?`: any): *string*
+▸ (`path`: string, `queryParams`: any, `arrayFormat?`: QueryStringArrayFormat, `arrayFormatSeparator?`: string | undefined): _string_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`path` | string |
-`pathParams?` | any |
+| Name                    | Type                    |
+| ----------------------- | ----------------------- |
+| `path`                  | string                  |
+| `queryParams`           | any                     |
+| `arrayFormat?`          | QueryStringArrayFormat  |
+| `arrayFormatSeparator?` | string &#124; undefined |
 
-###  getUrlFromPath
+### debugRoutes
 
-• **getUrlFromPath**: *function* = CoreRouteUtils.getUrlFromPath
+• **debugRoutes**: _[debugRoutes](README.md#const-debugroutes)_
 
-*Defined in [src/utilities/route-utils.ts:50](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L50)*
+_Defined in [src/utilities/route-utils.ts:47](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L47)_
+
+### getFlattenedRoutes
+
+• **getFlattenedRoutes**: _[getFlattenedRoutes](README.md#const-getflattenedroutes)_
+
+_Defined in [src/utilities/route-utils.ts:48](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L48)_
+
+### getUrl
+
+• **getUrl**: _function_ = CoreRouteUtils.getUrl
+
+_Defined in [src/utilities/route-utils.ts:49](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L49)_
 
 #### Type declaration:
 
-▸ (`path`: string, `pathParams?`: any, `queryParams?`: any): *string*
+▸ (`path`: string, `pathParams?`: any): _string_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`path` | string |
-`pathParams?` | any |
-`queryParams?` | any |
+| Name          | Type   |
+| ------------- | ------ |
+| `path`        | string |
+| `pathParams?` | any    |
 
-###  replacePathParams
+### getUrlFromPath
 
-• **replacePathParams**: *function* = CoreRouteUtils.replacePathParams
+• **getUrlFromPath**: _function_ = CoreRouteUtils.getUrlFromPath
 
-*Defined in [src/utilities/route-utils.ts:51](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/utilities/route-utils.ts#L51)*
+_Defined in [src/utilities/route-utils.ts:50](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L50)_
 
 #### Type declaration:
 
-▸ (`path`: string, `pathParams`: any): *string*
+▸ (`path`: string, `pathParams?`: any, `queryParams?`: any): _string_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`path` | string |
-`pathParams` | any |
+| Name           | Type   |
+| -------------- | ------ |
+| `path`         | string |
+| `pathParams?`  | any    |
+| `queryParams?` | any    |
 
-___
+### replacePathParams
+
+• **replacePathParams**: _function_ = CoreRouteUtils.replacePathParams
+
+_Defined in [src/utilities/route-utils.ts:51](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/utilities/route-utils.ts#L51)_
+
+#### Type declaration:
+
+▸ (`path`: string, `pathParams`: any): _string_
+
+**Parameters:**
+
+| Name         | Type   |
+| ------------ | ------ |
+| `path`       | string |
+| `pathParams` | any    |
+
+---
 
 ### `Const` ServiceFactory
 
-### ▪ **ServiceFactory**: *object*
+### ▪ **ServiceFactory**: _object_
 
-*Defined in [src/services/service-factory.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L19)*
+_Defined in [src/services/service-factory.ts:19](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L19)_
 
 Factory to encapsulate common service function logic
 
-###  bulkUpdate
+### bulkUpdate
 
-▸ **bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›*
+▸ **bulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): _[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-factory.ts:25](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L25)*
+_Defined in [src/services/service-factory.ts:25](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L25)_
 
 Creates a conventional Service Update function for an Array of the supplied resource type
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
-▪ **TPathParams**: *any*
+▪ **TPathParams**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›*
+**Returns:** _[BulkUpdateService](README.md#bulkupdateservice)‹TRecord, TPathParams›_
 
-###  create
+### create
 
-▸ **create**<**TRecord**>(`recordType`: object, `baseEndpoint`: string): *[CreateService](README.md#createservice)‹TRecord›*
+▸ **create**<**TRecord**>(`recordType`: object, `baseEndpoint`: string): _[CreateService](README.md#createservice)‹TRecord›_
 
-*Defined in [src/services/service-factory.ts:47](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L47)*
+_Defined in [src/services/service-factory.ts:47](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L47)_
 
 Creates conventional Service Create function for the supplied resource type
 
 ### Recommendation
+
 Use `nestedCreate` when route is nested!
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[CreateService](README.md#createservice)‹TRecord›*
+**Returns:** _[CreateService](README.md#createservice)‹TRecord›_
 
-###  delete
+### delete
 
-▸ **delete**(`resourceEndpoint`: string): *[DeleteService](README.md#deleteservice)*
+▸ **delete**(`resourceEndpoint`: string): _[DeleteService](README.md#deleteservice)_
 
-*Defined in [src/services/service-factory.ts:60](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L60)*
+_Defined in [src/services/service-factory.ts:60](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L60)_
 
 Creates conventional Service Delete function for the supplied resource type
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`resourceEndpoint` | string |   |
+| Name               | Type   | Description |
+| ------------------ | ------ | ----------- |
+| `resourceEndpoint` | string |             |
 
-**Returns:** *[DeleteService](README.md#deleteservice)*
+**Returns:** _[DeleteService](README.md#deleteservice)_
 
-###  get
+### get
 
-▸ **get**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string): *[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›*
+▸ **get**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string): _[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›_
 
-*Defined in [src/services/service-factory.ts:70](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L70)*
+_Defined in [src/services/service-factory.ts:70](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L70)_
 
 Creates conventional Service Get function for the supplied resource type
 
@@ -1252,25 +1253,26 @@ Creates conventional Service Get function for the supplied resource type
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›*
+**Returns:** _[GetService](README.md#getservice)‹TRecord, TPathParams, TQueryParams›_
 
-###  list
+### list
 
-▸ **list**<**TRecord**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[ListService](README.md#listservice)‹TRecord, TQueryParams›*
+▸ **list**<**TRecord**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): _[ListService](README.md#listservice)‹TRecord, TQueryParams›_
 
-*Defined in [src/services/service-factory.ts:92](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L92)*
+_Defined in [src/services/service-factory.ts:92](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L92)_
 
 Creates conventional Service List function for the supplied resource type
 
 ### Recommendation
+
 Use `nestedList` when route is nested!
 
 **Type parameters:**
@@ -1281,48 +1283,48 @@ Use `nestedList` when route is nested!
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[ListService](README.md#listservice)‹TRecord, TQueryParams›*
+**Returns:** _[ListService](README.md#listservice)‹TRecord, TQueryParams›_
 
-###  nestedCreate
+### nestedCreate
 
-▸ **nestedCreate**<**TRecord**, **TPathParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›*
+▸ **nestedCreate**<**TRecord**, **TPathParams**>(`recordType`: object, `baseEndpoint`: string): _[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-factory.ts:106](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L106)*
+_Defined in [src/services/service-factory.ts:106](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L106)_
 
 Creates conventional Service Create function for the supplied resource type
 when the resource is nested
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
 ▪ **TPathParams**
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›*
+**Returns:** _[NestedCreateService](README.md#nestedcreateservice)‹TRecord, TPathParams›_
 
-###  nestedList
+### nestedList
 
-▸ **nestedList**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›*
+▸ **nestedList**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): _[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›_
 
-*Defined in [src/services/service-factory.ts:121](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L121)*
+_Defined in [src/services/service-factory.ts:121](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L121)_
 
 Creates conventional Service List function for the supplied resource type
 
@@ -1336,57 +1338,57 @@ Creates conventional Service List function for the supplied resource type
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›*
+**Returns:** _[NestedListService](README.md#nestedlistservice)‹TRecord, TPathParams, TQueryParams›_
 
-###  update
+### update
 
-▸ **update**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[UpdateService](README.md#updateservice)‹TRecord, TPathParams›*
+▸ **update**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): _[UpdateService](README.md#updateservice)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-factory.ts:139](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-factory.ts#L139)*
+_Defined in [src/services/service-factory.ts:139](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-factory.ts#L139)_
 
 Creates conventional Service Update function for the supplied resource type
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
-▪ **TPathParams**: *any*
+▪ **TPathParams**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[UpdateService](README.md#updateservice)‹TRecord, TPathParams›*
+**Returns:** _[UpdateService](README.md#updateservice)‹TRecord, TPathParams›_
 
-___
+---
 
 ### `Const` ServiceHookFactory
 
-### ▪ **ServiceHookFactory**: *object*
+### ▪ **ServiceHookFactory**: _object_
 
-*Defined in [src/services/service-hook-factory.ts:26](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L26)*
+_Defined in [src/services/service-hook-factory.ts:26](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L26)_
 
 Factory to encapsulate common service function logic
 
-###  useBulkUpdate
+### useBulkUpdate
 
-▸ **useBulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[BulkUpdateServiceHook](README.md#bulkupdateservicehook)‹TRecord, TPathParams›*
+▸ **useBulkUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): _[BulkUpdateServiceHook](README.md#bulkupdateservicehook)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-hook-factory.ts:33](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L33)*
+_Defined in [src/services/service-hook-factory.ts:33](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L33)_
 
 Creates conventional hook for using service update function for an array of the supplied resource type.
 Automatically handles cancellation tokens internally.
@@ -1399,66 +1401,67 @@ Automatically handles cancellation tokens internally.
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[BulkUpdateServiceHook](README.md#bulkupdateservicehook)‹TRecord, TPathParams›*
+**Returns:** _[BulkUpdateServiceHook](README.md#bulkupdateservicehook)‹TRecord, TPathParams›_
 
-###  useCreate
+### useCreate
 
-▸ **useCreate**<**TRecord**>(`recordType`: object, `baseEndpoint`: string): *[CreateServiceHook](README.md#createservicehook)‹TRecord›*
+▸ **useCreate**<**TRecord**>(`recordType`: object, `baseEndpoint`: string): _[CreateServiceHook](README.md#createservicehook)‹TRecord›_
 
-*Defined in [src/services/service-hook-factory.ts:68](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L68)*
+_Defined in [src/services/service-hook-factory.ts:68](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L68)_
 
 Creates conventional hook for using service create function for the supplied resource type.
 Automatically handles cancellation tokens internally.
 
 ### Recommendation
+
 Use `useNestedCreate` when route is nested!
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[CreateServiceHook](README.md#createservicehook)‹TRecord›*
+**Returns:** _[CreateServiceHook](README.md#createservicehook)‹TRecord›_
 
-###  useDelete
+### useDelete
 
-▸ **useDelete**(`resourceEndpoint`: string): *[DeleteServiceHook](README.md#deleteservicehook)*
+▸ **useDelete**(`resourceEndpoint`: string): _[DeleteServiceHook](README.md#deleteservicehook)_
 
-*Defined in [src/services/service-hook-factory.ts:98](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L98)*
+_Defined in [src/services/service-hook-factory.ts:98](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L98)_
 
 Creates conventional hook for using service delete function for the supplied resource type.
 Automatically handles cancellation tokens internally.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`resourceEndpoint` | string |
+| Name               | Type   |
+| ------------------ | ------ |
+| `resourceEndpoint` | string |
 
-**Returns:** *[DeleteServiceHook](README.md#deleteservicehook)*
+**Returns:** _[DeleteServiceHook](README.md#deleteservicehook)_
 
-###  useGet
+### useGet
 
-▸ **useGet**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string): *[GetServiceHook](README.md#getservicehook)‹TRecord, TPathParams, TQueryParams›*
+▸ **useGet**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `resourceEndpoint`: string): _[GetServiceHook](README.md#getservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-*Defined in [src/services/service-hook-factory.ts:123](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L123)*
+_Defined in [src/services/service-hook-factory.ts:123](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L123)_
 
 Creates conventional hook for using service get function for the supplied resource type.
 Automatically handles cancellation tokens internally.
@@ -1473,26 +1476,27 @@ Automatically handles cancellation tokens internally.
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[GetServiceHook](README.md#getservicehook)‹TRecord, TPathParams, TQueryParams›*
+**Returns:** _[GetServiceHook](README.md#getservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-###  useList
+### useList
 
-▸ **useList**<**TRecord**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[ListServiceHook](README.md#listservicehook)‹TRecord, TQueryParams›*
+▸ **useList**<**TRecord**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): _[ListServiceHook](README.md#listservicehook)‹TRecord, TQueryParams›_
 
-*Defined in [src/services/service-hook-factory.ts:159](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L159)*
+_Defined in [src/services/service-hook-factory.ts:159](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L159)_
 
 Creates conventional hook for using service list function for the supplied resource type.
 Automatically handles cancellation tokens internally.
 
 ### Recommendation
+
 Use `useNestedList` when route is nested!
 
 **Type parameters:**
@@ -1503,48 +1507,48 @@ Use `useNestedList` when route is nested!
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[ListServiceHook](README.md#listservicehook)‹TRecord, TQueryParams›*
+**Returns:** _[ListServiceHook](README.md#listservicehook)‹TRecord, TQueryParams›_
 
-###  useNestedCreate
+### useNestedCreate
 
-▸ **useNestedCreate**<**TRecord**, **TPathParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedCreateServiceHook](README.md#nestedcreateservicehook)‹TRecord, TPathParams›*
+▸ **useNestedCreate**<**TRecord**, **TPathParams**>(`recordType`: object, `baseEndpoint`: string): _[NestedCreateServiceHook](README.md#nestedcreateservicehook)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-hook-factory.ts:189](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L189)*
+_Defined in [src/services/service-hook-factory.ts:189](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L189)_
 
 Creates conventional hook for using service nested create function for the supplied resource type.
 Automatically handles cancellation tokens internally.
 
 **Type parameters:**
 
-▪ **TRecord**: *any*
+▪ **TRecord**: _any_
 
 ▪ **TPathParams**
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[NestedCreateServiceHook](README.md#nestedcreateservicehook)‹TRecord, TPathParams›*
+**Returns:** _[NestedCreateServiceHook](README.md#nestedcreateservicehook)‹TRecord, TPathParams›_
 
-###  useNestedList
+### useNestedList
 
-▸ **useNestedList**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): *[NestedListServiceHook](README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›*
+▸ **useNestedList**<**TRecord**, **TPathParams**, **TQueryParams**>(`recordType`: object, `baseEndpoint`: string): _[NestedListServiceHook](README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-*Defined in [src/services/service-hook-factory.ts:220](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L220)*
+_Defined in [src/services/service-hook-factory.ts:220](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L220)_
 
 Creates conventional hook for using service nested list function for the supplied resource type.
 Automatically handles cancellation tokens internally.
@@ -1559,21 +1563,21 @@ Automatically handles cancellation tokens internally.
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **baseEndpoint**: *string*
+▪ **baseEndpoint**: _string_
 
-**Returns:** *[NestedListServiceHook](README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›*
+**Returns:** _[NestedListServiceHook](README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-###  useUpdate
+### useUpdate
 
-▸ **useUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): *[UpdateServiceHook](README.md#updateservicehook)‹TRecord, TPathParams›*
+▸ **useUpdate**<**TRecord**, **TPathParams**>(`recordType`: object, `resourceEndpoint`: string): _[UpdateServiceHook](README.md#updateservicehook)‹TRecord, TPathParams›_
 
-*Defined in [src/services/service-hook-factory.ts:252](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/services/service-hook-factory.ts#L252)*
+_Defined in [src/services/service-hook-factory.ts:252](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/services/service-hook-factory.ts#L252)_
 
 Creates conventional hook for using service update function for the supplied resource type.
 Automatically handles cancellation tokens internally.
@@ -1586,12 +1590,12 @@ Automatically handles cancellation tokens internally.
 
 **Parameters:**
 
-▪ **recordType**: *object*
+▪ **recordType**: _object_
 
-Name | Type |
------- | ------ |
-`constructor` |  |
+| Name          | Type |
+| ------------- | ---- |
+| `constructor` |      |
 
-▪ **resourceEndpoint**: *string*
+▪ **resourceEndpoint**: _string_
 
-**Returns:** *[UpdateServiceHook](README.md#updateservicehook)‹TRecord, TPathParams›*
+**Returns:** _[UpdateServiceHook](README.md#updateservicehook)‹TRecord, TPathParams›_

@@ -12,54 +12,54 @@
 
 ## Hierarchy
 
-* **UseQueryOptions**
+-   **UseQueryOptions**
 
 ## Index
 
 ### Properties
 
-* [initialPathParams](usequeryoptions.md#optional-initialpathparams)
-* [initialQuery](usequeryoptions.md#initialquery)
-* [onError](usequeryoptions.md#optional-onerror)
-* [onSuccess](usequeryoptions.md#optional-onsuccess)
-* [serviceHook](usequeryoptions.md#servicehook)
+-   [initialPathParams](usequeryoptions.md#optional-initialpathparams)
+-   [initialQuery](usequeryoptions.md#initialquery)
+-   [onError](usequeryoptions.md#optional-onerror)
+-   [onSuccess](usequeryoptions.md#optional-onsuccess)
+-   [serviceHook](usequeryoptions.md#servicehook)
 
 ## Properties
 
 ### `Optional` initialPathParams
 
-• **initialPathParams**? : *TPathParams*
+• **initialPathParams**? : _TPathParams_
 
-*Defined in [src/interfaces/use-query-options.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/use-query-options.ts#L14)*
+_Defined in [src/interfaces/use-query-options.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/use-query-options.ts#L14)_
 
-___
+---
 
-###  initialQuery
+### initialQuery
 
-• **initialQuery**: *TQueryParams*
+• **initialQuery**: _TQueryParams_
 
-*Defined in [src/interfaces/use-query-options.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/use-query-options.ts#L13)*
+_Defined in [src/interfaces/use-query-options.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/use-query-options.ts#L13)_
 
-___
+---
 
 ### `Optional` onError
 
-• **onError**? : *CatchResultHandler‹TRecord›*
+• **onError**? : _CatchResultHandler‹TRecord›_
 
-*Defined in [src/interfaces/use-query-options.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/use-query-options.ts#L16)*
+_Defined in [src/interfaces/use-query-options.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/use-query-options.ts#L16)_
 
-___
+---
 
 ### `Optional` onSuccess
 
-• **onSuccess**? : *undefined | function*
+• **onSuccess**? : _undefined | function_
 
-*Defined in [src/interfaces/use-query-options.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/use-query-options.ts#L15)*
+_Defined in [src/interfaces/use-query-options.ts:15](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/use-query-options.ts#L15)_
 
-___
+---
 
-###  serviceHook
+### serviceHook
 
-• **serviceHook**: *[ListServiceHook](../README.md#listservicehook)‹TRecord, TQueryParams› | [NestedListServiceHook](../README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›*
+• **serviceHook**: _[ListServiceHook](../README.md#listservicehook)‹TRecord, TQueryParams› | [NestedListServiceHook](../README.md#nestedlistservicehook)‹TRecord, TPathParams, TQueryParams›_
 
-*Defined in [src/interfaces/use-query-options.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/3508bab/src/interfaces/use-query-options.ts#L10)*
+_Defined in [src/interfaces/use-query-options.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/use-query-options.ts#L10)_
