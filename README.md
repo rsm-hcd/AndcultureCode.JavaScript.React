@@ -1,6 +1,6 @@
 # AndcultureCode.JavaScript.React
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.JavaScript.React.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.JavaScript.React)
@@ -56,6 +56,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jhugs"><img src="https://avatars.githubusercontent.com/u/14300627?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Hughes</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/commits?author=jhugs" title="Code">💻</a></td>
     <td align="center"><a href="http://mytydev.com"><img src="https://avatars.githubusercontent.com/u/37794?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Tyson</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/commits?author=myty" title="Code">💻</a> <a href="https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/commits?author=myty" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://resume.dylanjustice.com"><img src="https://avatars.githubusercontent.com/u/22502365?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dylan Justice</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/pulls?q=is%3Apr+reviewed-by%3Adylanjustice" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://mjones.network"><img src="https://avatars.githubusercontent.com/u/8648891?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mat Jones</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/commits?author=mrjones2014" title="Code">💻</a></td>
   </tr>
 </table>
 
