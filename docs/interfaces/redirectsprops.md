@@ -4,18 +4,18 @@
 
 ## Hierarchy
 
--   **RedirectsProps**
+* **RedirectsProps**
 
 ## Index
 
 ### Properties
 
--   [redirects](redirectsprops.md#redirects)
+* [redirects](redirectsprops.md#redirects)
 
 ## Properties
 
-### redirects
+###  redirects
 
-• **redirects**: _[RedirectDefinition](redirectdefinition.md)[]_
+• **redirects**: *[RedirectDefinition](redirectdefinition.md)[]*
 
-_Defined in [src/components/routing/redirects.tsx:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/components/routing/redirects.tsx#L10)_
+*Defined in [src/components/routing/redirects.tsx:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/components/routing/redirects.tsx#L10)*
