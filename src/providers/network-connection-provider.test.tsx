@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { act, cleanup, render } from "@testing-library/react";
-import NetworkConnectionProvider from "./network-connection-provider";
+import { NetworkConnectionProvider } from "./network-connection-provider";
 import {
     NetworkConnection,
     NetworkInformationUtils,
 } from "andculturecode-javascript-core";
-import { NetworkConnectionContext } from "./network-connection-context";
+import { useNetworkConnection } from "../hooks/use-network-connection";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -74,7 +74,7 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
     };
 
     function TestComponent() {
-        const connection = useContext(NetworkConnectionContext);
+        const connection = useNetworkConnection();
         networkConnectionResults.all.push(connection);
         networkConnectionResults.current = connection;
 

@@ -1,11 +1,23 @@
+import React, {
+    PropsWithChildren,
+    useCallback,
+    useEffect,
+    useState,
+} from "react";
 import {
     NetworkConnection,
     NetworkInformationUtils,
 } from "andculturecode-javascript-core";
-import React, { useCallback, useEffect, useState } from "react";
-import { NetworkConnectionContext } from "./network-connection-context";
+import { NetworkConnectionContext } from "../contexts/network-connection-context";
 
-const NetworkConnectionProvider: React.FC = ({ children }) => {
+/**
+ * Wrapper provider component that provides context to the `useNetworkConnection` hook
+ */
+export const NetworkConnectionProvider: React.FC = (
+    props: PropsWithChildren<unknown>
+) => {
+    const { children } = props;
+
     const [state, setState] = useState<NetworkConnection>(
         NetworkInformationUtils.getNetworkConnection()
     );
@@ -26,7 +38,7 @@ const NetworkConnectionProvider: React.FC = ({ children }) => {
 
         loadNetworkInformation();
 
-        return () => {
+        return function cleanup() {
             networkConnection?.removeEventListener?.(
                 "change",
                 loadNetworkInformation
@@ -40,5 +52,3 @@ const NetworkConnectionProvider: React.FC = ({ children }) => {
         </NetworkConnectionContext.Provider>
     );
 };
-
-export default NetworkConnectionProvider;
