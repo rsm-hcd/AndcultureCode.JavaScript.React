@@ -4,72 +4,72 @@
 
 ## Hierarchy
 
--   **RouteDefinition**
+* **RouteDefinition**
 
 ## Index
 
 ### Properties
 
--   [authRequired](routedefinition.md#authrequired)
--   [component](routedefinition.md#component)
--   [exact](routedefinition.md#optional-exact)
--   [getComponent](routedefinition.md#optional-getcomponent)
--   [path](routedefinition.md#path)
--   [routes](routedefinition.md#routes)
--   [sidebar](routedefinition.md#optional-sidebar)
+* [authRequired](routedefinition.md#authrequired)
+* [component](routedefinition.md#component)
+* [exact](routedefinition.md#optional-exact)
+* [getComponent](routedefinition.md#optional-getcomponent)
+* [path](routedefinition.md#path)
+* [routes](routedefinition.md#routes)
+* [sidebar](routedefinition.md#optional-sidebar)
 
 ## Properties
 
-### authRequired
+###  authRequired
 
-• **authRequired**: _boolean_
+• **authRequired**: *boolean*
 
-_Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L9)_
+*Defined in [src/interfaces/route-definition.ts:9](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L9)*
 
----
+___
 
-### component
+###  component
 
-• **component**: _React.ComponentType_
+• **component**: *React.ComponentType*
 
-_Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L10)_
+*Defined in [src/interfaces/route-definition.ts:10](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L10)*
 
----
+___
 
 ### `Optional` exact
 
-• **exact**? : _undefined | false | true_
+• **exact**? : *undefined | false | true*
 
-_Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L11)_
+*Defined in [src/interfaces/route-definition.ts:11](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L11)*
 
----
+___
 
 ### `Optional` getComponent
 
-• **getComponent**? : _undefined | function_
+• **getComponent**? : *undefined | function*
 
-_Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L12)_
+*Defined in [src/interfaces/route-definition.ts:12](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L12)*
 
----
+___
 
-### path
+###  path
 
-• **path**: _string_
+• **path**: *string*
 
-_Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L13)_
+*Defined in [src/interfaces/route-definition.ts:13](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L13)*
 
----
+___
 
-### routes
+###  routes
 
-• **routes**: _[RouteMap](routemap.md)_
+• **routes**: *[RouteMap](routemap.md)*
 
-_Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L14)_
+*Defined in [src/interfaces/route-definition.ts:14](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L14)*
 
----
+___
 
 ### `Optional` sidebar
 
-• **sidebar**? : _React.ComponentType_
+• **sidebar**? : *React.ComponentType*
 
-_Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/eed00bb/src/interfaces/route-definition.ts#L16)_
+*Defined in [src/interfaces/route-definition.ts:16](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/blob/bf780d8/src/interfaces/route-definition.ts#L16)*
