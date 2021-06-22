@@ -5,7 +5,7 @@ import {
 import React, { useCallback, useEffect, useState } from "react";
 import { NetworkConnectionContext } from "./network-connection-context";
 
-const NetworkInformationProvider: React.FC = ({ children }) => {
+const NetworkConnectionProvider: React.FC = ({ children }) => {
     const [state, setState] = useState<NetworkConnection>(
         NetworkInformationUtils.getNetworkConnection()
     );
@@ -20,14 +20,17 @@ const NetworkInformationProvider: React.FC = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        const { connection } = window.navigator as any;
+        const networkConnection = NetworkInformationUtils.getNetworkConnection();
 
-        connection?.addEventListener("change", loadNetworkInformation);
+        networkConnection?.addEventListener?.("change", loadNetworkInformation);
 
         loadNetworkInformation();
 
         return () => {
-            connection?.removeEventListener("change", loadNetworkInformation);
+            networkConnection?.removeEventListener?.(
+                "change",
+                loadNetworkInformation
+            );
         };
     }, [loadNetworkInformation]);
 
@@ -38,4 +41,4 @@ const NetworkInformationProvider: React.FC = ({ children }) => {
     );
 };
 
-export default NetworkInformationProvider;
+export default NetworkConnectionProvider;
