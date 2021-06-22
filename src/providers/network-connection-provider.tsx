@@ -18,12 +18,16 @@ export const NetworkConnectionProvider: React.FC = (
 ) => {
     const { children } = props;
 
-    const [state, setState] = useState<NetworkConnection>(
+    const [state, setState] = useState<NetworkConnection | undefined>(
         NetworkInformationUtils.getNetworkConnection()
     );
 
     const loadNetworkInformation = useCallback(() => {
         const networkConnection = NetworkInformationUtils.getNetworkConnection();
+
+        if (networkConnection == null) {
+            return;
+        }
 
         setState((prev) => ({
             ...prev,
@@ -31,20 +35,45 @@ export const NetworkConnectionProvider: React.FC = (
         }));
     }, []);
 
-    useEffect(() => {
-        const networkConnection = NetworkInformationUtils.getNetworkConnection();
+    useEffect(function handleOnlineOfflineEvents() {
+        const createNetworkChangeHandler = (isOnline: boolean) => () => {
+            setState((prev) => ({
+                ...prev,
+                isOnline,
+            }));
+        };
 
-        networkConnection?.addEventListener?.("change", loadNetworkInformation);
+        const handleOffline = createNetworkChangeHandler(false);
+        const handleOnline = createNetworkChangeHandler(true);
 
-        loadNetworkInformation();
+        window?.addEventListener?.("online", handleOnline);
+        window?.addEventListener?.("offline", handleOffline);
 
         return function cleanup() {
-            networkConnection?.removeEventListener?.(
+            window?.removeEventListener?.("online", handleOnline);
+            window?.removeEventListener?.("offline", handleOffline);
+        };
+    }, []);
+
+    useEffect(
+        function handleNetworkChangeEvents() {
+            const networkConnection = NetworkInformationUtils.getNetworkConnection();
+            networkConnection?.addEventListener?.(
                 "change",
                 loadNetworkInformation
             );
-        };
-    }, [loadNetworkInformation]);
+
+            loadNetworkInformation();
+
+            return function cleanup() {
+                networkConnection?.removeEventListener?.(
+                    "change",
+                    loadNetworkInformation
+                );
+            };
+        },
+        [loadNetworkInformation]
+    );
 
     return (
         <NetworkConnectionContext.Provider value={state}>
