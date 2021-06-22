@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { ResultRecord } from "andculturecode-javascript-core";
+import { CollectionUtils, ResultRecord } from "andculturecode-javascript-core";
 
 /**
  * Hook to bundle common page error handling functionality
@@ -7,20 +7,27 @@ import { ResultRecord } from "andculturecode-javascript-core";
 export function usePageErrors() {
     const [pageErrors, setPageErrors] = useState<Array<string>>([]);
 
-    const handlePageLoadError = useCallback(
-        (result: string | ResultRecord<any>) => {
-            if (typeof result === "string") {
-                setPageErrors((e) => [...e, result]);
-                return;
-            }
+    const handlePageLoadError = useCallback((result: any) => {
+        if (result instanceof ResultRecord) {
+            setPageErrors((errors: string[]) => [
+                ...errors,
+                ...result.listErrorMessages(),
+            ]);
+            return;
+        }
 
-            setPageErrors((e) => [...e, ...result.listErrorMessages()]);
-        },
-        []
-    );
+        if (typeof result === "string") {
+            setPageErrors((errors: string[]) => [...errors, result]);
+            return;
+        }
+
+        setPageErrors((errors: string[]) => [...errors, result.toString()]);
+    }, []);
 
     const resetPageErrors = useCallback(() => {
-        setPageErrors([]);
+        setPageErrors((prevState) =>
+            CollectionUtils.hasValues(prevState) ? [] : prevState
+        );
     }, []);
 
     return {
