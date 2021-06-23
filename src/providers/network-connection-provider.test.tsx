@@ -6,6 +6,7 @@ import {
     NetworkInformationUtils,
 } from "andculturecode-javascript-core";
 import { useNetworkConnection } from "../hooks/use-network-connection";
+import { networkConnectionFactory } from "../tests/factories/network-connection-factory";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -48,9 +49,10 @@ const getNetworkConnectionMock = jest.spyOn(
 // #region Setup
 // -----------------------------------------------------------------------------------------
 
-const setupSut = (options?: SetupSutOptions): SetupSutResults => {
-    const { mockConnections = [] } = options ?? {};
-
+const setupMocks = (
+    getNetworkConnectionMock: jest.SpyInstance<NetworkConnection, []>,
+    mockConnections: Array<Partial<NetworkConnection>>
+) => {
     getNetworkConnectionMock.mockReset();
     for (let index = 0; index < mockConnections.length; index++) {
         const mockImplementation =
@@ -65,6 +67,12 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
             };
         });
     }
+};
+
+const setupSut = (options?: SetupSutOptions): SetupSutResults => {
+    const { mockConnections = [] } = options ?? {};
+
+    setupMocks(getNetworkConnectionMock, mockConnections);
 
     const networkConnectionResults: TypeFromKey<
         SetupSutResults,
@@ -92,11 +100,10 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
 describe("NetworkConnectionProvider", () => {
     it("renders initial network connection state", () => {
         // Arrange
-        const connection: NetworkConnection = {
-            isOnline: true,
-        };
+        const firstConnection = networkConnectionFactory.build();
+        const secondConnection = networkConnectionFactory.build();
         const { networkConnectionResults, TestComponent } = setupSut({
-            mockConnections: [connection],
+            mockConnections: [firstConnection, secondConnection],
         });
 
         // Act
@@ -108,14 +115,17 @@ describe("NetworkConnectionProvider", () => {
 
         // Assert
         expect(networkConnectionResults.all.length).toEqual(2);
-        expect(networkConnectionResults.current).toEqual(connection);
+        expect(networkConnectionResults.current).toEqual(secondConnection);
     });
 
     it("adds an event listener", () => {
         // Arrange
         const addEventListener = jest.fn();
+        const networkConnection = networkConnectionFactory.build({
+            addEventListener,
+        });
         const { TestComponent } = setupSut({
-            mockConnections: [{ addEventListener }],
+            mockConnections: [networkConnection],
         });
 
         // Act
@@ -132,24 +142,21 @@ describe("NetworkConnectionProvider", () => {
     describe("when change event is called", () => {
         it("loads network connection into state", () => {
             // Arrange
-            let loadNetworkInformationCallback = () => {};
+            let changeEventCallback = () => {};
+
+            const expectedNetworkConnection = networkConnectionFactory.build();
 
             const mockConnections: Array<NetworkConnection> = [
-                {
-                    isOnline: true,
-                },
-                {
-                    isOnline: true,
+                networkConnectionFactory.build(),
+                networkConnectionFactory.build({
                     addEventListener: (
                         event: "change",
                         callback: VoidFunction
                     ) => {
-                        loadNetworkInformationCallback = callback;
+                        changeEventCallback = callback;
                     },
-                },
-                {
-                    isOnline: false,
-                },
+                }),
+                expectedNetworkConnection,
             ];
 
             const { networkConnectionResults, TestComponent } = setupSut({
@@ -163,14 +170,14 @@ describe("NetworkConnectionProvider", () => {
                 </NetworkConnectionProvider>
             );
 
-            act(() => loadNetworkInformationCallback());
+            act(() => changeEventCallback());
 
             // Assert
             expect(networkConnectionResults.all.length).toEqual(
                 mockConnections.length
             );
             expect(networkConnectionResults.current).toEqual(
-                mockConnections[2]
+                expectedNetworkConnection
             );
         });
     });
@@ -179,8 +186,11 @@ describe("NetworkConnectionProvider", () => {
         it("calls removeEventlistener for cleanup", async () => {
             // Arrange
             const removeEventListener = jest.fn();
+            const networkConnection = networkConnectionFactory.build({
+                removeEventListener,
+            });
             const { TestComponent } = setupSut({
-                mockConnections: [{ removeEventListener }],
+                mockConnections: [networkConnection],
             });
 
             // Act
