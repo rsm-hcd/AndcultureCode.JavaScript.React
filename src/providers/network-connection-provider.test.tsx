@@ -35,7 +35,7 @@ interface SetupSutResults {
 // #endregion Interfaces
 
 // -----------------------------------------------------------------------------------------
-// #region Mocks
+// #region Setup
 // -----------------------------------------------------------------------------------------
 
 const getNetworkConnectionMock = jest.spyOn(
@@ -43,16 +43,7 @@ const getNetworkConnectionMock = jest.spyOn(
     "getNetworkConnection"
 );
 
-// #endregion Mocks
-
-// -----------------------------------------------------------------------------------------
-// #region Setup
-// -----------------------------------------------------------------------------------------
-
-const setupMocks = (
-    getNetworkConnectionMock: jest.SpyInstance<NetworkConnection, []>,
-    mockConnections: Array<Partial<NetworkConnection>>
-) => {
+const setupMocks = (mockConnections: Array<Partial<NetworkConnection>>) => {
     getNetworkConnectionMock.mockReset();
     for (let index = 0; index < mockConnections.length; index++) {
         const mockImplementation =
@@ -72,7 +63,7 @@ const setupMocks = (
 const setupSut = (options?: SetupSutOptions): SetupSutResults => {
     const { mockConnections = [] } = options ?? {};
 
-    setupMocks(getNetworkConnectionMock, mockConnections);
+    setupMocks(mockConnections);
 
     const networkConnectionResults: TypeFromKey<
         SetupSutResults,
@@ -100,10 +91,12 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
 describe("NetworkConnectionProvider", () => {
     it("renders initial network connection state", () => {
         // Arrange
-        const firstConnection = networkConnectionFactory.build();
-        const secondConnection = networkConnectionFactory.build();
+        const expectedConnection = networkConnectionFactory.build();
         const { networkConnectionResults, TestComponent } = setupSut({
-            mockConnections: [firstConnection, secondConnection],
+            mockConnections: [
+                networkConnectionFactory.build(),
+                expectedConnection,
+            ],
         });
 
         // Act
@@ -115,7 +108,7 @@ describe("NetworkConnectionProvider", () => {
 
         // Assert
         expect(networkConnectionResults.all.length).toEqual(2);
-        expect(networkConnectionResults.current).toEqual(secondConnection);
+        expect(networkConnectionResults.current).toEqual(expectedConnection);
     });
 
     it("adds an event listener", () => {
