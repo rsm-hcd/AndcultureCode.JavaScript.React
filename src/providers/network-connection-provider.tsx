@@ -22,7 +22,7 @@ export const NetworkConnectionProvider: React.FC = (
         NetworkInformationUtils.getNetworkConnection()
     );
 
-    const loadNetworkInformation = useCallback(() => {
+    const loadNetworkInformation = useCallback((isOnline?: boolean) => {
         const networkConnection = NetworkInformationUtils.getNetworkConnection();
 
         if (networkConnection == null) {
@@ -32,44 +32,37 @@ export const NetworkConnectionProvider: React.FC = (
         setState((prev) => ({
             ...prev,
             ...networkConnection,
+            isOnline: isOnline ?? networkConnection.isOnline,
         }));
-    }, []);
-
-    useEffect(function handleOnlineOfflineEvents() {
-        const createNetworkChangeHandler = (isOnline: boolean) => () => {
-            setState((prev) => ({
-                ...prev,
-                isOnline,
-            }));
-        };
-
-        const handleOffline = createNetworkChangeHandler(false);
-        const handleOnline = createNetworkChangeHandler(true);
-
-        window?.addEventListener?.("online", handleOnline);
-        window?.addEventListener?.("offline", handleOffline);
-
-        return function cleanup() {
-            window?.removeEventListener?.("online", handleOnline);
-            window?.removeEventListener?.("offline", handleOffline);
-        };
     }, []);
 
     useEffect(
         function handleNetworkChangeEvents() {
             const networkConnection = NetworkInformationUtils.getNetworkConnection();
+
+            const createNetworkChangeHandler = (isOnline?: boolean) => () =>
+                loadNetworkInformation(isOnline);
+
+            const handleNetworkChange = createNetworkChangeHandler();
+            const handleOffline = createNetworkChangeHandler(false);
+            const handleOnline = createNetworkChangeHandler(true);
+
             networkConnection?.addEventListener?.(
                 "change",
-                loadNetworkInformation
+                handleNetworkChange
             );
+            window?.addEventListener?.("online", handleOnline);
+            window?.addEventListener?.("offline", handleOffline);
 
             loadNetworkInformation();
 
             return function cleanup() {
                 networkConnection?.removeEventListener?.(
                     "change",
-                    loadNetworkInformation
+                    handleNetworkChange
                 );
+                window?.removeEventListener?.("online", handleOnline);
+                window?.removeEventListener?.("offline", handleOffline);
             };
         },
         [loadNetworkInformation]
