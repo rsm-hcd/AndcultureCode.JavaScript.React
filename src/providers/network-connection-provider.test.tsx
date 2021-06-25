@@ -6,7 +6,7 @@ import {
     NetworkInformationUtils,
 } from "andculturecode-javascript-core";
 import { useNetworkConnection } from "../hooks/use-network-connection";
-import { networkConnectionFactory } from "../tests/factories/network-connection-factory";
+import { NetworkConnectionFactory } from "../tests/factories/network-connection-factory";
 
 // -----------------------------------------------------------------------------------------
 // #region Types
@@ -91,10 +91,10 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
 describe("NetworkConnectionProvider", () => {
     it("renders initial network connection state", () => {
         // Arrange
-        const expectedConnection = networkConnectionFactory.build();
+        const expectedConnection = NetworkConnectionFactory.build();
         const { networkConnectionResults, TestComponent } = setupSut({
             mockConnections: [
-                networkConnectionFactory.build(),
+                NetworkConnectionFactory.build(),
                 expectedConnection,
             ],
         });
@@ -114,7 +114,7 @@ describe("NetworkConnectionProvider", () => {
     it("adds an event listener", () => {
         // Arrange
         const addEventListener = jest.fn();
-        const networkConnection = networkConnectionFactory.build({
+        const networkConnection = NetworkConnectionFactory.build({
             addEventListener,
         });
         const { TestComponent } = setupSut({
@@ -137,11 +137,11 @@ describe("NetworkConnectionProvider", () => {
             // Arrange
             let changeEventCallback = () => {};
 
-            const expectedNetworkConnection = networkConnectionFactory.build();
+            const expectedNetworkConnection = NetworkConnectionFactory.build();
 
             const mockConnections: Array<NetworkConnection> = [
-                networkConnectionFactory.build(),
-                networkConnectionFactory.build({
+                NetworkConnectionFactory.build(),
+                NetworkConnectionFactory.build({
                     addEventListener: (
                         event: "change",
                         callback: VoidFunction
@@ -179,7 +179,7 @@ describe("NetworkConnectionProvider", () => {
         it("calls removeEventlistener for cleanup", async () => {
             // Arrange
             const removeEventListener = jest.fn();
-            const networkConnection = networkConnectionFactory.build({
+            const networkConnection = NetworkConnectionFactory.build({
                 removeEventListener,
             });
             const { TestComponent } = setupSut({

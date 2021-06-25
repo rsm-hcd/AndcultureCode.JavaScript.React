@@ -8,7 +8,7 @@ import { NetworkConnectionContext } from "../contexts/network-connection-context
 export const useNetworkConnection = (): NetworkConnection => {
     const networkConnection = useContext(NetworkConnectionContext);
 
-    if (networkConnection === undefined) {
+    if (networkConnection == null) {
         throw new Error(
             "useNetworkConnection must be used within a NetworkConnectionProvider component"
         );
