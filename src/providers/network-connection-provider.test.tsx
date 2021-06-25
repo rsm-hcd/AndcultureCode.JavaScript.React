@@ -13,7 +13,7 @@ import { Factory } from "rosie";
 // #region Types
 // -----------------------------------------------------------------------------------------
 
-type TypeFromKey<Type, Key extends keyof Type> = Type[Key];
+type TypeOfKey<Type, Key extends keyof Type> = Type[Key];
 
 // #endregion Types
 
@@ -66,7 +66,7 @@ const setupSut = (options?: SetupSutOptions): SetupSutResults => {
 
     setupMocks(mockConnections);
 
-    const networkConnectionResults: TypeFromKey<
+    const networkConnectionResults: TypeOfKey<
         SetupSutResults,
         "networkConnectionResults"
     > = {
