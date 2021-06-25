@@ -1,12 +1,13 @@
 import { NetworkConnection } from "andculturecode-javascript-core";
 import { Factory } from "rosie";
+import { FactoryType } from "./factory-type";
 
 // -----------------------------------------------------------------------------------------
 // #region Factory
 // -----------------------------------------------------------------------------------------
 
 export const NetworkConnectionFactory = Factory.define<NetworkConnection>(
-    "NetworkConnection"
+    FactoryType.NetworkConnection
 )
     .attr("isOnline", true)
     .attr("addEventListener", eventListenerFactory)
