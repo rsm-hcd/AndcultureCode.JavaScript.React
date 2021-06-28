@@ -20,7 +20,7 @@
         "@types/react-dom": "16.9.6",
         "@types/react-router-dom": "5.1.5",
         "@types/rosie": "0.0.37",
-        "andculturecode-javascript-core": "0.6.3",
+        "andculturecode-javascript-core": "0.8.0",
         "andculturecode-javascript-testing": "0.2.0",
         "axios": "0.19.2",
         "cross-env": "6.0.3",
