@@ -1,6 +1,6 @@
 # AndcultureCode.JavaScript.React
 
-![build status](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/actions/workflows/main.yaml/badge.svg)
+![build status](https://github.com/AndcultureCode/AndcultureCode.JavaScript.React/actions/workflows/build.yaml/badge.svg)
 [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.JavaScript.React/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.JavaScript.React)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 
