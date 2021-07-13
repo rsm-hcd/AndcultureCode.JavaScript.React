@@ -18,6 +18,7 @@ export {
     NestedRoutesByProperty,
     NestedRoutesByPropertyProps,
 } from "./components/routing/nested-routes-by-property";
+export { NetworkConnectionProvider } from "./providers/network-connection-provider";
 export { Redirects, RedirectsProps } from "./components/routing/redirects";
 
 // #endregion Components
@@ -31,6 +32,7 @@ export { useAsyncEffect } from "./hooks/use-async-effect";
 export { useCancellablePromise } from "./hooks/use-cancellable-promise";
 export { useDebounce } from "./hooks/use-debounce";
 export { useLocalization } from "./hooks/use-localization";
+export { useNetworkConnection } from "./hooks/use-network-connection";
 export { useOnClickOutside } from "./hooks/use-onclick-outside";
 export { usePageErrors } from "./hooks/use-page-errors";
 export { useSortedAlphabetically } from "./hooks/use-sorted-alphabetically";
